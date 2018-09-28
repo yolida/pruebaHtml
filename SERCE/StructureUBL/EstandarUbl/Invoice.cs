@@ -109,7 +109,7 @@ namespace StructureUBL.EstandarUbl
             writer.WriteAttributeString("xmlns:xsi",    EspacioNombres.xsi);
             #endregion xmlns    
 
-
+            //quitar comentarios en nodos
             #region UBLExtensions
             writer.WriteStartElement("ext:UBLExtensions");
             {

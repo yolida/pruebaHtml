@@ -46,3 +46,13 @@ D:\Jorge Luis\FEICONT21\MigrarDatos\obj\Debug\MigrarDatos.csproj.GenerateResourc
 D:\Jorge Luis\FEICONT21\MigrarDatos\obj\Debug\MigrarDatos.csproj.CoreCompileInputs.cache
 D:\Jorge Luis\FEICONT21\MigrarDatos\obj\Debug\MigrarDatos.exe
 D:\Jorge Luis\FEICONT21\MigrarDatos\obj\Debug\MigrarDatos.pdb
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\bin\Debug\MigrarDatos.exe.config
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\bin\Debug\MigrarDatos.exe
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\bin\Debug\MigrarDatos.pdb
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.csprojAssemblyReference.cache
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.Form1.resources
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.Properties.Resources.resources
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.csproj.GenerateResource.cache
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.exe
+D:\Jorge Luis\FEICONT21\pruebaHtml\MigrarDatos\obj\Debug\MigrarDatos.pdb

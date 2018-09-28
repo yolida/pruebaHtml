@@ -22,6 +22,7 @@ namespace FEI
         {
             try
             {
+                // testing
                 ReadGeneralData readGeneralData =   new ReadGeneralData();
                 DataTable dataTableInternalData =   readGeneralData.GetInternalDataTable("[dbo].[Read_DataAccess]");
 
