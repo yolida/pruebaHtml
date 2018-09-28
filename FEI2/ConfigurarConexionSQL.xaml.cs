@@ -3,6 +3,8 @@ using DataLayer.CRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,7 @@ namespace FEI
     /// </summary>
     public partial class ConfigurarConeccionSQL : Window
     {
-        bool exitoConexion = false; // Indicador de que se realizó la conexión con éxito
+        bool exitoConexion  = false; // Indicador de que se realizó la conexión con éxito
 
         public ConfigurarConeccionSQL()
         {
@@ -32,21 +34,15 @@ namespace FEI
 
         void DataWindow_Closing(object sender, CancelEventArgs e)
         {
-            // If data is dirty, notify user and ask for a response
-            if (exitoConexion)
+            if (exitoConexion   ==  false)
             {
-                string msg = "Data is dirty. Close without saving?";
+                string msg = "Aún no se ha podido realizar la conexión con la base de datos, ¿Esta seguro(a) de salir?";
                 MessageBoxResult result =
-                  MessageBox.Show(
-                    msg,
-                    "Data App",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning);
+                    MessageBox.Show( msg,    "No se obtuvo la conexión al servidor de base de datos",    MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.No)
-                {
-                    // If user doesn't want to close, cancel closure
-                    e.Cancel = true;
-                }
+                    e.Cancel        =   true;    // Sí el usuario no quiere cerrar la aplicación, cancelará el cierre, sino cerrará toda la aplicación
+                else
+                    Application.Current.Shutdown();
             }
         }
 
@@ -64,28 +60,28 @@ namespace FEI
 
             Connection connection = new Connection();
 
-            if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))
+            if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
             {
-                if (!connection.CheckConnection(cadena))
-                {   // Actualizar la cadena de conexión
-                    MessageBox.Show("Lo sentimos, no se podido realizar la conexión con el servidor de base de datos, corriga los datos y vuelva a intentarlo.",
-                        "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);
+                if (connection.CheckConnection(cadena))    // Comprobamos la conexión con la base de datos
+                {   
+                    // Actualizar la cadena de conexión
+                    exitoConexion       =   true;
+                    btnGuardar.Content  =   "Guardar";  // Entonces la funcionalidad del botón cambia a GUARDAR debido a que la conexión es correcta
                 }
                 else
                 {
-                    exitoConexion       =   true;
-                    btnGuardar.Content  =   "Guardar";
+                    MessageBox.Show("Lo sentimos, no se podido realizar la conexión con el servidor de base de datos, corriga los datos y vuelva a intentarlo.",
+                        "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);  // Aún  no se puede conectar con la base de datos
                 }
             }
-
+            else
+                MessageBox.Show("Antes de continuar debes completar todos los campos.", "Datos incompletos", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            if (exitoConexion)  //  Sí es que es FALSE, entonces el botón funciona como botón de salir
-            {
-                Application.Current.Shutdown();
-            }
+            if (exitoConexion   ==  false)  //  Sí es que es FALSE, entonces el botón funciona como botón de salir
+                Close();
             else // En caso de que este en TRUE es porque ya se probó con éxito la conexión con la DB, se vuelve a comprobar los accesos para asegurar la conexión siga disponible
             { 
                 string servidor     =   string.Empty;
@@ -100,25 +96,59 @@ namespace FEI
 
                 Connection connection = new Connection();
 
-                if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))
+                if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
                 {
-                    if (!connection.CheckConnection(cadena))
-                    {   // Actualizar la cadena de conexión
-                        MessageBox.Show("Lo sentimos, se ha cambiado los datos de acceso, corriga los datos y vuelva a intentarlo.",
-                            "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else
+                    if (connection.CheckConnection(cadena))    // Comprobamos la conexión con la base de datos
                     {
-                        // Escribir txt con los accesos (pendiente)
+                        string ruta                 =   Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                        if (!Directory.Exists($"{ruta}\\FEICONT"))
+                            Directory.CreateDirectory($"{ruta}\\FEICONT");
+
+                        #region Escritura del archivo txt con los datos del servidor de base de datos
+                        try
+                        {
+                            if (!File.Exists($"{ruta}\\FEICONT\\access.txt"))
+                                File.Delete($"{ruta}\\FEICONT\\access.txt");
+                            else
+                            {
+                                using (StreamWriter streamWriter = new StreamWriter($"{ruta}\\FEICONT\\access.txt"))
+                                {
+                                    streamWriter.WriteLine($"{servidor}|{usuario}|{contrasenia}");
+                                }
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            // El archivo esta en uso o no se puede acceder a el
+                        }
+                        #endregion Escritura del archivo txt con los datos del servidor de base de datos
+
+                        #region Actualizar o crear InternalDB
+                        InternalAccess internalAccess   =   new InternalAccess() {  Servidor    =   servidor,   Usuario =   usuario, Contrasenia    =   contrasenia };
+
+                        ReadGeneralData readGeneralData =   new ReadGeneralData();
+                        DataTable dataTableInternalData =   readGeneralData.GetInternalDataTable("[dbo].[Read_DataAccess]");
+
+                        if (dataTableInternalData.Rows.Count == 1)  // En caso de que ya haya un registro en la db
+                            internalAccess.Alter_InternalAccess("[dbo].[Update_DataAccess]");
+                        else // Sí no lo hay, la crea
+                            internalAccess.Alter_InternalAccess("[dbo].[Create_DataAccess]");
+                        #endregion Actualizar o crear InternalDB
+
+                        // Ejecutar todo el script de creación de base de datos (PENDIENTE)
 
                         Application.Current.Shutdown();
                         System.Windows.Forms.Application.Restart(); // Se reinicia la aplicación para que acceda de inmediato al login ya con los accesos correctos de la db
                     }
+                    else
+                    {
+                        MessageBox.Show("Lo sentimos, se ha cambiado los datos de acceso, corriga los datos y vuelva a intentarlo.",
+                            "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);  // Aún  no se puede conectar con la base de datos
+                    }
                 }
                 else
-                    MessageBox.Show("Lo sentimos, no se podido realizar la conexión con el servidor de base de datos, corriga los datos y vuelva a intentarlo.",
-                            "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
+                    MessageBox.Show("Antes de continuar debes completar todos los campos.", "Datos incompletos", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
     }
 }

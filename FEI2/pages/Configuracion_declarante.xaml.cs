@@ -81,7 +81,7 @@ namespace FEI.pages
             if (item != null)
             {
                 //Cargar formulario de manejo de declarante para eliminar.
-                Declarante Formulario = new Declarante("DLT", item.Id, localDB);
+                Declarante Formulario = new Declarante();
                 Formulario.ShowDialog();
                 if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
                 {
@@ -100,7 +100,7 @@ namespace FEI.pages
             if (item != null)
             {
                 //Mostrar formulario para manejo de declarante  con opcion de actualizar
-                Declarante Formulario = new Declarante("UPD", item.Id, localDB);
+                Declarante Formulario = new Declarante();
                 Formulario.ShowDialog();
                 if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
                 {
@@ -117,7 +117,7 @@ namespace FEI.pages
         private void btnNuevo_Click(object sender, RoutedEventArgs e)
         {
             //Mostrar formulario de menajeo de declarante con opcion para crear nuevo.
-            Declarante Formulario = new Declarante("INS", "", localDB);
+            Declarante Formulario = new Declarante();
             Formulario.ShowDialog();
             if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
             {

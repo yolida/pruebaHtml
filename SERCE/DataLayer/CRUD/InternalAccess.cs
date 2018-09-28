@@ -36,11 +36,11 @@ namespace DataLayer.CRUD
 
         public bool Alter_InternalAccess(string storedProcedure)
         {   // para la escritura y actualización
-            Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
+            InternalConnection connection   = new InternalConnection();
+            SqlCommand sqlCommand           = new SqlCommand();
+            sqlCommand.CommandText          = storedProcedure;
+            sqlCommand.CommandType          = CommandType.StoredProcedure;
+            sqlCommand.Connection           = connection.connectionString;
 
             SqlParameter paramServidor  = new SqlParameter();
             paramServidor.SqlDbType     = SqlDbType.NVarChar;

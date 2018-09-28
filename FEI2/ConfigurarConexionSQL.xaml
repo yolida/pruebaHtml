@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
+        Closing="DataWindow_Closing"
         Title="Configurar conexión de Sql Server" Height="350" Width="550">
     <Window.Resources>
         <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">

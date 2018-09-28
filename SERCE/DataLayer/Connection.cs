@@ -14,12 +14,11 @@ namespace DataLayer
         {
             bool resultado      =   false;
             SqlConnection sqlConnection     =   new SqlConnection(cadena);
-            ConnectionState connectionState =   sqlConnection.State;
 
             try
             {
                 sqlConnection.Open();
-                if (connectionState ==  ConnectionState.Open )
+                if (sqlConnection.State ==  ConnectionState.Open )
                     resultado   =   true;
                 sqlConnection.Close();
             }

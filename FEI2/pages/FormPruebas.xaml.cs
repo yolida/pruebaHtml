@@ -70,7 +70,7 @@ namespace FEI.pages
                 string xmlTextoPlano = Encoding.UTF8.GetString(Convert.FromBase64String(response.TramaXmlSinFirma)); // Para pruebas 
 
                 // Certificado
-                rutaCertificado = @"D:\certificado\Certificado-NuevoProveedor\Wnl2U2wyVk01S2wyMzgzQQ%3d%3d.pfx";
+                rutaCertificado = "D:\\certificado\\Certificado-NuevoProveedor\\Wnl2U2wyVk01S2wyMzgzQQ%3d%3d.pfx";
                 passCertificado = "53P4xfFC8sSeFRmt";
 
                 var firmadoRequest = new FirmadoRequest

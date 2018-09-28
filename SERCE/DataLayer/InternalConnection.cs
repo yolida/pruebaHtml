@@ -67,7 +67,7 @@ namespace DataLayer
             }
             catch (Exception ex)
             {
-                throw;
+                // No se pudo acceder al archivo txt (Agregar notificación)
             }
 
             try

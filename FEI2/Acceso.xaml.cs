@@ -29,41 +29,17 @@ namespace FEI
                 int cantidadFilas   = dataTableInternalData.Rows.Count;
 
                 InternalConnection  internalConnection  =   new InternalConnection();
-                string[] valores    =   internalConnection.GetDataFile();
                 
-                if (cantidadFilas != 1) //  Comprobar que haya registro en db interna, primera vez que se ejecute el sistema
+                if (cantidadFilas == 1) //  Comprobar que haya registro en db interna, primera vez que se ejecute el sistema
                 {   // Se comprueba que los valores sean correctos
-                    if (valores.Length == 2 || !string.IsNullOrEmpty(valores[0]) || !string.IsNullOrEmpty(valores[1]) || !string.IsNullOrEmpty(valores[2]))
-                    {
-                        Connection connection = new Connection();
-                        string cadena = $"data source={valores[0]}; initial catalog=master; user id={valores[1]}; password={valores[2]};";
-                        if (!connection.CheckConnection(cadena))    //  Verificamos que la cadena de conexión sea correcta
-                        {
-                            if (internalConnection.Create_DataAccess(valores))  // Sólo si la cadena de conexión es correcta procedemos a registrar
-                            {
-                                Application.Current.Shutdown();
-                                System.Windows.Forms.Application.Restart();
-                            }
-                        }
-                    }
-                    else // Sí no es correcto se pide configurar de forma manual (Formulario)
-                    {
-                        MessageBox.Show("Se debe configurar de forma manual la conexión a la base de datos.");
-                        ConfigurarConeccionSQL configurarConeccionSQL   =   new ConfigurarConeccionSQL();
-                        configurarConeccionSQL.Show();
-                    }
-                }
-                else     // En caso de que haya registro en db interna  
-                {   // Comprobar la conexión con el servidor de SqlServer
-
                     InternalAccess internalAccess   =   new InternalAccess();
                     internalAccess.Read_InternalAccess();
                     string cadena   =   $"data source={@internalAccess.Servidor}; initial catalog=master; user id={@internalAccess.Usuario}; password={@internalAccess.Contrasenia}; Connection Timeout=3";
 
                     Connection  connection  =   new Connection();
 
-                    if (!connection.CheckConnection(cadena))    
-                    {   // Actualizar la cadena de conexión
+                    if (!connection.CheckConnection(cadena))   // Falló la conexión con los datos de InternalDB 
+                    {   // Actualizar la cadena de conexión mediante formulario
                         MessageBox.Show("Se debe configurar de forma manual la conexión a la base de datos.");
                         ConfigurarConeccionSQL configurarConeccionSQL = new ConfigurarConeccionSQL();
                         configurarConeccionSQL.Show();
@@ -90,6 +66,33 @@ namespace FEI
                             lstEmpresas.SelectedValuePath   =   "IdDatosFox";
                             lstEmpresas.SelectedIndex       =   0;
                         }
+                    }
+                }
+                else     // En caso de que no haya registro en db interna  
+                {   // Comprobar la conexión con el servidor de SqlServer
+                    string[] valores = internalConnection.GetDataFile();   // Obtenemos los datos del archivo txt
+
+                    if (valores.Length == 2 )
+                    {
+                        if (!string.IsNullOrEmpty(valores[0]) || !string.IsNullOrEmpty(valores[1]) || !string.IsNullOrEmpty(valores[2]))
+                        {
+                            Connection connection = new Connection();
+                            string cadena = $"data source={valores[0]}; initial catalog=master; user id={valores[1]}; password={valores[2]};";
+                            if (connection.CheckConnection(cadena))    //  Verificamos que la cadena de conexión con el Servidor de SQL sea correcta
+                            {
+                                if (internalConnection.Create_DataAccess(valores))  // Sólo si la cadena de conexión es correcta procedemos a registrar en InternalDB
+                                {
+                                    Application.Current.Shutdown();
+                                    System.Windows.Forms.Application.Restart();
+                                }
+                            }
+                        }
+                    }
+                    else // Sí no es correcto se pide configurar de forma manual (Formulario)
+                    {
+                        MessageBox.Show("Se debe configurar de forma manual la conexión a la base de datos.");
+                        ConfigurarConeccionSQL configurarConeccionSQL = new ConfigurarConeccionSQL();
+                        configurarConeccionSQL.Show();
                     }
                 }
             }
