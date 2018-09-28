@@ -1,0 +1,300 @@
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\FEI.Extension.tlb
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\bin\Debug\ContasisALF.dll
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Base.frmAdvertencia.resources
+C:\proyectos\kamaro\workspace\SERCE\SERCEDLL\obj\Debug\FEI.Extension.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Base.frmAdvertencia.resources
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE\SERCEDLL\obj\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\FEI.Extension.tlb
+C:\proyectos\kamaro\SERCE\SERCEDLL\bin\Debug\ContasisALF.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\bin\Debug\FEI.Extension.tlb
+C:\proyectos\kamaro\SERCE_V2\SERCEDLL\obj\Debug\FEI.Extension.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\itextsharp.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\itextsharp.xml
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\itextsharp.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\itextsharp.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\itextsharp.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\StructureUBL.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\Common.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\StructureUBL.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\itextsharp.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\bin\Debug\Common.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\itextsharp.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\StructureUBL.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\Common.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\StructureUBL.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\itextsharp.xml
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\bin\Debug\Common.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csprojResolveAssemblyReference.cache
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\git\FEIUpdateUBL\actualizacionubl\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Common.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\itextsharp.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\StructureUBL.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Common.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\StructureUBL.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\itextsharp.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\GenerateXML.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Models.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Newtonsoft.Json.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Security.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Net.Http.Formatting.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Web.Http.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Web.Http.WebHost.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Ionic.Zip.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\GenerateXML.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Models.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Security.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\Newtonsoft.Json.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Net.Http.Formatting.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Web.Http.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\SERCEDLL\bin\Debug\System.Web.Http.WebHost.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Common.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\GenerateXML.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\itextsharp.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Models.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Newtonsoft.Json.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Security.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\StructureUBL.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Net.Http.Formatting.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Web.Http.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Web.Http.WebHost.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Ionic.Zip.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Common.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\GenerateXML.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Models.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Security.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\StructureUBL.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\itextsharp.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\Newtonsoft.Json.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Net.Http.Formatting.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Web.Http.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\System.Web.Http.WebHost.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\obj\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\FEI.Extension.tlb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Common.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\GenerateXML.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\itextsharp.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Models.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Newtonsoft.Json.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Security.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\StructureUBL.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Net.Http.Formatting.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Web.Http.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Web.Http.WebHost.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Ionic.Zip.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Common.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\GenerateXML.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Models.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Security.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\StructureUBL.pdb
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\itextsharp.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\Newtonsoft.Json.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Net.Http.Formatting.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Web.Http.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\bin\Debug\System.Web.Http.WebHost.xml
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.csprojAssemblyReference.cache
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.Base.frmBaseFormularios.resources
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\SERCE.frmSelect.resources
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.Properties.Resources.resources
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.csproj.GenerateResource.cache
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.csproj.CopyComplete
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.dll
+D:\Jorge Luis\FEICONT21\SERCEDLL\obj\Debug\FEI.Extension.pdb

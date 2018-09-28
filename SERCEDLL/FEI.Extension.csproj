@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2F44551-885E-41D9-A0BD-5D73AF698360}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FEI.Extension</RootNamespace>
+    <AssemblyName>FEI.Extension</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>GlobalizationRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>FEI.Extension.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\System.Data.SQLite.Core.1.0.108.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\SERCE\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\clsBaseAES.cs" />
+    <Compile Include="Base\clsBaseCifrado.cs" />
+    <Compile Include="Base\clsBaseConexionSistema.cs" />
+    <Compile Include="Base\clsBaseConexion.cs" />
+    <Compile Include="Base\clsBaseConfiguracion.cs" />
+    <Compile Include="Base\clsBaseEntidadSistema.cs" />
+    <Compile Include="Base\clsBaseEntidad.cs" />
+    <Compile Include="Base\clsBaseLicencia.cs" />
+    <Compile Include="Base\clsBaseLog.cs" />
+    <Compile Include="Base\clsBaseMensaje.cs" />
+    <Compile Include="Base\clsBaseSunat.cs" />
+    <Compile Include="Base\clsBaseUtil.cs" />
+    <Compile Include="Base\clsBaseXML.cs" />
+    <Compile Include="Base\clsRegistry.cs" />
+    <Compile Include="Base\frmBaseFormularios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\frmBaseFormularios.Designer.cs">
+      <DependentUpon>frmBaseFormularios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Datos\clsEntidadDocument.cs" />
+    <Compile Include="Datos\clsEntidadDocument_AdditionalComments.cs" />
+    <Compile Include="Datos\clsEntidadDocument_AdditionalDocumentReference.cs" />
+    <Compile Include="Datos\clsEntidadDocument_DespatchDocumentReference.cs" />
+    <Compile Include="Datos\clsEntidadDocument_Line.cs" />
+    <Compile Include="Datos\clsEntidadDocument_Line_Description.cs" />
+    <Compile Include="Datos\clsEntidadDocument_Line_PricingReference.cs" />
+    <Compile Include="Datos\clsEntidadDocument_Line_TaxTotal.cs" />
+    <Compile Include="Datos\clsEntidadDocument_TaxTotal.cs" />
+    <Compile Include="Datos\clsEntidadDocument_UBLExtension_ExtensionContent_AdditionalInformation_AdditionalMonetaryTotal.cs" />
+    <Compile Include="Datos\clsEntidadDocument_UBLExtension_ExtensionContent_AdditionalInformation_AdditionalProperty.cs" />
+    <Compile Include="Datos\clsEntityAccount.cs" />
+    <Compile Include="Datos\clsEntityAlarms.cs" />
+    <Compile Include="Datos\clsEntityDatabaseSystem.cs" />
+    <Compile Include="Datos\clsEntityDatabaseLocal.cs" />
+    <Compile Include="Datos\clsEntityDatabaseWeb.cs" />
+    <Compile Include="Datos\clsEntityDeclarant.cs" />
+    <Compile Include="Datos\clsEntityDespatch.cs" />
+    <Compile Include="Datos\clsEntityDespatch_Line.cs" />
+    <Compile Include="Datos\clsEntityDespatch_OrderReference.cs" />
+    <Compile Include="Datos\clsEntityDespatch_PortLocation.cs" />
+    <Compile Include="Datos\clsEntityDespatch_ShipmentStage.cs" />
+    <Compile Include="Datos\clsEntityDespatch_ShipmentStage_Driver.cs" />
+    <Compile Include="Datos\clsEntityDocument.cs" />
+    <Compile Include="Datos\clsEntityDocument_AdditionalComments.cs" />
+    <Compile Include="Datos\clsEntityDocument_Advance.cs" />
+    <Compile Include="Datos\clsEntityDocument_Line_AdditionalComments.cs" />
+    <Compile Include="Datos\clsEntityModulo.cs" />
+    <Compile Include="Datos\clsEntityPerception.cs" />
+    <Compile Include="Datos\clsEntityPerception_PerceptionLine.cs" />
+    <Compile Include="Datos\clsEntityPermisos.cs" />
+    <Compile Include="Datos\clsEntityRetention.cs" />
+    <Compile Include="Datos\clsEntityRetention_RetentionLine.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments_Notes.cs" />
+    <Compile Include="Datos\clsEntityDocument_AdditionalDocumentReference.cs" />
+    <Compile Include="Datos\clsEntityDocument_DespatchDocumentReference.cs" />
+    <Compile Include="Datos\clsEntityDocument_Line.cs" />
+    <Compile Include="Datos\clsEntityDocument_Line_Description.cs" />
+    <Compile Include="Datos\clsEntityDocument_Line_PricingReference.cs" />
+    <Compile Include="Datos\clsEntityDocument_Line_TaxTotal.cs" />
+    <Compile Include="Datos\clsEntityDocument_TaxTotal.cs" />
+    <Compile Include="Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation .cs" />
+    <Compile Include="Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation_AdditionalMonetaryTotal.cs" />
+    <Compile Include="Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation_AdditionalProperty.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments_SummaryDocumentsLine.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments_SummaryDocumentsLine_AllowanceCharge.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments_SummaryDocumentsLine_BillingPayment.cs" />
+    <Compile Include="Datos\clsEntitySummaryDocuments_SummaryDocumentsLine_TaxTotal.cs" />
+    <Compile Include="Datos\clsEntityUsers.cs" />
+    <Compile Include="Datos\clsEntityVoidedDocuments.cs" />
+    <Compile Include="Datos\clsEntityVoidedDocuments_VoidedDocumentsLine.cs" />
+    <Compile Include="Datos\clsEntityRange.cs" />
+    <Compile Include="Base\frmSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\frmSelect.Designer.cs">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModVers.cs" />
+    <Compile Include="Negocio\clsNegocioCE.cs" />
+    <Compile Include="Negocio\clsNegocioCEBoleta.cs" />
+    <Compile Include="Negocio\clsNegocioCEFactura.cs" />
+    <Compile Include="Negocio\clsNegocioCEGuiaRemision.cs" />
+    <Compile Include="Negocio\clsNegocioCENotaCredito.cs" />
+    <Compile Include="Negocio\clsNegocioCENotaDebito.cs" />
+    <Compile Include="Negocio\clsNegocioCEEstadosFEI.cs" />
+    <Compile Include="Negocio\clsNegocioCEComunicacionBaja.cs" />
+    <Compile Include="Negocio\clsNegocioCEPercepcion.cs" />
+    <Compile Include="Negocio\clsNegocioCEResumenDiario.cs" />
+    <Compile Include="Negocio\clsNegocioCERetention.cs" />
+    <Compile Include="Negocio\clsNegocioValidar.cs" />
+    <Compile Include="Negocio\clsNegocioValidar_Campos.cs" />
+    <Compile Include="Negocio\clsNegocioWeb.cs" />
+    <Compile Include="Negocio\clsNegocioXML.cs" />
+    <Compile Include="Negocio\ClassNegocioExtractData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Query\cls_Consulta.cs" />
+    <Compile Include="Service References\ServiceReference_Guia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_Perception\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\www.sunat.gob.pe\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Triggers\EntityData.cs" />
+    <Compile Include="Triggers\GenerateInvoice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\Debug\FEI.Extensiion.snk" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Datos\ClassDiagram1.cd" />
+    <None Include="Diagrama\DiagramaSERCE.cd" />
+    <None Include="FEI.Extensiion.snk" />
+    <None Include="FEI.Extension.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="serce.ico" />
+    <None Include="Service References\ServiceReference_Guia\FEI.Extension.ServiceReference_Guia.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\FEI.Extension.ServiceReference_Guia.sendBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\FEI.Extension.ServiceReference_Guia.sendPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\FEI.Extension.ServiceReference_Guia.sendSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\FEI.Extension.ServiceReference_Guia.statusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Guia\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_Guia\billService.wsdl" />
+    <None Include="Service References\ServiceReference_Guia\billService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Guia\billService1.wsdl" />
+    <None Include="Service References\ServiceReference_Perception\billService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\billService2.wsdl" />
+    <None Include="Service References\ServiceReference_Perception\billService21.wsdl" />
+    <None Include="Service References\ServiceReference_Perception\FEI.Extension.ServiceReference_Perception.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\FEI.Extension.ServiceReference_Perception.sendBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\FEI.Extension.ServiceReference_Perception.sendPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\FEI.Extension.ServiceReference_Perception.sendSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\FEI.Extension.ServiceReference_Perception.statusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_Perception\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Perception\configuration91.svcinfo" />
+    <None Include="Service References\www.sunat.gob.pe\billService.wsdl" />
+    <None Include="Service References\www.sunat.gob.pe\billService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\billService1.wsdl" />
+    <None Include="Service References\www.sunat.gob.pe\billService2.wsdl" />
+    <None Include="Service References\www.sunat.gob.pe\FEI.Extension.www.sunat.gob.pe.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\FEI.Extension.www.sunat.gob.pe.sendBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\FEI.Extension.www.sunat.gob.pe.sendPackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\FEI.Extension.www.sunat.gob.pe.sendSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\FEI.Extension.www.sunat.gob.pe.statusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\www.sunat.gob.pe\configuration.svcinfo" />
+    <None Include="Service References\www.sunat.gob.pe\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference_Guia\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_Perception\" />
+    <WCFMetadataStorage Include="Service References\www.sunat.gob.pe\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\frmBaseFormularios.resx">
+      <DependentUpon>frmBaseFormularios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\frmSelect.resx">
+      <DependentUpon>frmSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Usuario\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SERCE\Common\Common.csproj">
+      <Project>{8d1a43ae-2c69-4277-9c06-86b496fabd89}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SERCE\GenerateXML\GenerateXML.csproj">
+      <Project>{e5d088f1-2806-4150-8d05-3faa11d49148}</Project>
+      <Name>GenerateXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SERCE\Models\Models.csproj">
+      <Project>{6DDC510B-794C-43B7-86E2-0B1EF96042FF}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SERCE\Security\Security.csproj">
+      <Project>{3a893cd3-8a95-4750-beed-0e72e1a2904c}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SERCE\StructureUBL\StructureUBL.csproj">
+      <Project>{b70d6a75-50b5-4fac-887c-698c3b7b9860}</Project>
+      <Name>StructureUBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.102.0\build\net45\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\SERCE\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\SERCE\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\SERCE\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\SERCE\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

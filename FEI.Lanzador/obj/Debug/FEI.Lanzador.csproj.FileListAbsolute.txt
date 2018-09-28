@@ -1,0 +1,9 @@
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\bin\Debug\FEI.Lanzador.exe.config
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\bin\Debug\FEI.Lanzador.exe
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\bin\Debug\FEI.Lanzador.pdb
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.Principal.resources
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.Properties.Resources.resources
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.exe
+C:\proyectos\kamaro\workspace\SERCE\FEI.Lanzador\obj\Debug\FEI.Lanzador.pdb

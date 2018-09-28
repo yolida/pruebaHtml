@@ -1,0 +1,106 @@
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe.config
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\WpfTabNavigation.pdb
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\MainWindow.baml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\MainWindow.g.cs
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\App.g.cs
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.cache
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.g.resources
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.Properties.Resources.resources
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.csproj.GenerateResource.Cache
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.exe
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.pdb
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\styles\TabControlStyle.baml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\App.baml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.dll
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.dll
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Xps.dll
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.pdb
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.xml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.pdb
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.xml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Xps.pdb
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\bin\Debug\OxyPlot.Xps.xml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\pages\Page_Chart.baml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\pages\Page_Chart.g.cs
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\pages\Page_Chart2.baml
+c:\users\wangming\documents\visual studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\pages\Page_Chart2.g.cs
+C:\Users\wangming\Documents\Visual Studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation.csprojResolveAssemblyReference.cache
+C:\Users\wangming\Documents\Visual Studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\wangming\Documents\Visual Studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.lref
+C:\Users\wangming\Documents\Visual Studio 2012\Projects\WpfTabNavigation\WpfTabNavigation\obj\Debug\styles\DatePicker.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe.config
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.exe
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.dll
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.dll
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.xml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.xml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\MainWindow.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart2.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\styles\TabControlStyle.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\App.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\MainWindow.g.cs
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart.g.cs
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart2.g.cs
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\App.g.cs
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.cache
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.lref
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\styles\DatePicker.baml
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.g.resources
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.Properties.Resources.resources
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.csproj.GenerateResource.Cache
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\FEI.Extension.dll
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\System.Data.SQLite.dll
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\FEI.Extension.pdb
+C:\Users\usuario\Downloads\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\System.Data.SQLite.xml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe.config
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\WpfTabNavigation.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\FEI.Extension.dll
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.dll
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.dll
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.dll
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\System.Data.SQLite.dll
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\FEI.Extension.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.xml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Wpf.xml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\OxyPlot.Xps.xml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\bin\Debug\System.Data.SQLite.xml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\MainWindow.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart2.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\styles\TabControlStyle.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\App.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\MainWindow.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart2.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart3.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\App.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.cache
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation_MarkupCompile.lref
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\pages\Page_Chart3.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\styles\DatePicker.baml
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.g.resources
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.Properties.Resources.resources
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.csproj.GenerateResource.Cache
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.exe
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.pdb
+D:\Demos C#\WPFTabNavigation-master\WPFTabNavigation-master\WpfTabNavigation\obj\Debug\WpfTabNavigation.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\SERCE\FEIn\WpfTabNavigation\bin\Debug\WpfTabNavigation.exe.config
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\SERCE\FEIn\WpfTabNavigation\obj\Debug\WpfTabNavigation.exe
+C:\Users\usuario\Documents\Visual Studio 2015\Projects\SERCE\FEIn\WpfTabNavigation\obj\Debug\WpfTabNavigation.pdb

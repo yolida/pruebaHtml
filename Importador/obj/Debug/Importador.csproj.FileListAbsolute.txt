@@ -1,0 +1,75 @@
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\Importador.exe.config
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\Importador.exe
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\Importador.pdb
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.Principal.resources
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.exe
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.pdb
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\SERCE_V2\Importador\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE_V2\Importador\obj\Debug\Importador.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.Principal.resources
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.Properties.Resources.resources
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.csproj.GenerateResource.cache
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.csproj.CoreCompileInputs.cache
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\Importador.exe.config
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\Importador.exe
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\Importador.pdb
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\EntityFramework.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\System.Data.SQLite.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\EntityFramework.xml
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\FEI.Extension.pdb
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\FEI.Extension.dll.config
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\System.Data.SQLite.xml
+D:\git\Betas\FEI\BetaFEI\Importador\bin\Debug\System.Data.SQLite.dll.config
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.csproj.CopyComplete
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.exe
+D:\git\Betas\FEI\BetaFEI\Importador\obj\Debug\Importador.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\Importador.exe.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\Importador.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\Importador.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.Principal.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.Properties.Resources.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.csproj.CopyComplete
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\Importador\obj\Debug\Importador.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\Importador\obj\Debug\Importador.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\Importador\obj\Debug\Importador.Principal.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\Importador\obj\Debug\Importador.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\Importador\obj\Debug\Importador.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\Importador\obj\Debug\Importador.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\FEICONT21\Importador\obj\Debug\Importador.csprojAssemblyReference.cache
+D:\Jorge Luis\FEICONT21\Importador\obj\Debug\Importador.Principal.resources
+D:\Jorge Luis\FEICONT21\Importador\obj\Debug\Importador.Properties.Resources.resources
+D:\Jorge Luis\FEICONT21\Importador\obj\Debug\Importador.csproj.GenerateResource.cache
+D:\Jorge Luis\FEICONT21\Importador\obj\Debug\Importador.csproj.CoreCompileInputs.cache

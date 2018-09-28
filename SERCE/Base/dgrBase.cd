@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FEI.Base.clsBaseConexion">
+    <Position X="2.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEAhABAAACAAAAAAAAAgAAAEAAAAAAAAAACAAAACA=</HashCode>
+      <FileName>Base\clsBaseConexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseConfiguracion">
+    <Position X="5.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>FAIAAIAAgAACAABAgAgECAAAQYAIAAYAAAAAEBAAQCA=</HashCode>
+      <FileName>Base\clsBaseConfiguracion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseCifrado">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAA=</HashCode>
+      <FileName>Base\clsBaseCifrado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseLog">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Base\clsBaseLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseMensaje">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\clsBaseMensaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseReporte">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Base\clsBaseReporte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseSunat">
+    <Position X="13" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAABAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\clsBaseSunat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseEntidad">
+    <Position X="8.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAABAAACAAAAAACAUAAABAAAAAAAAgAACAAAAAA=</HashCode>
+      <FileName>Base\clsBaseEntidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.clsBaseUtil">
+    <Position X="16.25" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAMAAAAAQAAAAQAAAAAAAQAAAAAAIAARAAQBAo=</HashCode>
+      <FileName>Base\clsBaseUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.frmBaseFormularios">
+    <Position X="20.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\frmBaseFormularios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.ucBaseDatagridview">
+    <Position X="22.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\ucBaseDatagridview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Base.ucBaseTextBox">
+    <Position X="24.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Base\ucBaseTextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

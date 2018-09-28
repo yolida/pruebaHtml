@@ -1,0 +1,67 @@
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form1.resources
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form2.resources
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form3.resources
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\TransData.exe.config
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\TransData.exe
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\TransData.pdb
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransData.exe
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\obj\Debug\TransData.pdb
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE_V2\TransferenciaDatos\bin\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form1.resources
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form2.resources
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form3.resources
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.Properties.Resources.resources
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.GenerateResource.cache
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CoreCompileInputs.cache
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\TransData.exe.config
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\TransData.exe
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\TransData.pdb
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\System.Data.SQLite.dll
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\FEI.Extension.pdb
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\FEI.Extension.dll.config
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\System.Data.SQLite.xml
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\bin\Debug\System.Data.SQLite.dll.config
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CopyComplete
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransData.exe
+D:\git\Betas\FEI\BetaFEI\TransferenciaDatos\obj\Debug\TransData.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\TransData.exe.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\TransData.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\TransData.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form1.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form2.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form3.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.Properties.Resources.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CopyComplete
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransData.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\TransferenciaDatos\obj\Debug\TransData.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form1.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form2.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form3.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.csprojAssemblyReference.cache
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form1.resources
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form2.resources
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.Form3.resources
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.Properties.Resources.resources
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.GenerateResource.cache
+D:\Jorge Luis\FEICONT21\TransferenciaDatos\obj\Debug\TransferenciaDatos.csproj.CoreCompileInputs.cache

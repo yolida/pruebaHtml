@@ -1,0 +1,29 @@
+﻿<Window x:Class="FEI.pages.FormPruebas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FEI.pages"
+        mc:Ignorable="d"
+        Title="FormPruebas" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" x:Name="txtSerieNumero" VerticalAlignment="Top" Width="120" Margin="161,44,0,0" />
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" x:Name="txtCodigoComprobante" VerticalAlignment="Top" Width="120" Margin="161,72,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" x:Name="txtIdentificacionCliente" VerticalAlignment="Top" Width="120" Margin="161,100,0,0"/>
+        <Button Content="Ejecutar" HorizontalAlignment="Left" Margin="161,142,0,0" VerticalAlignment="Top" Width="120" x:Name="btnEjecutar" Click="Ejecutar_Click" />
+        <Label Content="serieNumero" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,44,0,0"/>
+        <Label Content="codigoComprobante" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,72,0,0"/>
+        <Label Content="identificacionCliente" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,97,0,0"/>
+        <Button Content="Ejecutar con interfaces" HorizontalAlignment="Left" Margin="161,213,0,0" VerticalAlignment="Top" Width="159" x:Name="btnEjecutar_ConInterfaces" Click="btnEjecutar_ConInterfaces_Click"  RenderTransformOrigin="0.5,0.5" Height="36" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.679"/>
+                    <RotateTransform Angle="1.386"/>
+                    <TranslateTransform X="0.018" Y="-0.711"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>

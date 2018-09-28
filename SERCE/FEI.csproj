@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0AD0B95-EDC3-4FC1-8D30-2F0236FFB7C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SERCE</RootNamespace>
+    <AssemblyName>FEI_01.00.00</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\jordy\Documents\local\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>es-PE</TargetCulture>
+    <ProductName>Facturación Electrónica Integrada</ProductName>
+    <PublisherName>Jorge Caso</PublisherName>
+    <SuiteName>Facturación Electrónica Integrada</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>82</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1FAF766AE78B59332D0A44562F4BD652CBB06C0C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FEI_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_fei_cuadro.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>SERCE.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestTimestampUrl>http://timestamp.digicert.com</ManifestTimestampUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ContasisALF">
+      <HintPath>..\..\..\Oficialdllactivacion\ContasisALF.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FEI.Extension">
+      <HintPath>..\SERCEDLL\bin\Debug\FEI.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="phd, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Oficialdllactivacion\phd.dll</HintPath>
+    </Reference>
+    <Reference Include="Servicios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Oficialdllactivacion\Servicios.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Core.1.0.103\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.103\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.103\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\clsBaseReporte.cs" />
+    <Compile Include="Base\ucBaseDatagridview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\ucBaseDatagridview.Designer.cs">
+      <DependentUpon>ucBaseDatagridview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ucBaseTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\ucBaseTextBox.Designer.cs">
+      <DependentUpon>ucBaseTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaVisorSUNAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaVisorSUNAT.Designer.cs">
+      <DependentUpon>frmComunicacionbajaVisorSUNAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiarioVisorSUNAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiarioVisorSUNAT.Designer.cs">
+      <DependentUpon>frmResumendiarioVisorSUNAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaMotivo.Designer.cs">
+      <DependentUpon>frmComunicacionbajaMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmAcerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmAcerca.Designer.cs">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmAlarma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmAlarma.Designer.cs">
+      <DependentUpon>frmAlarma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmBasedatosWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmBasedatosWeb.Designer.cs">
+      <DependentUpon>frmBasedatosWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmBasedatosLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmBasedatosLocal.Designer.cs">
+      <DependentUpon>frmBasedatosLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmComprobantedetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmComprobantedetalle.Designer.cs">
+      <DependentUpon>frmComprobantedetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbaja.Designer.cs">
+      <DependentUpon>frmComunicacionbaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmDeclarante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmDeclarante.Designer.cs">
+      <DependentUpon>frmDeclarante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmDeclarantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmDeclarantes.Designer.cs">
+      <DependentUpon>frmDeclarantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiario.Designer.cs">
+      <DependentUpon>frmResumendiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmComunicacionbajaDetalle.Designer.cs">
+      <DependentUpon>frmComunicacionbajaDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiarioDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmResumendiarioDetalle.Designer.cs">
+      <DependentUpon>frmResumendiarioDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmRutaArchivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmRutaArchivo.Designer.cs">
+      <DependentUpon>frmRutaArchivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarioCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarioCuentas.Designer.cs">
+      <DependentUpon>frmUsuarioCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmVisorSUNAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmVisorSUNAT.Designer.cs">
+      <DependentUpon>frmVisorSUNAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmSistema.Designer.cs">
+      <DependentUpon>frmSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Usuario\frmComunicacionbajaVisorSUNAT.resx">
+      <DependentUpon>frmComunicacionbajaVisorSUNAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmResumendiarioVisorSUNAT.resx">
+      <DependentUpon>frmResumendiarioVisorSUNAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmComunicacionbajaMotivo.resx">
+      <DependentUpon>frmComunicacionbajaMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmAcerca.resx">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmAlarma.resx">
+      <DependentUpon>frmAlarma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmBasedatosWeb.resx">
+      <DependentUpon>frmBasedatosWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmBasedatosLocal.resx">
+      <DependentUpon>frmBasedatosLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmComprobantedetalle.resx">
+      <DependentUpon>frmComprobantedetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmComunicacionbaja.resx">
+      <DependentUpon>frmComunicacionbaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmDeclarante.resx">
+      <DependentUpon>frmDeclarante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmDeclarantes.resx">
+      <DependentUpon>frmDeclarantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmResumendiario.resx">
+      <DependentUpon>frmResumendiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmComunicacionbajaDetalle.resx">
+      <DependentUpon>frmComunicacionbajaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmResumendiarioDetalle.resx">
+      <DependentUpon>frmResumendiarioDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmRutaArchivo.resx">
+      <DependentUpon>frmRutaArchivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmUsuarioCuentas.resx">
+      <DependentUpon>frmUsuarioCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmVisorSUNAT.resx">
+      <DependentUpon>frmVisorSUNAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmSistema.resx">
+      <DependentUpon>frmSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Usuario\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Base\dgrBase.cd" />
+    <None Include="FEI_1_TemporaryKey.pfx" />
+    <None Include="FEI_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SERCE.cd" />
+    <None Include="SERCE_TemporaryKey.pfx" />
+    <None Include="Usuario\cdgUsuario.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-contents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\network-server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-lock-screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-browser1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-reply-sender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-reply-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\format-justify-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FEI.ico" />
+    <Content Include="logo_fei_cuadro.ico" />
+    <Content Include="mail-send-receive.ico" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\Animation.gif" />
+    <Content Include="x64\SQLite.Interop.dll" />
+    <Content Include="x86\SQLite.Interop.dll" />
+    <None Include="Resources\mail-mark-not-junk.png" />
+    <None Include="Resources\edit-paste.png" />
+    <None Include="Resources\serce.ico" />
+    <None Include="Resources\system-users1.png" />
+    <None Include="Resources\preferences-desktop-wallpaper.png" />
+    <None Include="Resources\system-lock-screen1.png" />
+    <None Include="Resources\emblem-readonly1.png" />
+    <None Include="Resources\emblem-readonly.png" />
+    <None Include="Resources\appointment-new.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\System.Data.SQLite.Core.1.0.103\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.103\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.103\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.103\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

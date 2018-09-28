@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FEI.Extension.Datos.clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation _tipomonetario">
+    <Position X="0.5" Y="0.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AQQEAoAAAEEAAgAAEAAAAAAAAAAAAAAAACAAAAAAEAQ=</HashCode>
+      <FileName>Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation _tipomonetario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument_impuestosglobales">
+    <Position X="4.75" Y="1" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAQEAAhAAAAAAABAAAAEAAAACCAAAAAAgAAQ=</HashCode>
+      <FileName>Datos\clsEntityDocument_impuestosglobales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument_otrodocumentorelacionado">
+    <Position X="9" Y="1" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAgIAEAAgAAAAAAAAAAAAAAAAACAAAAAAAAAAQ=</HashCode>
+      <FileName>Datos\clsEntityDocument_otrodocumentorelacionado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument ">
+    <Position X="23" Y="2.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AQFAACAAAAEgAgAACAAAAAAAAgAAAAQKIBAAAAAACAY=</HashCode>
+      <FileName>Datos\clsEntityDocument .cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntidadCedetalle_descripcionitem">
+    <Position X="13.25" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAEAAgAAAAAAAEAAAAEAAAAAIAAAAAAAAAQ=</HashCode>
+      <FileName>Datos\clsEntidadCedetalle_descripcionitem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntidadCedetalle_informaciondeimpuesto">
+    <Position X="13.25" Y="4.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAgAAAEEEgAAAAAAAAAAAAAAAAAAIAAAAgIAAIQ=</HashCode>
+      <FileName>Datos\clsEntidadCedetalle_informaciondeimpuesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument">
+    <Position X="28.5" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>IAEAEQEIAIAsigAREAAAQgABRPEAWEiCAQCAAAAoAgQ=</HashCode>
+      <FileName>Datos\clsEntityDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation ">
+    <Position X="18.75" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAEAAgAAAAAAAAAAAAAAAAACAAAAAAAAAAQ=</HashCode>
+      <FileName>Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation .cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FEI.Extension.Datos.clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation _cualquiertipo">
+    <Position X="18.25" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAEAEgAAACAAAAAAAAAIAAAAAAAAIAAAAAQ=</HashCode>
+      <FileName>Datos\clsEntityDocument_UBLExtension_ExtensionContent_AdditionalInformation _cualquiertipo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,1999 @@
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\InicioSesion.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\MainWindow.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\App.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Activacion.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\BajaMotivo.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Declarante.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Licencia.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Loading.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Usuarios.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\UsuariosCuentas.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\ContasisALF.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Servicios.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\WpfAnimatedGif.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\WpfAnimatedGif.xml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\MainWindow.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Activacion.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\BajaMotivo.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Declarante.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\InicioSesion.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Licencia.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Loading.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\Usuarios.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\UsuariosCuentas.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI.Properties.Resources.resources
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI2.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Factura.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_General.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Factura_Alerta.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Factura_Sunat.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_General.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\styles\TabControlStyle.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\App.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\styles\DatePicker.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\AcercaDe.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\AcercaDe.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\FEI.exe.config
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\FEI.exe
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\FEI.pdb
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI_MarkupCompile.cache
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI_MarkupCompile.lref
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI.g.resources
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI.exe
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI.pdb
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\ActivacionManual.g.cs
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\ActivacionManual.baml
+C:\proyectos\kamaro\workspace\SERCE\FEI2\obj\Debug\FEI2.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\workspace\SERCE\FEI2\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\FEI.exe.config
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI.exe
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI.pdb
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\FEI.exe
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\FEI.pdb
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\WpfAnimatedGif.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\WpfAnimatedGif.xml
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI2.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Factura.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\styles\TabControlStyle.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\App.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\AcercaDe.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Activacion.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\ActivacionManual.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\BajaMotivo.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Declarante.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\InicioSesion.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Licencia.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Loading.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\MainWindow.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_General.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Usuarios.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\UsuariosCuentas.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\App.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI_MarkupCompile.cache
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI_MarkupCompile.lref
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\AcercaDe.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Activacion.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\ActivacionManual.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\BajaMotivo.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Declarante.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\InicioSesion.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Licencia.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Loading.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\MainWindow.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Factura_Alerta.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Factura_Sunat.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_General.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\styles\DatePicker.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\Usuarios.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\UsuariosCuentas.baml
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI.g.resources
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE\FEI2\obj\Debug\FEI2.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\x64\liblept172.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\x64\libtesseract304.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\x86\liblept172.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\x86\libtesseract304.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\FEI.exe.config
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\FEI.exe
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\FEI.pdb
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\DotNetZip.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\EntityFramework.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\FEI.Extension.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\itextsharp.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Servicios.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\System.Data.SQLite.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Tesseract.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\WpfAnimatedGif.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\FEI.Extension.pdb
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\DotNetZip.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\EntityFramework.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\itextsharp.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\System.Data.SQLite.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\Tesseract.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\WpfAnimatedGif.xml
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI2.csprojResolveAssemblyReference.cache
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\styles\TabControlStyle.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\AcercaDe.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Activacion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ActivacionManual.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Activacion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Declarante.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\FE.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Page1.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Page2.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RA.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RASunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RD.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Reportes.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\BajaMotivo.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Declarante.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\frmDetallePR.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\InicioSesion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Licencia.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Loading.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\MainWindow.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Listado.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_General.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\RutaArchivo.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Usuarios.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\UsuariosCuentas.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\presentacion.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\App.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI_Content.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI_MarkupCompile.cache
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI_MarkupCompile.lref
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\App.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\AcercaDe.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Activacion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ActivacionManual.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Activacion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Actualizacion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Declarante.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Dirigido.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\FE.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\FEAlerta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Page1.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Page2.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RA.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RASunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RD.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RDAlerta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RDSunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteBV.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteFE.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteRA.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\ReporteRD.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Reportes.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ayuda\Usuarios.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\BajaMotivo.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Declarante.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\frmDetalleComprobante.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\frmDetallePR.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\InicioSesion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Licencia.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Loading.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\MainWindow.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\CertificadoDigital.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Factura_Alerta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Factura_Sunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Listado.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Receptor_Compras.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Receptor_Validar.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Factura.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_General.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\RutaArchivo.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\styles\DatePicker.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\Usuarios.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\UsuariosCuentas.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\presentacion.baml
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI.g.resources
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI.Properties.Resources.resources
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI2.csproj.GenerateResource.Cache
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI.exe
+C:\proyectos\kamaro\SERCE_V2\FEI2\obj\Debug\FEI.pdb
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\x64\liblept172.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\x86\liblept172.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.exe.config
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.exe
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.pdb
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\DotNetZip.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\EntityFramework.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.Extension.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\itextsharp.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Servicios.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Tesseract.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.Extension.pdb
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\DotNetZip.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\EntityFramework.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\itextsharp.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\Tesseract.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI2.csprojResolveAssemblyReference.cache
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\AcercaDe.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Activacion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Declarante.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\InicioSesion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Licencia.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Loading.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\MainWindow.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Listado.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Usuarios.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\presentacion.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\App.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI_Content.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\App.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\AcercaDe.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Activacion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ActivacionManual.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\FE.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Page1.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Page2.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RA.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RD.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\BajaMotivo.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Declarante.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\frmDetallePR.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\InicioSesion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Licencia.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Loading.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\MainWindow.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Listado.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\RutaArchivo.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\styles\DatePicker.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\Usuarios.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\presentacion.baml
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI.g.resources
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI.exe
+D:\git\Betas\FEI\BetaFEI\FEI2\obj\Debug\FEI.pdb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\x64\liblept172.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\x86\liblept172.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.exe.config
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.exe
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.pdb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\DotNetZip.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\itextsharp.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Servicios.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Tesseract.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\DotNetZip.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\itextsharp.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\Tesseract.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI2.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\AcercaDe.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Activacion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Declarante.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\InicioSesion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Licencia.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Loading.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\MainWindow.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Listado.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Usuarios.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\presentacion.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\App.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI_Content.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\App.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\AcercaDe.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Activacion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ActivacionManual.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\FE.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Page1.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Page2.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RA.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RD.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\BajaMotivo.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Declarante.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\frmDetallePR.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\InicioSesion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Licencia.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Loading.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\MainWindow.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Listado.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\RutaArchivo.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\styles\DatePicker.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\Usuarios.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\presentacion.baml
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI.g.resources
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI.exe
+D:\Jorge Luis\Back End\ActualizarVersionUBL2\BetaFEI\FEI2\obj\Debug\FEI.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\x64\liblept172.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\x86\liblept172.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.exe.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\DotNetZip.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\itextsharp.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Servicios.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Tesseract.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\DotNetZip.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\itextsharp.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Tesseract.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI2.csprojAssemblyReference.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\AcercaDe.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Activacion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Declarante.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\InicioSesion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Licencia.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Loading.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\MainWindow.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Listado.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Usuarios.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\presentacion.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\App.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI_Content.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\App.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\AcercaDe.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Activacion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ActivacionManual.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\FE.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Page1.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Page2.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RA.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RD.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\BajaMotivo.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Declarante.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\frmDetallePR.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\InicioSesion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Licencia.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Loading.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\MainWindow.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Listado.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\RutaArchivo.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\styles\DatePicker.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\Usuarios.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\presentacion.baml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI.g.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI.exe
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\obj\Debug\FEI.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Models.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\StructureUBL.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Newtonsoft.Json.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Common.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Models.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\StructureUBL.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Newtonsoft.Json.xml
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\Common.pdb
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Extensions.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Formatting.dll
+D:\Jorge Luis\Back End\UpdateUBL21\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Primitives.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\x64\liblept172.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\x86\liblept172.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.exe.config
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.exe
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\DotNetZip.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\EntityFramework.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.Extension.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\itextsharp.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Models.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Servicios.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\StructureUBL.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Extensions.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Formatting.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Net.Http.Primitives.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Tesseract.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Newtonsoft.Json.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Common.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.Extension.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Models.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\StructureUBL.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\DotNetZip.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\EntityFramework.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\itextsharp.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Tesseract.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Newtonsoft.Json.xml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\Common.pdb
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI2.csprojResolveAssemblyReference.cache
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\AcercaDe.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Activacion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Declarante.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\InicioSesion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Licencia.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Loading.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\MainWindow.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Listado.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Usuarios.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\presentacion.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\App.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI_Content.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\App.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\AcercaDe.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Activacion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ActivacionManual.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\FE.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Page1.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Page2.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RA.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RD.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\BajaMotivo.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Declarante.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\frmDetallePR.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\InicioSesion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Licencia.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Loading.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\MainWindow.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Listado.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\RutaArchivo.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\styles\DatePicker.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\Usuarios.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\presentacion.baml
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI.g.resources
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI.exe
+D:\git\FEIUpdateUBL\actualizacionubl\FEI2\obj\Debug\FEI.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\x64\liblept172.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\x86\liblept172.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.exe.config
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.exe
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\DotNetZip.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\EntityFramework.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\itextsharp.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Models.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Servicios.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\StructureUBL.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Net.Http.Extensions.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Net.Http.Formatting.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Net.Http.Primitives.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Tesseract.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Newtonsoft.Json.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Common.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Models.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\StructureUBL.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\DotNetZip.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\EntityFramework.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\itextsharp.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Tesseract.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Newtonsoft.Json.xml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Common.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI2.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\AcercaDe.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Activacion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Declarante.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\InicioSesion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Licencia.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Loading.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\MainWindow.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Listado.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Usuarios.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\presentacion.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\App.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI_Content.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\App.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\AcercaDe.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Activacion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ActivacionManual.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\FE.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Page1.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Page2.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RA.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RD.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\BajaMotivo.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Declarante.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\frmDetallePR.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\InicioSesion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Licencia.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Loading.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\MainWindow.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Listado.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\RutaArchivo.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\styles\DatePicker.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\Usuarios.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\presentacion.baml
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI.g.resources
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI.exe
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\obj\Debug\FEI.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\GenerateXML.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\GenerateXML.pdb
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Security.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Ionic.Zip.dll
+D:\git\pruebaSimpleHTML\PruebaSimpleDeHTML\FEI2\bin\Debug\Security.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\x64\liblept172.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\x86\liblept172.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.exe.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.exe
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Common.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\DotNetZip.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\EntityFramework.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.Extension.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\GenerateXML.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\itextsharp.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Models.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Security.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Servicios.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\StructureUBL.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Net.Http.Extensions.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Net.Http.Formatting.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Net.Http.Primitives.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Tesseract.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Newtonsoft.Json.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Ionic.Zip.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.Extension.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Common.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\GenerateXML.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Models.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Security.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\StructureUBL.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\DotNetZip.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\EntityFramework.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\itextsharp.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Tesseract.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\Newtonsoft.Json.xml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI2.csprojAssemblyReference.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\AcercaDe.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Activacion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Declarante.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\InicioSesion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Licencia.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Loading.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\MainWindow.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Listado.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Usuarios.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\presentacion.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\App.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI_Content.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\App.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\AcercaDe.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Activacion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ActivacionManual.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\FE.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Page1.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Page2.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RA.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RD.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\BajaMotivo.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Declarante.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\frmDetallePR.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\InicioSesion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Licencia.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Loading.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\MainWindow.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Listado.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\RutaArchivo.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\styles\DatePicker.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\Usuarios.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\presentacion.baml
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI.g.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI.exe
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\obj\Debug\FEI.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\ServicesSunat.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\ServicesSunat.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\ServicesSunat.dll.config
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\BusinessLayer.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Web.Http.dll
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\BusinessLayer.pdb
+D:\git\pruebaSimpleHTML\pruebamuysimpledehtml\FEI2\bin\Debug\System.Web.Http.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\InternalDB.mdf
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\InternalDB_log.ldf
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\x64\liblept172.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\x64\libtesseract304.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\x86\liblept172.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\x86\libtesseract304.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.exe.config
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.exe
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\BusinessLayer.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Common.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\DataLayer.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\DotNetZip.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\EntityFramework.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.Extension.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\GenerateXML.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\itextsharp.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Models.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Security.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\ServicesSunat.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Servicios.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\StructureUBL.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Data.SQLite.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Net.Http.Extensions.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Net.Http.Formatting.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Net.Http.Primitives.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Tesseract.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\WpfAnimatedGif.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.DataGrid.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Newtonsoft.Json.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Ionic.Zip.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.Extension.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\FEI.Extension.dll.config
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\BusinessLayer.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Common.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\DataLayer.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\DataLayer.dll.config
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\GenerateXML.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Models.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Security.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\ServicesSunat.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\ServicesSunat.dll.config
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\StructureUBL.pdb
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\DotNetZip.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\EntityFramework.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\itextsharp.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Data.SQLite.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\System.Data.SQLite.dll.config
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Tesseract.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\WpfAnimatedGif.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\Newtonsoft.Json.xml
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csprojAssemblyReference.cache
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\styles\TabControlStyle.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Acceso.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\AcercaDe.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Activacion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ActivacionManual.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Activacion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Actualizacion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\AyudaPrincipal.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Declarante.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Dirigido.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\FE.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\FEAlerta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Formasyplazos.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\GenerarBackup.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\InicioSesionAyuda.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\MotivoRechazo.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\OpcionesPrograma.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Page1.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Page2.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\PermisosUsuario.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RA.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RASunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RD.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RDAlerta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RDSunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RegistroLocal.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RegistroWeb.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteBV.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteFE.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteGeneral.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteRA.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteRD.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Reportes.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RestaurarBackup.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RutaArchivos.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Usuarios.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\BajaMotivo.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ConfigurarConexionSQL.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\CustomDialog\CustomDialog.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Declarante.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\frmDetalleComprobante.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\frmDetallePR.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\InicioSesion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Licencia.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Loading.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\MainWindow.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Factura_Alerta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Factura_Sunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\FormPruebas.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Listado.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Receptor_Compras.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Receptor_Validar.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Boleta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Factura.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_General.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Resumen.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Retencion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Alerta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Generar.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Sunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Retencion_Alerta.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Retencion_Sunat.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ReversionSunat_Retencion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ProgressDialog\ProgressWindow.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\RutaArchivo.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Usuarios.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\UsuariosCuentas.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\presentacion.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\App.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI_Content.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI_MarkupCompile.cache
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI_MarkupCompile.lref
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\App.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Acceso.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\AcercaDe.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Activacion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ActivacionManual.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Activacion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Actualizacion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\AyudaPrincipal.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Declarante.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Dirigido.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\FE.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\FEAlerta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Formasyplazos.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\GenerarBackup.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\InicioSesionAyuda.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\MotivoRechazo.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\OpcionesPrograma.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Page1.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Page2.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\PermisosUsuario.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RA.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RASunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RD.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RDAlerta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RDSunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RegistroLocal.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RegistroWeb.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteBV.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteFE.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteGeneral.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteRA.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\ReporteRD.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Reportes.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RestaurarBackup.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\RutaArchivos.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ayuda\Usuarios.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\BajaMotivo.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ConfigurarConexionSQL.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\CustomDialog\CustomDialog.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Declarante.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\frmDetalleComprobante.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\frmDetallePR.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\InicioSesion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Licencia.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Loading.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\MainWindow.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\CertificadoDigital.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_declarante.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_permisos.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Factura_Alerta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Factura_Sunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\FormPruebas.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Listado.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Receptor_Compras.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Receptor_Validar.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Boleta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_ComunicacionBaja.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Factura.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_General.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Resumen.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Reporte_Retencion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Alerta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Generar.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ResumenDiario_Sunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Retencion_Alerta.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Retencion_Sunat.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ReversionGenerar_Retencion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\ReversionSunat_Retencion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Utilitario_GeneracionBackup.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\pages\Utilitario_RestauracionBackup.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\ProgressDialog\ProgressWindow.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\RutaArchivo.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\styles\DatePicker.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\Usuarios.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\UsuariosCuentas.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\presentacion.baml
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.g.resources
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.Properties.Resources.resources
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csproj.GenerateResource.cache
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csproj.CopyComplete
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.exe
+D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.pdb
