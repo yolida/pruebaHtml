@@ -15,7 +15,7 @@ namespace BusinessLayer
         public EnviarSunat()
         {
             Serializador serializador   =   new Serializador();
-            ISerializador _serializador =   (ISerializador)serializador;
+            ISerializador _serializador =   (ISerializador)serializador;    // Vefr
 
             ServicioSunatDocumentos servicioSunatDocumentos     =   new ServicioSunatDocumentos();
             IServicioSunatDocumentos _servicioSunatDocumentos   =   (IServicioSunatDocumentos)servicioSunatDocumentos;

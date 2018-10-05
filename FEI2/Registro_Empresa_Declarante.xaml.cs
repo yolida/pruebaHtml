@@ -55,8 +55,23 @@ namespace FEI
                     {
                         if (empresaDeclarante._Selectable == true)
                         {
-                            Declarante declarante   =   new Declarante(empresaDeclarante._IdEmisor, empresaDeclarante._IdDatosFox, data_Usuario);
-                            declarante.Show();
+                            DataTable dataTable     =   readGeneralData.GetDataTable("[dbo].[Verify_User_Empresa]", "@IdDatosFox", 
+                                empresaDeclarante._IdDatosFox, "@IdUsuario", data_Usuario.IdUsuario);
+
+                            if (dataTable.Rows.Count > 0)
+                            {
+                                MessageBox.Show(
+                                    $" Ya has registrado datos de acceso a Sunat con esta empresa, y con este mismo usuario: {data_Usuario.IdUsuario}, " +
+                                    $" en caso de querer actualizar estos datos, debe hacerlo directamente en la opción de 'Configuración de sistema ->" +
+                                    $" Información del declarante' seleccione la empresa, y pulse 'Actualizar accesos sunat'",
+                                    "Duplicado de empresa", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            }
+                            else
+                            {
+                                Declarante declarante   =   new Declarante(empresaDeclarante._IdEmisor, empresaDeclarante._IdDatosFox, data_Usuario);
+                                declarante.Show();
+                            }
+                            break;  // Bandera al encontrar la empresa seleccionada
                         }
                     }
                     break;
@@ -71,7 +86,7 @@ namespace FEI
             dgEmpresas.ItemsSource  =   null;
             dgEmpresas.Items.Clear();
             
-            DataTable dataTable =   readGeneralData.GetDataTable("[sysfox].[Read_List_DatosFox]");
+            DataTable dataTable =   readGeneralData.GetDataTable("[sysfox].[Read_List_DatosFox]");  // Obtener SOLO la lista de empresas de DatosFox
             DataRow row;
 
             EmpresaDeclarante empresaDeclarante;
@@ -99,18 +114,10 @@ namespace FEI
 
         private void btnSalir_Click(object sender, RoutedEventArgs e) => Close();
 
-        private void chbDatosEmisor_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void chbDatosEmisor_Unchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            dgEmpresas.ItemsSource = null;
+            dgEmpresas.Items.Clear();
             dgEmpresas.ItemsSource = GetEmpresas();
         }
 
@@ -120,7 +127,6 @@ namespace FEI
             DataGridRow dataGridRow             =   VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
             EmpresaDeclarante empresaDeclarante =   (EmpresaDeclarante)dataGridRow.DataContext;
             empresaDeclarante._Selectable       =   true;
-            e.Handled                           =   true;
         }
 
         private void chbEmpresaPorCelda_Unchecked(object sender, RoutedEventArgs e)
@@ -129,7 +135,6 @@ namespace FEI
             DataGridRow dataGridRow             =   VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
             EmpresaDeclarante empresaDeclarante =   (EmpresaDeclarante)dataGridRow.DataContext;
             empresaDeclarante._Selectable       =   false;
-            e.Handled                           =   true;
         }
         private void Page_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {

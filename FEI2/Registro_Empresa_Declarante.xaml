@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
-        Title="Registro de empresa declarante" Height="550" Width="1000" WindowStartupLocation="CenterScreen" Loaded="Page_Loaded" KeyDown="Page_KeyDown">
+        Title="Registro de empresa declarante" WindowStartupLocation="CenterScreen" Loaded="Page_Loaded" KeyDown="Page_KeyDown">
     <Window.Resources>
         <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -62,7 +62,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" x:Name="label" Content="EMPRESAS" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Calibri"  Background="#dbeaf9"/>
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" x:Name="label" Content="Empresas" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Calibri"  Background="#dbeaf9"/>
         <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -96,9 +96,6 @@
                         </DataGrid.Resources>
                         <DataGrid.Columns>
                             <DataGridTemplateColumn CanUserReorder="False" CanUserResize="False">
-                                <DataGridTemplateColumn.Header>
-                                    <CheckBox HorizontalAlignment="Center" x:Name="chbDatosEmisor" Checked="chbDatosEmisor_Checked"  Unchecked="chbDatosEmisor_Unchecked"/>
-                                </DataGridTemplateColumn.Header>
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <CheckBox Name="chbEmpresaPorCelda"  IsChecked="{Binding Path=_Selectable,Mode=TwoWay}" Margin="0 2 0 0" Checked="chbEmpresaPorCelda_Checked" Unchecked="chbEmpresaPorCelda_Unchecked" />
@@ -153,20 +150,32 @@
                             </DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <DockPanel Margin="0,20,0,0" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.ColumnSpan="2">
-                        <Button Margin="0,0,0,0" x:Name="btnSalir" HorizontalAlignment="Right" HorizontalContentAlignment="Right"  VerticalAlignment="Bottom" Click="btnSalir_Click" >
-                            <StackPanel Orientation="Horizontal">
-                                <Image x:Name="imgSalir" Source="/FEI;component/images/close.png" Height="18" Width="20" />
-                                <Label x:Name="txtSalir" Content="Salir"/>
-                            </StackPanel>
-                        </Button>
-                        <Button Margin="0,0,0,0" x:Name="btnSelecionar" HorizontalAlignment="Right" HorizontalContentAlignment="Right"  VerticalAlignment="Bottom" Click="btnSelecionar_Click" >
-                            <StackPanel Orientation="Horizontal">
-                                <Image x:Name="imageNuevo" Source="/FEI;component/images/add-list.png" Height="18" Width="20" />
-                                <Label x:Name="txtSelecionar" Content="Seleccionar"/>
-                            </StackPanel>
-                        </Button>
-                    </DockPanel>
+                    <Grid  Grid.Column="0" Grid.Row="2" Margin="40,20,40,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <DockPanel Grid.Column="1" Grid.Row="0">
+                            <Button Margin="0,0,0,0" x:Name="btnSalir" HorizontalAlignment="Center" Click="btnSalir_Click" MinWidth="150" VerticalAlignment="Bottom"   >
+                                <StackPanel Orientation="Horizontal">
+                                    <Image  Source="/FEI;component/images/close.png" Height="18" Width="26" />
+                                    <Label  Content="Cerrar"/>
+                                </StackPanel>
+                            </Button>
+                        </DockPanel>
+                        <DockPanel Grid.Column="2" Grid.Row="0">
+                            <Button Margin="0,0,0,0" x:Name="btnSelecionar" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="150"  Click="btnSelecionar_Click" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Image x:Name="image" Source="/FEI;component/images/add_declarante.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
+                                    <Label x:Name="TextBoton" Content="Seleccionar"/>
+                                </StackPanel>
+                            </Button>
+                        </DockPanel>
+                    </Grid>
                 </Grid>
             </Border>
 

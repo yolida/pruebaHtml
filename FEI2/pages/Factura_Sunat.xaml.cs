@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using DataLayer.CRUD;
 using FEI.ayuda;
 using FEI.Base;
 using FEI.CustomDialog;
@@ -12,10 +13,12 @@ using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace FEI.pages
 {
@@ -31,6 +34,7 @@ namespace FEI.pages
         clsEntityDatabaseLocal localDB;
 
         ReadGeneralData readGeneralData =   new ReadGeneralData();
+        private readonly IData_Documentos _Documentos;
         private Window padre;
 
         public Factura_Sunat(Window parent,clsEntityDatabaseLocal local)
@@ -38,12 +42,16 @@ namespace FEI.pages
             InitializeComponent();
             padre = parent;
             localDB = local;
+            Data_Documentos documentos  =   new Data_Documentos();
+            _Documentos = (IData_Documentos)documentos;
         }
         //Evento de carga de la ventana principal.
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
+                Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+
                 DataTable dataTable =   readGeneralData.GetDataTable("[dbo].[Read_TipoDocumentos]");
                 var items           =   (dataTable as IListSource).GetList();
                 lstTipoComprobante.ItemsSource          =   items;
@@ -53,12 +61,47 @@ namespace FEI.pages
 
                 datePick_inicio.Text = DateTime.Now.Date.ToString();
                 datePick_fin.Text = DateTime.Now.Date.ToString();
+
+                LoadGrid();
             }
             catch (Exception)
             {
                 System.Windows.MessageBox.Show("La base de datos ha sido alterada, contacte con soporte.", "Base de datos alterada", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            finally
+            {
+                Mouse.OverrideCursor = null;
+            }
         }
+        public async void LoadGrid()
+        {
+            dgDocumentos.ItemsSource    =   null;
+            dgDocumentos.Items.Clear();
+
+            //Data_Documentos data = new Data_Documentos();
+            //List<Data_Documentos> data_Documentos = data.pruebaSimple(DateTime.Parse(datePick_inicio.SelectedDate.ToString()), DateTime.Parse(datePick_fin.SelectedDate.ToString()));
+
+            dgDocumentos.ItemsSource    =   await GetDocumentos();
+            //dgDocumentos.ItemsSource = data_Documentos;
+        }
+
+        public async Task<List<Data_Documentos>> GetDocumentos()
+        {
+            var listDocumentos = new List<Data_Documentos>();
+            try
+            {
+                listDocumentos = await _Documentos.GetListFiltered(
+                    DateTime.Parse(datePick_inicio.SelectedDate.ToString()), DateTime.Parse(datePick_fin.SelectedDate.ToString()));
+            }
+            catch (Exception)
+            {
+                listDocumentos = new List<Data_Documentos>();
+            }
+
+            return listDocumentos;
+        }
+
+
         private void AddBlackOutDates(DatePicker dp, int offset)
         {
             Dictionary<CalendarDateRange, string> blackoutDatesTextLookup = new Dictionary<CalendarDateRange, string>();
@@ -73,8 +116,8 @@ namespace FEI.pages
         //Metodo para cargar la grilla del listado de comprobantes.
         private void cs_pxCargarDgvComprobanteselectronicos(string tipo, string fechainicio, string fechafin)
         {
-            dgComprobantesFactura.ItemsSource = null;
-            dgComprobantesFactura.Items.Clear();
+            dgDocumentos.ItemsSource = null;
+            dgDocumentos.Items.Clear();
             //Obtener los registros para facturas.
 
             //clsBaseLog.cs_pxRegistarAdd(localDB.cs_prConexioncadenabasedatos()+" "+fechainicio +" "+fechafin+" " +tipo );
@@ -109,7 +152,7 @@ namespace FEI.pages
                     lista_reporte.Add(itemRow);
                 }
             }
-            dgComprobantesFactura.ItemsSource = lista_reporte;
+            dgDocumentos.ItemsSource = lista_reporte;
         }
         //Evento check para cada item del listado.
         private void chkDiscontinue_Checked(object sender, RoutedEventArgs e)
@@ -144,8 +187,9 @@ namespace FEI.pages
         //Evento click para consulta sobre filtro.
         private void btnConsultar_Click(object sender, RoutedEventArgs e)
         {
-            refrescarGrilla();
+            LoadGrid();
         }
+        
         private void refrescarGrilla()
         {
             cbpTipoComprobante = (ComboBoxPares)lstTipoComprobante.SelectedItem;
@@ -258,7 +302,7 @@ namespace FEI.pages
         {
             try
             {
-                ReporteDocumento item = (ReporteDocumento)dgComprobantesFactura.SelectedItem;
+                ReporteDocumento item = (ReporteDocumento)dgDocumentos.SelectedItem;
                 if (item != null)
                 {
                     frmDetalleComprobante Formulario = new frmDetalleComprobante(item.Id,localDB);
@@ -280,7 +324,7 @@ namespace FEI.pages
         {
             try
             {
-                ReporteDocumento item = (ReporteDocumento)dgComprobantesFactura.SelectedItem;
+                ReporteDocumento item = (ReporteDocumento)dgDocumentos.SelectedItem;
                 if (item != null)
                 {
                     SaveFileDialog sfdDescargar = new SaveFileDialog();
@@ -333,7 +377,7 @@ namespace FEI.pages
         {
             try
             {
-                ReporteDocumento item = (ReporteDocumento)dgComprobantesFactura.SelectedItem;
+                ReporteDocumento item = (ReporteDocumento)dgDocumentos.SelectedItem;
                 if (item != null)
                 {
                     clsEntityDocument cabecera = new clsEntityDocument(localDB).cs_fxObtenerUnoPorId(item.Id);
@@ -374,9 +418,9 @@ namespace FEI.pages
                     {
                         item.Check = true;
                     }
-                    dgComprobantesFactura.ItemsSource = null;
-                    dgComprobantesFactura.Items.Clear();
-                    dgComprobantesFactura.ItemsSource = lista_reporte;
+                    dgDocumentos.ItemsSource = null;
+                    dgDocumentos.Items.Clear();
+                    dgDocumentos.ItemsSource = lista_reporte;
                 }
             }
             catch
@@ -398,9 +442,9 @@ namespace FEI.pages
                     {
                         item.Check = false;
                     }
-                    dgComprobantesFactura.ItemsSource = null;
-                    dgComprobantesFactura.Items.Clear();
-                    dgComprobantesFactura.ItemsSource = lista_reporte;
+                    dgDocumentos.ItemsSource = null;
+                    dgDocumentos.Items.Clear();
+                    dgDocumentos.ItemsSource = lista_reporte;
                 }
             }
             catch

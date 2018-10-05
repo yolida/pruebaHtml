@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
-        Title="Inicio de Sesión" Height="380" Width="320" MinHeight="390" MinWidth="320" MaxHeight="400"  Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Icon="images/fei_cuadro.ico" Loaded="Window_Loaded"  Visibility="Visible">
+        Title="Inicio de Sesión" Width="420" Height="400" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Icon="images/fei_cuadro.ico" Loaded="Window_Loaded"  Visibility="Visible">
     <Border  CornerRadius="10,10,10,10" BorderBrush="#FF000000" BorderThickness="0,0,0,0">
         <Border.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -14,49 +14,61 @@
             </LinearGradientBrush>
 
         </Border.Background>
-        <Grid Height="auto" VerticalAlignment="Top">
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="130"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
             <Image  x:Name="imageIngresar"  Margin="10,20,10,20" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Source="images/fei_cuadro_logo.png" Stretch="Fill"/>
             <Label Padding="4,0,0,0" FontWeight="Bold"  Margin="16,0,0,0" Grid.Column="0" Grid.Row="1" Content="Empresa:" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <ComboBox x:Name="lstEmpresas" Grid.Column="1" Grid.Row="1" Margin="10,7,20,0" TextBlock.TextAlignment="Center" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Height="27" VerticalAlignment="Top">
+            <ComboBox x:Name="lstEmpresas" Grid.Column="1" Grid.Row="1" Padding="5" Margin="10" TextBlock.TextAlignment="Center" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" VerticalAlignment="Center">
                 <ComboBoxItem IsSelected="True">Sin empresa</ComboBoxItem>
             </ComboBox>
             <Label Padding="4,0,0,0" FontWeight="Bold"  Margin="16,0,0,0" Grid.Column="0" Grid.Row="2" Content="Usuario:" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <TextBox  x:Name="txtUsuario" KeyUp="txtUsuario_KeyUp" Grid.Column="1" Grid.Row="2" Margin="10,7,20,7"  TextAlignment="Center"  VerticalContentAlignment="Center"  TextBlock.FontWeight="Bold" />
+            <TextBox  x:Name="txtUsuario" KeyUp="txtUsuario_KeyUp" Grid.Column="1" Grid.Row="2" Padding="2" Margin="10"  TextAlignment="Center"  VerticalContentAlignment="Center"  TextBlock.FontWeight="Bold" />
             <Label Padding="4,0,0,0" FontWeight="Bold"  Margin="16,0,0,0" Grid.Column="0" Grid.Row="3" Content="Contraseña:"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-            <PasswordBox   Grid.Column="1" Grid.Row="3" x:Name="txtPassword" Background="WhiteSmoke" Margin="10,7,20,7"   TextBlock.TextAlignment="Center" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold" KeyUp="txtPassword_KeyUp"/>
-            <DockPanel Grid.ColumnSpan="3" Grid.Row="4" VerticalAlignment="Bottom" >
-                <Button Grid.Column="0" Margin="10" x:Name="btnCerrar" HorizontalAlignment="Center"   VerticalAlignment="Center" Click="btnCerrar_Click" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image x:Name="imsage" Source="images/login-exit.png" Height="15" Width="20" />
-                        <Label x:Name="TexstBoton" Content="Salir"/>
-                    </StackPanel>
-                </Button>
-                <Button Grid.Column="2" Margin="10" x:Name="btnNuevo" HorizontalAlignment="Center"   VerticalAlignment="Top" Click="btnNuevo_Click" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image x:Name="imgBtnNuevo" Source="images/login-incio.png" Stretch="Fill" Height="15" Width="20"/>
-                        <Label x:Name="lblBtnNuevo" Content="Nuevo usuario"/>
-                    </StackPanel>
-                </Button>
-                <Button Grid.Column="1" Margin="10" x:Name="btnIngresar" HorizontalAlignment="Center"  VerticalAlignment="Top" Click="btnIngresar_Click" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image x:Name="imageButton" Source="images/login-incio.png" Stretch="Fill" Height="15" Width="20"/>
-                        <Label x:Name="TextBoton" Content="Ingresar"/>
-                    </StackPanel>
-                </Button>
-            </DockPanel>
+            <PasswordBox   Grid.Column="1" Grid.Row="3" x:Name="txtPassword" Background="WhiteSmoke" Padding="2" Margin="10"   TextBlock.TextAlignment="Center" VerticalContentAlignment="Center" KeyUp="txtPassword_KeyUp"/>
+            <Grid Grid.ColumnSpan="2" Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="0" Grid.Row="0">
+                    <Button Grid.Column="0" x:Name="btnCerrar" MinWidth="120" Padding="5" HorizontalAlignment="Center"   VerticalAlignment="top" Click="btnCerrar_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="imsage" Source="images/login-exit.png" Height="15" Width="20" />
+                            <Label x:Name="TexstBoton" Content="Salir"/>
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+                <DockPanel Grid.Column="1" Grid.Row="0">
+                    <Button Grid.Column="2" Padding="5" x:Name="btnNuevo" MinWidth="120" HorizontalAlignment="Center"   VerticalAlignment="Top" Click="btnNuevo_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="imgBtnNuevo" Source="images/login-incio.png" Stretch="Fill" Height="15" Width="20"/>
+                            <Label x:Name="lblBtnNuevo" Content="Nuevo usuario"/>
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+                <DockPanel Grid.Column="2" Grid.Row="0">
+                    <Button Grid.Column="1" Padding="5" x:Name="btnIngresar" MinWidth="120" HorizontalAlignment="Center"  VerticalAlignment="Top" Click="btnIngresar_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="imageButton" Source="images/login-incio.png" Stretch="Fill" Height="15" Width="20"/>
+                            <Label x:Name="TextBoton" Content="Ingresar"/>
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+            </Grid>
             <Label x:Name="Informacion"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Content="Iniciando sesión..." HorizontalContentAlignment="Center" Visibility="Hidden" />
         </Grid>
     </Border>
@@ -218,24 +230,6 @@
                             </Popup>
 
                         </Grid>
-                        <!--</Border>-->
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="HasItems" Value="false">
-                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
-                            </Trigger>
-                            <Trigger Property="IsGrouping" Value="true">
-                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
-                            </Trigger>
-                            <!-- <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
-                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
-                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
-                            </Trigger>-->
-                            <Trigger Property="IsEditable" Value="true">
-                                <Setter Property="IsTabStop" Value="false"/>
-                                <Setter TargetName="PART_EditableTextBox" Property="Visibility"    Value="Visible"/>
-                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>

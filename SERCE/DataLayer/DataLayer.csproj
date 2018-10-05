@@ -51,6 +51,7 @@
     <Compile Include="CRUD\Data_SubTotalImpuesto.cs" />
     <Compile Include="CRUD\Data_TerminosEntrega.cs" />
     <Compile Include="CRUD\Data_TotalImpuesto.cs" />
+    <Compile Include="CRUD\IData_Documentos.cs" />
     <Compile Include="CRUD\InternalAccess.cs" />
     <Compile Include="CRUD\Data_Usuario.cs" />
     <Compile Include="InternalConnection.cs" />

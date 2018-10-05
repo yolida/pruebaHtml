@@ -458,10 +458,11 @@ namespace StructureUBL.EstandarUbl
                             writer.WriteStartElement("cbc:ID");
                             {
                                 writer.WriteAttributeString("schemeID", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeId);
-                                writer.WriteAttributeString("schemeName", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeId);
-                                writer.WriteAttributeString("schemeAgencyName	", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeId);
-                                writer.WriteAttributeString("schemeURI	", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeId);
+                                writer.WriteAttributeString("schemeName", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeName);
+                                writer.WriteAttributeString("schemeAgencyName	", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeAgencyName);
+                                writer.WriteAttributeString("schemeURI	", AccountingSupplierParty.Party.PartyIdentification.Id.SchemeURI);
                                 writer.WriteValue(AccountingSupplierParty.Party.PartyIdentification.Id.Value); // Número de RUC
+                                //writer.WriteCData(AccountingSupplierParty.Party.PartyIdentification.Id.Value);
                             }
                             writer.WriteEndElement();
                         }

@@ -66,10 +66,25 @@ namespace FEI.pages
             }
         }
 
-        private void btnEditar_Click(object sender, RoutedEventArgs e)
+
+        private void btnElimnar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnUpdateEmisor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUpdateAccesoSunat_Click(object sender, RoutedEventArgs e)
         {
 
         }
     }
-
 }

@@ -63,57 +63,75 @@ namespace DataLayer.CRUD
         {
             string storedProcedure  = "[dbo].[Create_AccesosSunat]";
             Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
-            
-            SqlParameter paramCertificadoDigital  = new SqlParameter();
-            paramCertificadoDigital.SqlDbType     = SqlDbType.NVarChar;
-            paramCertificadoDigital.ParameterName = "@CertificadoDigital";
-            paramCertificadoDigital.Value         = CertificadoDigital;
+            SqlCommand sqlCommand   = new SqlCommand
+            {
+                CommandText = storedProcedure,
+                CommandType = CommandType.StoredProcedure,
+                Connection  = connection.connectionString
+            };
+
+            SqlParameter paramCertificadoDigital = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@CertificadoDigital",
+                Value           = CertificadoDigital
+            };
             sqlCommand.Parameters.Add(paramCertificadoDigital);
 
-            SqlParameter paramClaveCertificado  = new SqlParameter();
-            paramClaveCertificado.SqlDbType     = SqlDbType.NVarChar;
-            paramClaveCertificado.ParameterName = "@ClaveCertificado";
-            paramClaveCertificado.Value         = ClaveCertificado;
+            SqlParameter paramClaveCertificado  = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@ClaveCertificado",
+                Value           = ClaveCertificado
+            };
             sqlCommand.Parameters.Add(paramClaveCertificado);
 
-            SqlParameter paramUsuarioSol    = new SqlParameter();
-            paramUsuarioSol.SqlDbType       = SqlDbType.NVarChar;
-            paramUsuarioSol.ParameterName   = "@UsuarioSol";
-            paramUsuarioSol.Value           = UsuarioSol;
+            SqlParameter paramUsuarioSol        = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@UsuarioSol",
+                Value           = UsuarioSol
+            };
             sqlCommand.Parameters.Add(paramUsuarioSol);
 
-            SqlParameter paramClaveSol      = new SqlParameter();
-            paramClaveSol.SqlDbType         = SqlDbType.NVarChar;
-            paramClaveSol.ParameterName     = "@ClaveSol";
-            paramClaveSol.Value             = ClaveSol;
+            SqlParameter paramClaveSol          = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@ClaveSol",
+                Value           = ClaveSol
+            };
             sqlCommand.Parameters.Add(paramClaveSol);
 
-            SqlParameter paramPassContrasenia   = new SqlParameter();
-            paramPassContrasenia.SqlDbType      = SqlDbType.NVarChar;
-            paramPassContrasenia.ParameterName  = "@PassContrasenia";
-            paramPassContrasenia.Value          = PassContrasenia;
+            SqlParameter paramPassContrasenia   = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@PassContrasenia",
+                Value           = PassContrasenia
+            };
             sqlCommand.Parameters.Add(paramPassContrasenia);
 
-            SqlParameter paramIdUsuario         = new SqlParameter();
-            paramIdUsuario.SqlDbType            = SqlDbType.NVarChar;
-            paramIdUsuario.ParameterName        = "@IdUsuario";
-            paramIdUsuario.Value                = IdUsuario;
+            SqlParameter paramIdUsuario         = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = "@IdUsuario",
+                Value           = IdUsuario
+            };
             sqlCommand.Parameters.Add(paramIdUsuario);
 
-            SqlParameter paramIdDatosFox  = new SqlParameter();
-            paramIdDatosFox.SqlDbType     = SqlDbType.SmallInt;
-            paramIdDatosFox.ParameterName = "@IdDatosFox";
-            paramIdDatosFox.Value         = IdDatosFox;
+            SqlParameter paramIdDatosFox        = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.SmallInt,
+                ParameterName   = "@IdDatosFox",
+                Value           = IdDatosFox
+            };
             sqlCommand.Parameters.Add(paramIdDatosFox);
 
-            SqlParameter paramComprobacion  = new SqlParameter();
-            paramComprobacion.Direction     = ParameterDirection.Output;
-            paramComprobacion.SqlDbType     = SqlDbType.Bit;
-            paramComprobacion.ParameterName = "@Validation";
+            SqlParameter paramComprobacion      = new SqlParameter
+            {
+                Direction       = ParameterDirection.Output,
+                SqlDbType       = SqlDbType.Bit,
+                ParameterName   = "@Validation"
+            };
             sqlCommand.Parameters.Add(paramComprobacion);
             
             connection.Connect();

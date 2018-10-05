@@ -58,7 +58,7 @@ namespace FEI
                 txtPassword.Focus();
             else
             {
-                DataTable dataTable = readGeneralData.GetDataTable("[dbo].[Read_List_Empresas_By_Usuario]", "@IdUsuario", txtUsuario.Text.ToString().Trim());
+                DataTable dataTable = readGeneralData.GetDataTable("[dbo].[Read_User_Empresa]", "@IdUsuario", txtUsuario.Text.ToString().Trim());
 
                 lstEmpresas.ItemsSource         = null;
                 lstEmpresas.Items.Clear();

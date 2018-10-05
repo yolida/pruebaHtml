@@ -37,28 +37,24 @@ namespace FEI
                     CertificadoDigital  =   txtCertificadoDigital.Text.ToString().Trim(),
                     ClaveCertificado    =   txtCertificadoDigitalClave.Password.ToString().Trim(),
                     UsuarioSol          =   txtUsuarioSol.Text.ToString().Trim(),
-                    ClaveSol            =   txtClaveSol.Password.ToString().Trim()
+                    ClaveSol            =   txtClaveSol.Password.ToString().Trim(),
+                    IdDatosFox          =   Id_DatosFox,
+                    IdUsuario           =   data_Usuario.IdUsuario
                 };
+
                 if (data_AccesosSunat.Create_AccesosSunat())
                 {
-                    Data_Usuario registroUsuario   =   new Data_Usuario() { IdUsuario  = data_Usuario.IdUsuario, IdDatosFox = Id_DatosFox };
-
-                    if (registroUsuario.Create_User_Empresa())
+                    MessageBox.Show("Los datos se han registrado con éxito, para ver los cambios es necesario reiniciar FEICONT.", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    try
                     {
-                        MessageBox.Show("Los datos se han registrado con éxito, para ver los cambios es necesario reiniciar FEICONT.", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
-                        try
-                        {
-                            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-                            Application.Current.Shutdown();
-                            //System.Windows.Forms.Application.Restart();
-                        }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Tenemos problemas para reiniciar, por favor cierre y vuelva a abrir la aplicación.", "Es necesario reiniciar la aplicación", MessageBoxButton.OK, MessageBoxImage.Information);
-                        }
+                        System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                        Application.Current.Shutdown();
+                        //System.Windows.Forms.Application.Restart();
                     }
-                    else
-                        MessageBox.Show("Ha ocurrido un problema en el registro de datos usuario_empresa, contacte con soporte.", "Registro fallido", MessageBoxButton.OK, MessageBoxImage.Error);
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Tenemos problemas para reiniciar, por favor cierre y vuelva a abrir la aplicación.", "Es necesario reiniciar la aplicación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
                 else
                     MessageBox.Show("Ha ocurrido un problema en el registro de datos, contacte con soporte.", "Registro fallido", MessageBoxButton.OK, MessageBoxImage.Error);

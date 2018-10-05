@@ -41,23 +41,35 @@ namespace DataLayer
             return dataTable;
         }
 
-        public DataTable GetDataTable(string storedProcedure, string nameColumn1, Int16 id1)
+        public DataTable GetDataTable(string storedProcedure, string nameColumn1, Int16 id1, string nameColumn2, string id2)
         {
             DataTable dataTable             = new DataTable();
             Connection connection           = new Connection();
-            SqlCommand sqlCommand           = new SqlCommand();
             SqlDataAdapter sqlDataAdapter   = new SqlDataAdapter();
-            sqlCommand.CommandText          = storedProcedure;
-            sqlCommand.CommandType          = CommandType.StoredProcedure;
-            sqlCommand.Connection           = connection.connectionString;
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                CommandText     = storedProcedure,
+                CommandType     = CommandType.StoredProcedure,
+                Connection      = connection.connectionString
+            };
             sqlDataAdapter.SelectCommand    = sqlCommand;
 
-            SqlParameter parameter1     = new SqlParameter();
-            parameter1.SqlDbType        = SqlDbType.SmallInt;
-            parameter1.ParameterName    = nameColumn1;
-            parameter1.Value            = id1;
-
+            SqlParameter parameter1 = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.SmallInt,
+                ParameterName   = nameColumn1,
+                Value           = id1
+            };
             sqlCommand.Parameters.Add(parameter1);
+
+            SqlParameter parameter2 = new SqlParameter
+            {
+                SqlDbType       = SqlDbType.NVarChar,
+                ParameterName   = nameColumn2,
+                Value           = id2
+            };
+            sqlCommand.Parameters.Add(parameter2);
+
             connection.Connect();
             sqlDataAdapter.Fill(dataTable);
             connection.Disconnect();
@@ -69,11 +81,13 @@ namespace DataLayer
         {
             DataTable dataTable             = new DataTable();
             Connection connection           = new Connection();
-            SqlCommand sqlCommand           = new SqlCommand();
             SqlDataAdapter sqlDataAdapter   = new SqlDataAdapter();
-            sqlCommand.CommandText          = storedProcedure;
-            sqlCommand.CommandType          = CommandType.StoredProcedure;
-            sqlCommand.Connection           = connection.connectionString;
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                CommandText = storedProcedure,
+                CommandType = CommandType.StoredProcedure,
+                Connection  = connection.connectionString
+            };
             sqlDataAdapter.SelectCommand    = sqlCommand;
 
             SqlParameter parameter1         = new SqlParameter();
@@ -167,40 +181,6 @@ namespace DataLayer
             
             connection.Connect();
             value   = (int)sqlCommand.ExecuteScalar(); // Devuelve el valor convertido explícitamente a int
-            connection.Disconnect();
-
-            return value;
-        }
-
-        public decimal GetSingleValueDECIMAL_3Ids(string storedProcedure, string nameColumn1, string id1, string nameColumn2, Int16 id2, string nameColumn3, Int16 id3)
-        {
-            decimal value;
-            Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
-
-            SqlParameter parameter1     = new SqlParameter();
-            parameter1.SqlDbType        = SqlDbType.NVarChar;
-            parameter1.ParameterName    = nameColumn1;
-            parameter1.Value            = id1;
-            sqlCommand.Parameters.Add(parameter1);
-
-            SqlParameter parameter2     = new SqlParameter();
-            parameter2.SqlDbType        = SqlDbType.SmallInt;
-            parameter2.ParameterName    = nameColumn2;
-            parameter2.Value            = id2;
-            sqlCommand.Parameters.Add(parameter2);
-
-            SqlParameter parameter3     = new SqlParameter();
-            parameter3.SqlDbType        = SqlDbType.SmallInt;
-            parameter3.ParameterName    = nameColumn3;
-            parameter3.Value            = id3;
-            sqlCommand.Parameters.Add(parameter3);
-            
-            connection.Connect();
-            value   = (decimal)sqlCommand.ExecuteScalar(); // Devuelve el valor convertido explícitamente a string
             connection.Disconnect();
 
             return value;
