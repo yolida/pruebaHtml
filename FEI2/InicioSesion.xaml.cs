@@ -119,10 +119,10 @@ namespace FEI
                     }
                     // Verificar sí se esta haciendo pruebas
 
-                    if(DoTest == true)
-                        new pages.FormPruebas().Show();
-                    else //Cargar la ventana principal
-                        new MainWindow(new clsEntityAccount().cs_fxObtenerUnoPorId(Profile_Id)).Show();
+                    //if(DoTest == true)
+                    //    new pages.FormPruebas().Show();
+                    //else //Cargar la ventana principal
+                    //    new MainWindow(new clsEntityAccount().cs_fxObtenerUnoPorId(Profile_Id)).Show();
                 }
                 else
                 {

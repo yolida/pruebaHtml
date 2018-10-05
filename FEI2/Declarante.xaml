@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
-        Title="Información del declarante" MinHeight="455" MaxHeight="510" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="images/fei_cuadro.ico" Closing="Window_Closing" KeyDown="Window_KeyDown">
+        Title="Información del declarante" Height="auto" Width="520" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="images/fei_cuadro.ico" KeyDown="Window_KeyDown">
     <Window.Resources>
     <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -62,37 +62,29 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Content="Código de empresa SCC" HorizontalContentAlignment="Left" Margin="0,10,0,10" FontWeight="Bold" />
-        <TextBox   x:Name="txtCodigo" Grid.Column="1" Grid.Row="0" Margin="0,10,0,10"   Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="1" Content="RUC" HorizontalContentAlignment="Left" Margin="0,10,0,10" FontWeight="Bold" />
-        <TextBox   x:Name="txtRuc" Grid.Column="1" Grid.Row="1" Margin="0,10,0,10"   Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="2" Content="Razón social"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtRazonSocial" Grid.Column="1" Grid.Row="2" Margin="0,10,0,10"   Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="3" Content="Usuario Sol"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtUsuarioSol" Grid.Column="1" Grid.Row="3" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="4" Content="Clave Sol"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <PasswordBox    x:Name="txtClaveSol" Grid.Column="1" Grid.Row="4" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="5" Content="Certificado digital (*.pfx)"    Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtCertificadoDigital" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="6" Content="Certificado Digital - Clave"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <PasswordBox   x:Name="txtCertificadoDigitalClave" Grid.Column="1" Grid.Row="6" Margin="0,10,0,10"   Width="180" HorizontalAlignment="Right"/>
-        <Label Grid.Column="0" Grid.Row="7" Content="Correo electrónico"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtEmail" Grid.Column="1" Grid.Row="7" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="8" Content="Usuario de sistema"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtUsuarioSis" Grid.Column="1" Grid.Row="8" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-        <Label Grid.Column="0" Grid.Row="9" Content="Contraseña de sistema"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
-        <TextBox   x:Name="txtContraseniaSis" Grid.Column="1" Grid.Row="9" Margin="0,10,0,10"  Width="180" HorizontalAlignment="Right" />
-
-        <Button  Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" Margin="0,10,0,0" x:Name="btnGuardar" HorizontalAlignment="Right"  VerticalAlignment="Top"   >
+        <Label Grid.Column="0" Grid.Row="1" Content="Usuario Sol"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
+        <TextBox   x:Name="txtUsuarioSol" Grid.Column="1" Grid.Row="1" Margin="0,10,0,10"  Width="260" HorizontalAlignment="Right" />
+        <Label Grid.Column="0" Grid.Row="2" Content="Clave Sol"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
+        <PasswordBox    x:Name="txtClaveSol" Grid.Column="1" Grid.Row="2" Margin="0,10,0,10"  Width="260" HorizontalAlignment="Right" />
+        <Label Grid.Column="0" Grid.Row="3" Content="Certificado digital (*.pfx)"    Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
+        
+        <TextBox   x:Name="txtCertificadoDigital" Grid.Column="1" Grid.Row="3" Margin="0,10,0,10"  Width="260" HorizontalAlignment="Right" />
+        <Button  Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,10" x:Name="btnBuscar" HorizontalAlignment="Right"  VerticalAlignment="Top" Click="btnBuscar_Click"  >
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="imgbtnBuscar" Source="images/search-icon.png" Height="18" Width="26" />
+                <Label x:Name="lblBtnBuscar" Content="Buscar certificado"/>
+            </StackPanel>
+        </Button>
+        
+        <Label Grid.Column="0" Grid.Row="5" Content="Certificado Digital - Clave"  Margin="0,10,0,10" HorizontalContentAlignment="Left" FontWeight="Bold" />
+        <PasswordBox   x:Name="txtCertificadoDigitalClave" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10"   Width="260" HorizontalAlignment="Right"/>
+        
+        <Button  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Margin="0,10,0,0" x:Name="btnGuardar" HorizontalAlignment="Right"  VerticalAlignment="Top" Click="btnGuardar_Click" >
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="imageSunat" Source="images/save-icon.png" Height="18" Width="26" />
                 <Label x:Name="TextBotonSunat" Content="Guardar"/>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\
 FEI
 none
 false
 DEBUG;TRACE
-D:\Jorge Luis\FEICONT21\FEI2\App.xaml
-811546029683
-61496910028
-121-1541921215
-1011119680896
-Acceso.xaml;AcercaDe.xaml;Activacion.xaml;ActivacionManual.xaml;ayuda\Activacion.xaml;ayuda\Actualizacion.xaml;ayuda\AyudaPrincipal.xaml;ayuda\Declarante.xaml;ayuda\Dirigido.xaml;ayuda\FE.xaml;ayuda\FEAlerta.xaml;ayuda\Formasyplazos.xaml;ayuda\GenerarBackup.xaml;ayuda\InicioSesionAyuda.xaml;ayuda\MotivoRechazo.xaml;ayuda\OpcionesPrograma.xaml;ayuda\Page1.xaml;ayuda\Page2.xaml;ayuda\PermisosUsuario.xaml;ayuda\RA.xaml;ayuda\RASunat.xaml;ayuda\RD.xaml;ayuda\RDAlerta.xaml;ayuda\RDSunat.xaml;ayuda\RegistroLocal.xaml;ayuda\RegistroWeb.xaml;ayuda\ReporteBV.xaml;ayuda\ReporteFE.xaml;ayuda\ReporteGeneral.xaml;ayuda\ReporteRA.xaml;ayuda\ReporteRD.xaml;ayuda\Reportes.xaml;ayuda\RestaurarBackup.xaml;ayuda\RutaArchivos.xaml;ayuda\Usuarios.xaml;BajaMotivo.xaml;ConfigurarConexionSQL.xaml;CustomDialog\CustomDialog.xaml;Declarante.xaml;frmDetalleComprobante.xaml;frmDetallePR.xaml;InicioSesion.xaml;Licencia.xaml;Loading.xaml;MainWindow.xaml;pages\CertificadoDigital.xaml;pages\ComunicacionBaja_Generar.xaml;pages\ComunicacionBaja_Sunat.xaml;pages\Configuracion_bdlocal.xaml;pages\Configuracion_bdweb.xaml;pages\Configuracion_declarante.xaml;pages\Configuracion_permisos.xaml;pages\Configuracion_usuarios.xaml;pages\Factura_Alerta.xaml;pages\Factura_Sunat.xaml;pages\FormPruebas.xaml;pages\Listado.xaml;pages\Receptor_Compras.xaml;pages\Receptor_Validar.xaml;pages\Reporte_Boleta.xaml;pages\Reporte_ComunicacionBaja.xaml;pages\Reporte_Factura.xaml;pages\Reporte_General.xaml;pages\Reporte_Resumen.xaml;pages\Reporte_Retencion.xaml;pages\ResumenDiario_Alerta.xaml;pages\ResumenDiario_Generar.xaml;pages\ResumenDiario_Sunat.xaml;pages\Retencion_Alerta.xaml;pages\Retencion_Sunat.xaml;pages\ReversionGenerar_Retencion.xaml;pages\ReversionSunat_Retencion.xaml;pages\Utilitario_GeneracionBackup.xaml;pages\Utilitario_RestauracionBackup.xaml;ProgressDialog\ProgressWindow.xaml;RutaArchivo.xaml;styles\DatePicker.xaml;styles\TabControlStyle.xaml;Usuarios.xaml;UsuariosCuentas.xaml;presentacion.xaml;
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\App.xaml
+821542698972
+4-36349382
+1221996646255
+101-595367901
+Acceso.xaml;AcercaDe.xaml;Activacion.xaml;ActivacionManual.xaml;ayuda\Activacion.xaml;ayuda\Actualizacion.xaml;ayuda\AyudaPrincipal.xaml;ayuda\Declarante.xaml;ayuda\Dirigido.xaml;ayuda\FE.xaml;ayuda\FEAlerta.xaml;ayuda\Formasyplazos.xaml;ayuda\GenerarBackup.xaml;ayuda\InicioSesionAyuda.xaml;ayuda\MotivoRechazo.xaml;ayuda\OpcionesPrograma.xaml;ayuda\Page1.xaml;ayuda\Page2.xaml;ayuda\PermisosUsuario.xaml;ayuda\RA.xaml;ayuda\RASunat.xaml;ayuda\RD.xaml;ayuda\RDAlerta.xaml;ayuda\RDSunat.xaml;ayuda\RegistroLocal.xaml;ayuda\RegistroWeb.xaml;ayuda\ReporteBV.xaml;ayuda\ReporteFE.xaml;ayuda\ReporteGeneral.xaml;ayuda\ReporteRA.xaml;ayuda\ReporteRD.xaml;ayuda\Reportes.xaml;ayuda\RestaurarBackup.xaml;ayuda\RutaArchivos.xaml;ayuda\Usuarios.xaml;BajaMotivo.xaml;ConfigurarConexionSQL.xaml;CustomDialog\CustomDialog.xaml;Declarante.xaml;frmDetalleComprobante.xaml;frmDetallePR.xaml;InicioSesion.xaml;Licencia.xaml;Loading.xaml;MainWindow.xaml;pages\CertificadoDigital.xaml;pages\ComunicacionBaja_Generar.xaml;pages\ComunicacionBaja_Sunat.xaml;pages\Configuracion_bdlocal.xaml;pages\Configuracion_declarante.xaml;pages\Configuracion_permisos.xaml;pages\Configuracion_usuarios.xaml;pages\Emisor.xaml;pages\Factura_Alerta.xaml;pages\Factura_Sunat.xaml;pages\FormPruebas.xaml;pages\Listado.xaml;pages\Receptor_Compras.xaml;pages\Receptor_Validar.xaml;pages\Reporte_Boleta.xaml;pages\Reporte_ComunicacionBaja.xaml;pages\Reporte_Factura.xaml;pages\Reporte_General.xaml;pages\Reporte_Resumen.xaml;pages\Reporte_Retencion.xaml;pages\ResumenDiario_Alerta.xaml;pages\ResumenDiario_Generar.xaml;pages\ResumenDiario_Sunat.xaml;pages\Retencion_Alerta.xaml;pages\Retencion_Sunat.xaml;pages\ReversionGenerar_Retencion.xaml;pages\ReversionSunat_Retencion.xaml;pages\Utilitario_GeneracionBackup.xaml;pages\Utilitario_RestauracionBackup.xaml;ProgressDialog\ProgressWindow.xaml;Registro_Empresa_Declarante.xaml;RutaArchivo.xaml;styles\DatePicker.xaml;styles\TabControlStyle.xaml;Usuarios.xaml;UsuariosCuentas.xaml;presentacion.xaml;
 
 True
 

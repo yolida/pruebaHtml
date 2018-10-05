@@ -9,21 +9,17 @@ namespace DataLayer.CRUD
     public class Data_DatosFox
     {
         public Int16    IdDatosFox      { get; set; }
-
         public string   NombreModulo    { get; set; }
-
         public string   CodigoEmpresa   { get; set; }
-
         public string   Anio            { get; set; }
-
         public string   Ruta            { get; set; }
-
+        public int      IdEmisor        { get; set; }
         public Data_DatosFox(Int16 idDatosFox)
         {
             IdDatosFox  =   idDatosFox;
         }
 
-        public bool Read_DatosFox()
+        public void Read_DatosFox()
         {
             string storedProcedure  = "[sysfox].[Read_DatosFox]";
             Connection connection   = new Connection();
@@ -38,12 +34,6 @@ namespace DataLayer.CRUD
             paramIdDatosFox.Value         = IdDatosFox;
             sqlCommand.Parameters.Add(paramIdDatosFox);
 
-            SqlParameter paramComprobacion  = new SqlParameter();
-            paramComprobacion.Direction     = ParameterDirection.Output;
-            paramComprobacion.SqlDbType     = SqlDbType.Bit;
-            paramComprobacion.ParameterName = "@Validation";
-            sqlCommand.Parameters.Add(paramComprobacion);
-
             connection.Connect();
             
             using (SqlDataReader reader = sqlCommand.ExecuteReader())
@@ -52,13 +42,12 @@ namespace DataLayer.CRUD
                 {
                     NombreModulo    = reader["NombreModulo"].ToString();
                     CodigoEmpresa   = reader["CodigoEmpresa"].ToString();
-                    Anio            = reader["Anio"].ToString();
                     Ruta            = reader["Ruta"].ToString();
+                    IdEmisor        = Convert.ToInt32(reader["IdEmisor"].ToString());
                 }
             }
 
             connection.Disconnect();
-            return bool.Parse(sqlCommand.Parameters["@Validation"].Value.ToString());
         }
     }
 }

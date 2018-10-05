@@ -23,7 +23,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type CalendarDayButton}">
-
+      
 
                         <Grid x:Name="CalendarDayButtonGrid">
 
@@ -343,7 +343,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" x:Name="label" Content="ENVIO DE FACTURAS ELECTRONICAS" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Calibri" Background="#dbeaf9" />
+        <Label Grid.Column="0" Grid.Row="0" x:Name="label" Content="Envió de facturas electrónicas" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Calibri" Background="#dbeaf9" />
         <Border Grid.Column="0" Grid.Row="1" Margin="10,10,10,10"
               BorderBrush="#DBDBDB" 
               CornerRadius="0" BorderThickness="1, 1, 1, 1" 
@@ -377,7 +377,7 @@
 
                     <local:DatePickerEx   x:Name="datePick_fin" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5"  IsDropDownOpen="False" IsTodayHighlighted="True"  />
                     <Label  Grid.Column="2" Grid.Row="0" Content="Tipo de comprobante" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="0,6"/>
-                    <ComboBox  x:Name="cboTipoComprobante" Grid.Column="3" Grid.Row="0" Margin="0,5,5,5" Style="{StaticResource ComboBoxFlatStyle}"/>
+                    <ComboBox  x:Name="lstTipoComprobante" Grid.Column="3" Grid.Row="0" Margin="0,5,5,5" Style="{StaticResource ComboBoxFlatStyle}"/>
                     <StackPanel  Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <Button Width="80" Margin="0,0,5,0" Click="btnConsultar_Click">
                             <StackPanel Orientation="Horizontal">

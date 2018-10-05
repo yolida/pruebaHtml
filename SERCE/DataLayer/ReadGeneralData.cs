@@ -89,6 +89,37 @@ namespace DataLayer
             return dataTable;
         }
 
+        /// <summary>
+        /// Obtención de un dataTable mediante un parámetro nvarchar y storeprocedure
+        /// </summary>
+        /// <param name="storedProcedure"></param>
+        /// <param name="nameColumn"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public DataTable GetDataTable(string storedProcedure, string nameColumn, string id)
+        {
+            DataTable dataTable             = new DataTable();
+            Connection connection           = new Connection();
+            SqlCommand sqlCommand           = new SqlCommand();
+            SqlDataAdapter sqlDataAdapter   = new SqlDataAdapter();
+            sqlCommand.CommandText          = storedProcedure;
+            sqlCommand.CommandType          = CommandType.StoredProcedure;
+            sqlCommand.Connection           = connection.connectionString;
+            sqlDataAdapter.SelectCommand    = sqlCommand;
+
+            SqlParameter parameter          = new SqlParameter();
+            parameter.SqlDbType             = SqlDbType.NVarChar;
+            parameter.ParameterName         = nameColumn;
+            parameter.Value                 = id;
+
+            sqlCommand.Parameters.Add(parameter);
+            connection.Connect();
+            sqlDataAdapter.Fill(dataTable);
+            connection.Disconnect();
+
+            return dataTable;
+        }
+
         public string GetSingleValueSTRINGById(string storedProcedure, string nameColumn, Int16 id)
         {
             string value = string.Empty;

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
-        Title="Facturacion Electronica Integrada" Height="600" Width="1000" WindowStartupLocation="CenterScreen"  MinWidth="1000" MinHeight="650" Closed="Window_Closed" Loaded="mainForm_Loaded" Icon="images/fei_cuadro.ico" KeyDown="main_Form_KeyDown">
+        Title="Facturacion Electronica Integrada"  WindowState="Maximized"  WindowStartupLocation="CenterScreen"  MinWidth="1000" MinHeight="650" Closed="Window_Closed" Loaded="mainForm_Loaded" Icon="images/fei_cuadro.ico" KeyDown="main_Form_KeyDown">
     <Window.Resources>
         <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -476,10 +476,7 @@
                         </Expander.Header>
                         <WrapPanel Background="#a1c46d">
                             <Label Width="250"  Padding="20,5,0,5" Margin="0,0,0,0" Name="lblItem16"  Foreground="white" VerticalAlignment="Top">
-                                <Hyperlink  TextDecorations="{x:Null}" Foreground="white" Click="clkConfiguracionBDLocal" >Almacén de registros local</Hyperlink>
-                            </Label>
-                            <Label Width="250"  Padding="20,5,0,5" Margin="0,0,0,0" Name="lblItem17"  Foreground="white" VerticalAlignment="Top">
-                                <Hyperlink  TextDecorations="{x:Null}" Foreground="white" Click="clkConfiguracionBDWeb" >Almacén de registros web</Hyperlink>
+                                <Hyperlink x:Name="btnConfigurarDB"  TextDecorations="{x:Null}" Foreground="white" Click="btnConfigurarDB_Click" >Configuración de base de datos</Hyperlink>
                             </Label>
                             <Label Width="250"  Padding="20,5,0,5" Margin="0,0,0,0" Name="lblItem18"  Foreground="white" VerticalAlignment="Top">
                                 <Hyperlink  TextDecorations="{x:Null}" Foreground="white" Click="clkConfiguracionEmpresa" >Información del declarante</Hyperlink>
@@ -572,15 +569,17 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                        <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Empresa: " x:Name="lblEmpresa" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold"/>
-                    <Label Grid.Column="2" Grid.Row="0" Content="Usuario: " x:Name="lblUsuario" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold"/>
-                    <Label Grid.Column="3" Grid.Row="0" Content="" x:Name="lblAlerta" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold" TextBlock.Foreground="Red"/>
-                    <Button Width="120" x:Name="btnCerrarSesion"  Margin="0,5,20,5"  HorizontalAlignment="Right" Grid.Column="3" Grid.Row="0"  TextBlock.FontWeight="Bold" Click="btnCerrarSesion_Click">
+                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Empresa: " HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold"/>
+                    <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" x:Name="lblEmpresa" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <Label Grid.Column="2" Grid.Row="0" Content="Usuario: " HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextBlock.FontWeight="Bold"/>
+                    <Label Grid.Column="3" Grid.Row="0" x:Name="lblUsuario" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                    <Button x:Name="btnCerrarSesion"  Margin="0,5,20,5"  HorizontalAlignment="Right" Grid.Column="4" Grid.Row="0"  TextBlock.FontWeight="Bold" Click="btnCerrarSesion_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image x:Name="imageButton" Source="images/logout.png" Height="15" Width="15"/>
                             <Label x:Name="TextBoton" Content="Cerrar sesión"/>

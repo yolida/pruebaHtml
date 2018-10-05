@@ -1997,8 +1997,6 @@ D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.cache
 D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI2.csproj.CopyComplete
 D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.exe
 D:\Jorge Luis\FEICONT21\FEI2\obj\Debug\FEI.pdb
-D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\InternalDB.mdf
-D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\InternalDB_log.ldf
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\x64\liblept172.dll
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\x64\libtesseract304.dll
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\x86\liblept172.dll
@@ -2118,7 +2116,6 @@ D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\CertificadoDigital.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_bdlocal.g.cs
-D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_bdweb.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_declarante.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_permisos.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_usuarios.g.cs
@@ -2203,7 +2200,6 @@ D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\CertificadoDigital.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\ComunicacionBaja_Generar.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\ComunicacionBaja_Sunat.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_bdlocal.baml
-D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_bdweb.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_declarante.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_permisos.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Configuracion_usuarios.baml
@@ -2241,3 +2237,7 @@ D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\FEI2.csproj.CoreCompileInputs.
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\FEI2.csproj.CopyComplete
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\FEI.exe
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\FEI.pdb
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Emisor.g.cs
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\Registro_Empresa_Declarante.g.cs
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Emisor.baml
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\Registro_Empresa_Declarante.baml

@@ -1,4 +1,5 @@
-﻿using FEI.ayuda;
+﻿using DataLayer;
+using FEI.ayuda;
 using FEI.Base;
 using FEI.CustomDialog;
 using FEI.Extension.Base;
@@ -6,6 +7,8 @@ using FEI.Extension.Datos;
 using FEI.Extension.Negocio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -13,15 +16,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Forms;
-/// <summary>
-/// Jordy Amaro 11-01-17 FEI2-4
-/// Cambio de interfaz - Envio a sunat de facturas y notas relacionadas.
-/// </summary>
+
 namespace FEI.pages
 {
-    /// <summary>
-    /// Lógica de interacción para Factura_Sunat.xaml
-    /// </summary>
     public partial class Factura_Sunat : Page
     {
         List<ComboBoxPares> tipos_comprobante = new List<ComboBoxPares>();
@@ -31,34 +28,36 @@ namespace FEI.pages
         ComboBoxPares cbpTipoComprobante;
         string fecha_inicio_formato;
         string fecha_fin_formato;
+        clsEntityDatabaseLocal localDB;
+
+        ReadGeneralData readGeneralData =   new ReadGeneralData();
         private Window padre;
-       // private clsBaseConexion conexion;
-        private clsEntityDatabaseLocal localDB;
-        //Metodo constructor
+
         public Factura_Sunat(Window parent,clsEntityDatabaseLocal local)
         {
             InitializeComponent();
             padre = parent;
             localDB = local;
-           // conexion = new clsBaseConexion();
         }
         //Evento de carga de la ventana principal.
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //AddBlackOutDates(mdp, 2);
-            datePick_inicio.Text = DateTime.Now.Date.ToString();
-            datePick_fin.Text = DateTime.Now.Date.ToString();
-            //agregar los valores para tipo de comprobante.
-            tipos_comprobante.Add(new ComboBoxPares("", "Seleccione"));
-            tipos_comprobante.Add(new ComboBoxPares("01", "Factura Electronica"));
-            tipos_comprobante.Add(new ComboBoxPares("07", "Nota de Credito"));
-            tipos_comprobante.Add(new ComboBoxPares("08", "Nota de Debito"));
-            cboTipoComprobante.DisplayMemberPath = "_Value";
-            cboTipoComprobante.SelectedValuePath = "_Key";
-            cboTipoComprobante.SelectedIndex = 0;
-            cboTipoComprobante.ItemsSource = tipos_comprobante;
+            try
+            {
+                DataTable dataTable =   readGeneralData.GetDataTable("[dbo].[Read_TipoDocumentos]");
+                var items           =   (dataTable as IListSource).GetList();
+                lstTipoComprobante.ItemsSource          =   items;
+                lstTipoComprobante.DisplayMemberPath    =   "Descripcion";
+                lstTipoComprobante.SelectedValuePath    =   "IdTipoDocumento";
+                lstTipoComprobante.SelectedIndex        =   0;
 
-            refrescarGrilla();
+                datePick_inicio.Text = DateTime.Now.Date.ToString();
+                datePick_fin.Text = DateTime.Now.Date.ToString();
+            }
+            catch (Exception)
+            {
+                System.Windows.MessageBox.Show("La base de datos ha sido alterada, contacte con soporte.", "Base de datos alterada", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void AddBlackOutDates(DatePicker dp, int offset)
         {
@@ -149,7 +148,7 @@ namespace FEI.pages
         }
         private void refrescarGrilla()
         {
-            cbpTipoComprobante = (ComboBoxPares)cboTipoComprobante.SelectedItem;
+            cbpTipoComprobante = (ComboBoxPares)lstTipoComprobante.SelectedItem;
             if (datePick_inicio.SelectedDate != null)
             {
                 DateTime fecha_inicio = (DateTime)datePick_inicio.SelectedDate;

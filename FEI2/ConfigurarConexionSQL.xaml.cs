@@ -24,25 +24,60 @@ namespace FEI
     /// </summary>
     public partial class ConfigurarConeccionSQL : Window
     {
-        bool exitoConexion  = false; // Indicador de que se realizó la conexión con éxito
+        bool exitoConexion      =   false; // Indicador de que se realizó la conexión con éxito
+        bool asegurarGuardado   =   false;
 
-        public ConfigurarConeccionSQL()
+        public ConfigurarConeccionSQL(bool Update)
         {
             InitializeComponent();
+
+            if (Update) // Sí es true se debe actualizar
+            {
+                InternalAccess internalAccess   =   new InternalAccess();
+                internalAccess.Read_InternalAccess();
+                txtServidor.Text                =   internalAccess.Servidor;
+                txtUsuario.Text                 =   internalAccess.Usuario;
+                txtContrasenia.Password         =   internalAccess.Contrasenia;
+
+                InternalConnection internalConnection = new InternalConnection();
+                string uriIcon              =   internalConnection.GetPathMDF() + "\\images\\close.png";
+                imageGuardar.Source         =   new BitmapImage(new Uri(uriIcon));
+                TextBotonGuardar.Content    =   "Salir";  // Entonces la funcionalidad del botón cambia a SALIR debido a que la conexión es incorrecta
+            }
+            else // Sí es false se debe crear
+            {
+                InternalConnection internalConnection = new InternalConnection();
+                string uriIcon              =   internalConnection.GetPathMDF() + "\\images\\close.png";
+                imageGuardar.Source         =   new BitmapImage(new Uri(uriIcon));
+                TextBotonGuardar.Content    =   "Salir";  // Entonces la funcionalidad del botón cambia a SALIR debido a que la conexión es incorrecta
+            }
         }
         
 
         void DataWindow_Closing(object sender, CancelEventArgs e)
         {
-            if (exitoConexion   ==  false)
+            string msg  =   string.Empty;
+            MessageBoxResult result;
+            if (exitoConexion == false)
             {
-                string msg = "Aún no se ha podido realizar la conexión con la base de datos, ¿Esta seguro(a) de salir?";
-                MessageBoxResult result =
-                    MessageBox.Show( msg,    "No se obtuvo la conexión al servidor de base de datos",    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                msg     =   "Aún no se ha podido realizar la conexión con la base de datos, ¿Esta seguro(a) de salir?";
+                result  =   MessageBox.Show(msg, "No se obtuvo la conexión al servidor de base de datos", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.No)
-                    e.Cancel        =   true;    // Sí el usuario no quiere cerrar la aplicación, cancelará el cierre, sino cerrará toda la aplicación
+                    e.Cancel    =   true;    // Sí el usuario no quiere cerrar la aplicación, cancelará el cierre, sino cerrará toda la aplicación
                 else
                     Application.Current.Shutdown();
+            }
+            else // En caso de que si se haya realizado el testing de conexión pero todavía no se haya guardado los datos de conexión
+            {
+                if (asegurarGuardado == false)
+                {
+                    msg     =   "Aún no ha guardado los datos de conexión, ¿Esta seguro(a) de salir?";
+                    result  =   MessageBox.Show(msg, "No se obtuvo la conexión al servidor de base de datos", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                    if (result == MessageBoxResult.No)
+                        e.Cancel    =   true;    // Sí el usuario no quiere cerrar la aplicación, cancelará el cierre, sino cerrará toda la aplicación
+                    else
+                        Application.Current.Shutdown();
+                }
             }
         }
 
@@ -56,21 +91,26 @@ namespace FEI
             usuario             =   txtUsuario.Text.ToString().Trim();
             contrasenia         =   txtContrasenia.Password.ToString().Trim();
 
-            string cadena = $"data source={servidor}; initial catalog=master; user id={usuario}; password={contrasenia}; Connection Timeout=3";
+            string cadena = $"data source={servidor}; initial catalog=master; user id={usuario}; password={contrasenia}; Connection Timeout=7";
 
             Connection connection = new Connection();
 
-            if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
+            if (!string.IsNullOrEmpty(servidor) && !string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
             {
                 if (connection.CheckConnection(cadena))    // Comprobamos la conexión con la base de datos
                 {   
                     // Actualizar la cadena de conexión
-                    exitoConexion       =   true;
-                    btnGuardar.Content  =   "Guardar";  // Entonces la funcionalidad del botón cambia a GUARDAR debido a que la conexión es correcta
+                    exitoConexion               =   true;
+                    TextBotonGuardar.Content    =   "Guardar";  // Entonces la funcionalidad del botón cambia a GUARDAR debido a que la conexión es correcta
+                    InternalConnection internalConnection = new InternalConnection();
+                    string uriIcon              =   internalConnection.GetPathMDF() + "\\images\\save-icon.png";
+                    imageGuardar.Source         =   new BitmapImage(new Uri(uriIcon));
+                    MessageBox.Show("La conexión con el servidor tuvo éxito, procede a guardar para conservar los datos de conexión.",
+                        "Prueba de conexión", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Lo sentimos, no se podido realizar la conexión con el servidor de base de datos, corriga los datos y vuelva a intentarlo.",
+                    MessageBox.Show("Lo sentimos, no se ha podido realizar la conexión con el servidor de base de datos, corriga los datos y vuelva a intentarlo.",
                         "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);  // Aún  no se puede conectar con la base de datos
                 }
             }
@@ -96,7 +136,7 @@ namespace FEI
 
                 Connection connection = new Connection();
 
-                if (!string.IsNullOrEmpty(servidor) || !string.IsNullOrEmpty(usuario) || !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
+                if (!string.IsNullOrEmpty(servidor) && !string.IsNullOrEmpty(usuario) && !string.IsNullOrEmpty(contrasenia))    // Todos los campos completados
                 {
                     if (connection.CheckConnection(cadena))    // Comprobamos la conexión con la base de datos
                     {
@@ -107,7 +147,7 @@ namespace FEI
                         #region Escritura del archivo txt con los datos del servidor de base de datos
                         try
                         {
-                            if (!File.Exists($"{ruta}\\FEICONT\\access.txt"))
+                            if (File.Exists($"{ruta}\\FEICONT\\access.txt"))
                                 File.Delete($"{ruta}\\FEICONT\\access.txt");
                             else
                             {
@@ -137,6 +177,8 @@ namespace FEI
 
                         // Ejecutar todo el script de creación de base de datos (PENDIENTE)
 
+                        asegurarGuardado    =   true;
+
                         Application.Current.Shutdown();
                         System.Windows.Forms.Application.Restart(); // Se reinicia la aplicación para que acceda de inmediato al login ya con los accesos correctos de la db
                     }
@@ -144,6 +186,10 @@ namespace FEI
                     {
                         MessageBox.Show("Lo sentimos, se ha cambiado los datos de acceso, corriga los datos y vuelva a intentarlo.",
                             "Sin conexión", MessageBoxButton.OK, MessageBoxImage.Information);  // Aún  no se puede conectar con la base de datos
+                        InternalConnection internalConnection = new InternalConnection();
+                        string uriIcon              =   internalConnection.GetPathMDF() + "\\images\\close.png";
+                        imageGuardar.Source         =   new BitmapImage(new Uri(uriIcon));
+                        TextBotonGuardar.Content    =   "Salir";  // Entonces la funcionalidad del botón cambia a SALIR debido a que la conexión es incorrecta
                     }
                 }
                 else

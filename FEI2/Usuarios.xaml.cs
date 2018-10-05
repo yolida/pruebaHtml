@@ -1,156 +1,25 @@
-﻿using FEI.Extension.Base;
+﻿using DataLayer;
+using DataLayer.CRUD;
+using FEI.Extension.Base;
 using FEI.Extension.Datos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows;
 using System.Windows.Forms;
-/// <summary>
-/// Jordy Amaro 12-01-17 FEI2-4
-/// Cambio de interfaz - acciones para usuario.
-/// </summary>
+using System.Windows.Input;
+using MessageBox = System.Windows.MessageBox;
+
 namespace FEI
 {
-    /// <summary>
-    /// Lógica de interacción para Usuarios.xaml
-    /// </summary>
     public partial class Usuarios : Window
     {
-        private clsEntityUsers user;
-        private clsBaseConfiguracion entidad_usuario;
-        private string cs_cmModo = "";
-        private List<List<string>> empresas = new List<List<string>>();
-        List<ComboBoxPares> tipos_perfil = new List<ComboBoxPares>();
-        //Metodo constructor
-        public Usuarios(string modo, string id)
+        ReadGeneralData readGeneralData =   new ReadGeneralData();
+        bool exitoCreacion              =   false;
+
+        public Usuarios()
         {
             InitializeComponent();
-           /* tipos_perfil.Add(new ComboBoxPares("USER", "Usuario"));
-            tipos_perfil.Add(new ComboBoxPares("ADMIN", "Administrador"));
-            cboPerfil.DisplayMemberPath = "_Value";
-            cboPerfil.SelectedValuePath = "_key";
-            cboPerfil.SelectedIndex = 0;
-            cboPerfil.ItemsSource = tipos_perfil;*/
-            /** Antiguo */
-            entidad_usuario = new clsBaseConfiguracion();
-            txtUsuario.Text = entidad_usuario.cs_prLoginUsuario;
-            txtClave.Password = entidad_usuario.cs_prLoginPassword;
-            /** Fin-Antiguo */
-            //Elegir acciones segun modo seleccionado.
-            this.cs_cmModo = modo;
-            switch (cs_cmModo)
-            {
-                case "UPD":
-                    user = new clsEntityUsers().cs_pxObtenerUnoPorId(id);
-                    txtUsuario.Text = user.Cs_pr_User;
-                    txtClave.Password = user.Cs_pr_Password;
-                    if (user.Cs_pr_User == "admin")
-                    {
-                        txtUsuario.IsEnabled = false;
-                    }
-                   /* if (user.Cs_pr_Role_Id == "ADMIN")
-                    {
-                        cboPerfil.SelectedIndex = 1;
-                    }
-                    else
-                    {
-                        cboPerfil.SelectedIndex = 0;
-                    }*/
-                    break;
-                case "INS":
-                    user = new clsEntityUsers();
-                    txtUsuario.Text = "";
-                    txtClave.Password = "";
-                   
-                    break;
-                case "DLT":
-                    user = new clsEntityUsers().cs_pxObtenerUnoPorId(id);
-                    txtUsuario.Text = user.Cs_pr_User;
-                    txtUsuario.IsEnabled = false;
-                    txtClave.Password = user.Cs_pr_Password;
-                    txtClave.IsEnabled = false;
-                   /* if (user.Cs_pr_Role_Id == "ADMIN")
-                    {
-                        cboPerfil.SelectedIndex = 1;
-                    }
-                    else
-                    {
-                        cboPerfil.SelectedIndex = 0;
-                    }*/
-                    //cboPerfil.IsEnabled = false;
-                    btnGuardar.Content = "Eliminar";
-                    break;
-                default:
-                    break;
-            }
-        }
-        //Evento guardar los cambios realizados 
-        private void btnGuardar_Click(object sender, RoutedEventArgs e)
-        {
-            //Elegir acciones segun modo seleccionado
-            switch (cs_cmModo)
-            {
-                case "UPD":
-                    /** Antiguo */
-                    entidad_usuario.cs_prLoginUsuario = txtUsuario.Text;
-                    entidad_usuario.cs_prLoginPassword = txtClave.Password;
-                    /** Fin-Antiguo */
-                    user.Cs_pr_User = txtUsuario.Text;
-                    user.Cs_pr_Password = txtClave.Password;
-                    /*int indexSeleccionado = cboPerfil.SelectedIndex;
-                    if (indexSeleccionado == 0)
-                    {*/
-                     //   user.Cs_pr_Role_Id = "USER";
-                  /*  }
-                    else
-                    {
-                        user.Cs_pr_Role_Id = "ADMIN";
-                    }*/
-                    if (txtUsuario.Text.Trim().Length > 0 )
-                    {
-                        /** Antiguo */
-                        //entidad_usuario.cs_pxActualizar(true);
-                        /** Fin-Antiguo */
-                        user.cs_pxActualizar(true);
-                    }
-                    else
-                    {
-                        System.Windows.Forms.MessageBox.Show("No deben existir campos vacíos.", "Advertencia - Guardar cambios", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//                        clsBaseMensaje.cs_pxMsgEr("ERR13", "");
-                    }
-                    break;
-                case "INS":
-                    user = new clsEntityUsers();
-                    user.Cs_pr_Users_Id = Guid.NewGuid().ToString();
-                    user.Cs_pr_User = txtUsuario.Text;
-                    user.Cs_pr_Password = txtClave.Password;
-                    user.Cs_pr_Role_Id = "USER";
-                    if (txtUsuario.Text.Trim().Length > 0)
-                    {
-                        user.cs_pxInsertar(false);                       
-                    }
-                    else
-                    {
-                        System.Windows.Forms.MessageBox.Show("No deben existir campos vacíos.", "Advertencia - Guardar cambios", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                       // clsBaseMensaje.cs_pxMsgEr("ERR13", "");
-                    }
-                    break;
-                case "DLT":
-                    if (user.Cs_pr_Role_Id.Trim().ToUpper() == "ADMIN" && user.Cs_pr_User=="admin")
-                    {
-                        clsBaseMensaje.cs_pxMsgEr("ERR22", "No se puede eliminar el administrador.");
-                    }
-                    else
-                    {
-                        user.cs_pxElimnar(false);
-                        //Además eliminar las cuentas relacionadas a este usuario.
-                        new clsEntityAccount().cs_pxEliminarCuentasAsociadasUSUARIO(user.Cs_pr_Users_Id);
-                    }
-                    break;
-                default:
-                    break;
-            }
-            DialogResult = true;
-            Close();
         }
 
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -159,6 +28,96 @@ namespace FEI
             if (compare == 0)
             {
                 Close();
+            }
+        }
+        
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            DataTable usuariosByid  =   readGeneralData.GetDataTable("[dbo].[Read_Usuario]", "@IdUsuario", txtUsuario.Text.ToString().Trim());
+            if (usuariosByid.Rows.Count > 0)
+                System.Windows.MessageBox.Show("Lo sentimos este usuario ya existe.", "Error nombre de usuario", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            else
+            {
+                if (!string.IsNullOrEmpty(txtUsuario.Text.ToString().Trim()) && !string.IsNullOrEmpty(txtContrasenia.Password.Trim()) && !string.IsNullOrEmpty(txtVerificacionPass.Password.Trim()) )
+                {
+                    if (txtContrasenia.Password.Trim() == txtVerificacionPass.Password.Trim())
+                    {
+                        if (txtContrasenia.Password.Trim().Length > 5)
+                        {
+                            Data_Usuario usuario = new Data_Usuario() { IdUsuario = txtUsuario.Text.ToString().Trim(), Contrasenia = txtContrasenia.Password.Trim(), IdRol = 1 };
+                            if (usuario.Alter_Usuario("[dbo].[Create_Usuario]"))
+                            {
+                                System.Windows.MessageBox.Show($"Has registrado con exito a {txtUsuario.Text.ToString()}.", "Registro correcto",
+                                    MessageBoxButton.OK, MessageBoxImage.Information);
+                                exitoCreacion = true;
+                                Close();
+                            }
+                            else
+                            {
+                                System.Windows.MessageBox.Show($"Ha ocurrido un error de base de datos, verifique que el servicio " +
+                                    $" de SQL Server este activado en 'Servicios => SQLSERVER' clic derecho e INICIAR, sí el error persiste contacte con soporte.", "Error en la base de datos",
+                                    MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                        }
+                        else
+                            System.Windows.MessageBox.Show("La cantidad mínima de caracteres para la contraseña es de 6", "Contraseña muy insegura", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    }
+                    else
+                        System.Windows.MessageBox.Show("Las contraseñas no coinciden.", "Error de coincidencia contraseña", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+                System.Windows.MessageBox.Show("Antes de continuar debes completar todos los campos.", "Datos incompletos", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e) => Close();
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string msg  =   string.Empty;
+            MessageBoxResult result;
+            if (exitoCreacion == false)
+            {
+                msg     =   "Aún no se ha podido crear un nuevo usuario, ¿Esta seguro(a) de salir?";
+                result  = System.Windows.MessageBox.Show(msg, "No se creó ningún usuario", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.No)
+                    e.Cancel    =   true;   // Sí el usuario no quiere cerrar la aplicación, cancelará el cierre, sino cerrará este único formulario
+                else
+                {
+                    try
+                    {
+                        Close();
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+            }
+        }
+
+        private void txtUsuario_PreviewKeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                MessageBox.Show("No debe incluir espacios en blanco", "Acción no permitida", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                e.Handled = false;
+            }
+        }
+
+        private void txtContrasenia_PreviewKeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                MessageBox.Show("No debe incluir espacios en blanco", "Acción no permitida", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                e.Handled = false;
+            }
+        }
+
+        private void txtVerificacionPass_PreviewKeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                MessageBox.Show("No debe incluir espacios en blanco", "Acción no permitida", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                e.Handled = false;
             }
         }
     }

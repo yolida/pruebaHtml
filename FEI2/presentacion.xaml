@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEI"
         mc:Ignorable="d"
-        Title="presentacion" Height="364.43" Width="658.687" WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize" Foreground="{x:Null}" AllowsTransparency="True">
+        Title="presentacion" Height="364.43" Width="658.687" WindowStyle="None" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize" Foreground="{x:Null}" Loaded="Window_Loaded" AllowsTransparency="True">
     <Window.Background>
         <ImageBrush ImageSource="images/presentacionFEI.png"/>
     </Window.Background>

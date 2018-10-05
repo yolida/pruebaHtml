@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("internaldb.mdf")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("internaldb_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/liblept172.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/libtesseract304.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/liblept172.dll")]

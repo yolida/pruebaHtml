@@ -46,52 +46,52 @@ namespace FEI.pages
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
             //Obtener el usuario seleccionado.
-            ReporteUsuario item = (ReporteUsuario)dgUsuarios.SelectedItem;
-            //Si existe el item seleccionado.
-            if (item != null)
-            {          
-                Usuarios Formulario = new Usuarios("DLT",item.Id);
-                Formulario.ShowDialog();
-                if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
-                {
-                    cargarDataGrid();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario");
-            }
+            //ReporteUsuario item = (ReporteUsuario)dgUsuarios.SelectedItem;
+            ////Si existe el item seleccionado.
+            //if (item != null)
+            //{          
+            //    Usuarios Formulario = new Usuarios("DLT",item.Id);
+            //    Formulario.ShowDialog();
+            //    if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
+            //    {
+            //        cargarDataGrid();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Debe seleccionar un usuario");
+            //}
         }
         //Evento click para modificar la informacion del usuario.
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            //Obtener el usuario seleccionado.
-            ReporteUsuario item = (ReporteUsuario)dgUsuarios.SelectedItem;
-            //Si existe el item seleccionado.
-            if (item != null)
-            {
-                Usuarios Formulario = new Usuarios("UPD",item.Id);
-                Formulario.ShowDialog();
-                if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
-                {
-                    cargarDataGrid();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario");
-            }
+            ////Obtener el usuario seleccionado.
+            //ReporteUsuario item = (ReporteUsuario)dgUsuarios.SelectedItem;
+            ////Si existe el item seleccionado.
+            //if (item != null)
+            //{
+            //    Usuarios Formulario = new Usuarios("UPD",item.Id);
+            //    Formulario.ShowDialog();
+            //    if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
+            //    {
+            //        cargarDataGrid();
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Debe seleccionar un usuario");
+            //}
         }
         //Evento click para crear nuevo usuario.
         private void btnNuevo_Click(object sender, RoutedEventArgs e)
         {
             //Cargar formulario de usuarios.
-            Usuarios Formulario = new Usuarios("INS", "");
-            Formulario.ShowDialog();
-            if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
-            {
-                cargarDataGrid();
-            }
+            //Usuarios Formulario = new Usuarios("INS", "");
+            //Formulario.ShowDialog();
+            //if (Formulario.DialogResult.HasValue && Formulario.DialogResult.Value)
+            //{
+            //    cargarDataGrid();
+            //}
         }
         //Metodo para cargar informacion del grid principal
         private void cargarDataGrid()

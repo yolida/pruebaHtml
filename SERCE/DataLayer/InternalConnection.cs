@@ -8,7 +8,7 @@ namespace DataLayer
 {
     public class InternalConnection
     {
-        public SqlConnection connectionString = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\\InternalDB.mdf;Trusted_Connection=Yes; Integrated Security=True;");
+        public SqlConnection connectionString = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename=|DataDirectory|\\db\\InternalDB.mdf;Trusted_Connection=Yes; Integrated Security=True;");
 
         /// <summary>
         /// Método para obtener el path de la instancia de FEI2, la instalación donde se encuentre
@@ -98,8 +98,6 @@ namespace DataLayer
             try
             {
                 connectionString.Open();
-
-                string value = connectionString.State.ToString();   // Para pruebas
             }
             catch (System.Exception ex)
             {

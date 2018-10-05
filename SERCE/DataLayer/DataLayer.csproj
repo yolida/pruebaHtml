@@ -52,12 +52,8 @@
     <Compile Include="CRUD\Data_TerminosEntrega.cs" />
     <Compile Include="CRUD\Data_TotalImpuesto.cs" />
     <Compile Include="CRUD\InternalAccess.cs" />
+    <Compile Include="CRUD\Data_Usuario.cs" />
     <Compile Include="InternalConnection.cs" />
-    <Compile Include="InternalDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InternalDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -74,17 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="InternalDBDataSet.xsc">
-      <DependentUpon>InternalDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="InternalDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InternalDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="InternalDBDataSet.xss">
-      <DependentUpon>InternalDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

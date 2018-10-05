@@ -5,6 +5,8 @@ using DataLayer.CRUD;
 using System.ComponentModel;
 using System;
 using System.IO;
+using System.Windows.Input;
+using System.Windows.Controls;
 
 namespace FEI
 {
@@ -18,100 +20,82 @@ namespace FEI
             InitializeComponent();
         }
 
+        ReadGeneralData readGeneralData =   new ReadGeneralData();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            try
+            txtUsuario.Focus();
+        }
+
+        private void btnIngresar_Click(object sender, RoutedEventArgs e) => Ingresar();
+
+        public void Ingresar()
+        {
+            if (!string.IsNullOrEmpty(txtUsuario.Text.ToString().Trim()) && !string.IsNullOrEmpty(txtPassword.Password.ToString().Trim()))
             {
-                // testing
-                ReadGeneralData readGeneralData =   new ReadGeneralData();
-                DataTable dataTableInternalData =   readGeneralData.GetInternalDataTable("[dbo].[Read_DataAccess]");
-
-                int cantidadFilas   = dataTableInternalData.Rows.Count;
-
-                InternalConnection  internalConnection  =   new InternalConnection();
-                
-                if (cantidadFilas == 1) //  Comprobar que haya registro en db interna, primera vez que se ejecute el sistema
-                {   // Se comprueba que los valores sean correctos
-                    InternalAccess internalAccess   =   new InternalAccess();
-                    internalAccess.Read_InternalAccess();
-                    string cadena   =   $"data source={@internalAccess.Servidor}; initial catalog=master; user id={@internalAccess.Usuario}; password={@internalAccess.Contrasenia}; Connection Timeout=3";
-
-                    Connection  connection  =   new Connection();
-
-                    if (!connection.CheckConnection(cadena))   // Falló la conexión con los datos de InternalDB 
-                    {   // Actualizar la cadena de conexión mediante formulario
-                        MessageBox.Show("Se debe configurar de forma manual la conexión a la base de datos.");
-                        ConfigurarConeccionSQL configurarConeccionSQL = new ConfigurarConeccionSQL();
-                        configurarConeccionSQL.Show();
-                    }
-                    else // Aquí ya no se tiene problemas con la base de datos
+                Data_Usuario data_Usuario   =   new Data_Usuario() { IdUsuario  =   txtUsuario.Text.ToString().Trim(), Contrasenia  =   txtPassword.Password.ToString().Trim() };
+                if (data_Usuario.Security_Authenticate_Usuario())
+                {
+                    MainWindow mainWindow   =   new MainWindow(Int16.Parse(lstEmpresas.SelectedValue.ToString()), data_Usuario);
+                    mainWindow.Show();
+                    try
                     {
-                        DataTable dataTable =   readGeneralData.GetDataTable("[sysfox].[List_DatosFox]");
-
-                        int cantidadLineas  =   dataTable.Rows.Count;
-
-                        if (cantidadLineas <= 0)
-                        {
-                            MessageBox.Show("Aún no tienes registrada ninguna empresa, puedes realizar este registro desde tu sistema Contasis.",   
-                                "Error de conexión con los módulos Contasis", MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                            Application.Current.Shutdown();
-                        }
-                        else
-                        {
-                            // Comprobar accesos
-                            var items           =   (dataTable  as  IListSource).GetList();
-
-                            lstEmpresas.ItemsSource         =   items;
-                            lstEmpresas.DisplayMemberPath   =   "NombreLegal";
-                            lstEmpresas.SelectedValuePath   =   "IdDatosFox";
-                            lstEmpresas.SelectedIndex       =   0;
-                        }
+                        Close();
+                    }
+                    catch (Exception)
+                    {
                     }
                 }
-                else     // En caso de que no haya registro en db interna  
-                {   // Comprobar la conexión con el servidor de SqlServer
-                    string[] valores = internalConnection.GetDataFile();   // Obtenemos los datos del archivo txt
-
-                    if (valores.Length == 2 )
-                    {
-                        if (!string.IsNullOrEmpty(valores[0]) || !string.IsNullOrEmpty(valores[1]) || !string.IsNullOrEmpty(valores[2]))
-                        {
-                            Connection connection = new Connection();
-                            string cadena = $"data source={valores[0]}; initial catalog=master; user id={valores[1]}; password={valores[2]};";
-                            if (connection.CheckConnection(cadena))    //  Verificamos que la cadena de conexión con el Servidor de SQL sea correcta
-                            {
-                                if (internalConnection.Create_DataAccess(valores))  // Sólo si la cadena de conexión es correcta procedemos a registrar en InternalDB
-                                {
-                                    Application.Current.Shutdown();
-                                    System.Windows.Forms.Application.Restart();
-                                }
-                            }
-                        }
-                    }
-                    else // Sí no es correcto se pide configurar de forma manual (Formulario)
-                    {
-                        MessageBox.Show("Se debe configurar de forma manual la conexión a la base de datos.");
-                        ConfigurarConeccionSQL configurarConeccionSQL = new ConfigurarConeccionSQL();
-                        configurarConeccionSQL.Show();
-                    }
-                }
+                else
+                    MessageBox.Show("Los datos ingresados son incorrectos, vuelva a intentarlo.", "Error de autenticación", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (Exception ex)
+            else
+                MessageBox.Show("Complete los campos antes de continuar.", "Campos en blanco", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+
+        private void txtUsuario_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                txtPassword.Focus();
+            else
             {
-                MessageBox.Show($"Ha ocurrido un error al iniciar la aplicación, detalle del error: {ex}" , "Error de sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                DataTable dataTable = readGeneralData.GetDataTable("[dbo].[Read_List_Empresas_By_Usuario]", "@IdUsuario", txtUsuario.Text.ToString().Trim());
+
+                lstEmpresas.ItemsSource         = null;
+                lstEmpresas.Items.Clear();
+
+                if (dataTable.Rows.Count < 1)
+                {
+                    DataRow row     =   dataTable.NewRow();
+                    row["NombreLegal"]  =   "Sin empresa";
+                    row["IdDatosFox"]   =   0;
+                    dataTable.Rows.Add(row);
+                }
+
+                var items = (dataTable as IListSource).GetList(); //  Lista de empresas
+
+                lstEmpresas.ItemsSource         = items;
+                lstEmpresas.DisplayMemberPath   = "NombreLegal";
+                lstEmpresas.SelectedValuePath   = "IdDatosFox";
+                lstEmpresas.SelectedIndex       = 0;
             }
         }
 
-        public void ComprobarDatosDeAutenticacion()
+        private void btnNuevo_Click(object sender, RoutedEventArgs e)
         {
-            Data_AccesosSunat data_AccesosSunat = new Data_AccesosSunat((int)lstEmpresas.SelectedValue);
+            Usuarios usuarios   =   new Usuarios();
+            usuarios.Show();
+        }
 
-            if (!string.IsNullOrEmpty(data_AccesosSunat.Usuario))
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
             {
-                txtUsuario.IsEnabled    =   false;
-                txtPassword.IsEnabled   =   false;
-                btnIngresar.IsEnabled   =   false;
-                btnIngresar.Content     =   "Registro de datos";
+                Ingresar();
             }
         }
     }

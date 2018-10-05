@@ -1,4 +1,5 @@
-﻿using FEI.ayuda;
+﻿using DataLayer.CRUD;
+using FEI.ayuda;
 using FEI.Extension.Base;
 using FEI.Extension.Datos;
 using FEI.pages;
@@ -25,6 +26,7 @@ namespace FEI
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Variables antiguas
         private clsEntityAlarms alarm;
         private clsEntityAlarms alarmRD;
         private clsEntityAlarms alarmRE;
@@ -60,10 +62,34 @@ namespace FEI
         private BackgroundWorker workerWeb = new BackgroundWorker();
         public string versionCompilado = "02.01.01";//Ahora lo maneja el modulo ModVers
         //public string buildCompilado = "15112017";//Ahora lo maneja el modulo ModVers
-        public MainWindow(clsEntityAccount Profile)
+        #endregion Variables antiguas
+
+        private bool disponible         =   false;
+        private string mensaje          =   string.Empty;
+        private string mensajeCabecera  =   string.Empty;
+        Data_Usuario data_Usuario       =   new Data_Usuario();
+        public MainWindow(Int16 IdDatosFox, Data_Usuario usuario)
         {
             InitializeComponent();
-            Perfil = Profile;
+            data_Usuario = usuario;
+
+            Data_DatosFox data_DatosFox =   new Data_DatosFox(IdDatosFox);
+            data_DatosFox.Read_DatosFox();
+            Data_Contribuyente data_Contribuyente   =   new Data_Contribuyente(data_DatosFox.IdEmisor);
+            data_Contribuyente.Read_Contribuyente();
+
+            lblEmpresa.Content  =   data_Contribuyente.NombreLegal;
+            lblUsuario.Content  =   data_Usuario.IdUsuario;
+
+            if (IdDatosFox != 0)
+                disponible = true;
+
+            if (disponible == false)    // Validación inicial para la apertura de todos los reportes
+            {
+                mensaje         =   "Antes de proceder debe registrar los datos de acceso de emisor en 'Configuración de sistema -> Información del declarante' ";
+                mensajeCabecera =   "Registro necesario";
+            }
+
             string directory = Environment.CurrentDirectory;
             //clsBaseLog.cs_pxRegistarAdd(currentDirectory);
             if (!File.Exists(currentDirectory + "\\lcl.txt"))
@@ -128,128 +154,6 @@ namespace FEI
         //Evento de carga en la pagina principal
         private void mainForm_Loaded(object sender, RoutedEventArgs e)
         {
-            //Si el perfil inicado sesion existe.
-            if (Perfil.Cs_pr_Users_Id != "")
-            {
-                Usuario = new clsEntityUsers().cs_pxObtenerUnoPorId(Perfil.Cs_pr_Users_Id);
-                //Si tiene rol de admin
-                if (Usuario.Cs_pr_Role_Id == "ADMIN" || Usuario.Cs_pr_Role_Id == "MASTER")
-                {
-
-                   // lblItem15.IsEnabled = true;
-                   // lblItem16.IsEnabled = true;
-                    if (Perfil.Cs_pr_Declarant_Id == "")
-                    {
-                        //Bloquear el menu
-                        EstadoMenu(false, "0");
-                        //lblItem13.IsEnabled = false;
-                        //lblItem14.IsEnabled = false;
-                        // AlmacenLocal.IsEnabled = false;
-                        //  AlmacenWeb.IsEnabled = false;
-                    }
-                    //Habilitar las opciones para crear y administrar empresas.
-                    //Si existe una conexión con la base de datos, Habilitar la ventana principal.
-                    //Si no existe una conexión con la base de datos, Deshabilitar la ventana principal.
-                }
-                else
-                {
-                    //lblItem15.IsEnabled = false;
-                    //lblItem16.IsEnabled = false;
-                    if (Perfil.Cs_pr_Declarant_Id == "")
-                    {
-                        //Bloquear el menu
-                        EstadoMenu(false, "0");
-                        //lblItem13.IsEnabled = false;
-                        //lblItem14.IsEnabled = false;
-                        // AlmacenLocal.IsEnabled = false;
-                        // AlmacenWeb.IsEnabled = false;
-                    }
-                    //Deshabilitar las opciones para crear y administrar empresas.
-                    //Si existe una conexión con la base de datos, Habilitar la ventana principal.
-                    //Si no existe una conexión con la base de datos, Deshabilitar la ventana principal.
-                }
-                lblUsuario.Content = "Usuario: " + Usuario.Cs_pr_User;
-            }
-
-            if (Perfil.Cs_pr_Declarant_Id != "")
-            {
-                //Si el usuario existe cargar las alarmas y reiniciar los paramteros de conexion
-                Empresa = new clsEntityDeclarant().cs_pxObtenerUnoPorId(Perfil.Cs_pr_Declarant_Id);
-                DatabaseLocal = new clsEntityDatabaseLocal().cs_fxObtenerUnoPorDeclaranteId(Empresa.Cs_pr_Declarant_Id);
-                lblEmpresa.Content = "Empresa: " + Empresa.Cs_pr_RazonSocial;
-                alarm = new clsEntityAlarms().cs_fxObtenerUnoPorDeclaranteId(Empresa.Cs_pr_Declarant_Id, "");//Obtener configuracion alarma facturas.
-                alarmRD = new clsEntityAlarms().cs_fxObtenerUnoPorDeclaranteId(Empresa.Cs_pr_Declarant_Id, "1");//Obtener configuracion alarma de resumen diario.
-                alarmRE = new clsEntityAlarms().cs_fxObtenerUnoPorDeclaranteId(Empresa.Cs_pr_Declarant_Id, "2");//Obtener configuracion alarma retencion electrónico.
-                cs_pxReiniciarConexión();
-                cs_pxReiniciar();
-            }
-            else
-            {
-                if (Usuario.Cs_pr_Role_Id == "ADMIN" || Usuario.Cs_pr_Role_Id == "MASTER")
-                {
-
-                    //lblItem15.IsEnabled = true;
-                    //lblItem16.IsEnabled = true;
-                    if (Perfil.Cs_pr_Declarant_Id == "")
-                    {
-                        EstadoMenu(false, "0");
-                        //lblItem13.IsEnabled = false;
-                        //lblItem14.IsEnabled = false;
-                        // AlmacenLocal.IsEnabled = false;
-                        //  AlmacenWeb.IsEnabled = false;
-
-                    }
-                    //Habilitar las opciones para crear y administrar empresas.
-                    //Si existe una conexión con la base de datos, Habilitar la ventana principal.
-                    //Si no existe una conexión con la base de datos, Deshabilitar la ventana principal.
-                }
-                else
-                {
-                    //lblItem15.IsEnabled = false;
-                    //lblItem16.IsEnabled = false;
-                    if (Perfil.Cs_pr_Declarant_Id == "")
-                    {
-                        EstadoMenu(false, "0");
-                        //lblItem13.IsEnabled = false;
-                        //lblItem14.IsEnabled = false;
-                        //  AlmacenLocal.IsEnabled = false;
-                        //   AlmacenWeb.IsEnabled = false;
-                    }
-                    //Deshabilitar las opciones para crear y administrar empresas.
-                    //Si existe una conexión con la base de datos, Habilitar la ventana principal.
-                    //Si no existe una conexión con la base de datos, Deshabilitar la ventana principal.
-                }
-            }
-
-            //Timer facturas y notas           
-            System.Timers.Timer aTimerFactura = new System.Timers.Timer();
-            aTimerFactura.Elapsed += new ElapsedEventHandler(runWorkerAlertas);
-            // Set the Interval to 1 second.
-            aTimerFactura.Interval = 60000;
-            aTimerFactura.Enabled = true;
-            aTimerFactura.Start();
-
-            //Timer resumen diario          
-            //aTimerResumen.Elapsed += new ElapsedEventHandler(tmrAlarmaRD_Tick);
-            // Set the Interval to 1 second.
-            //aTimerResumen.Interval = 60000;
-            // aTimerResumen.Enabled = true;
-            //aTimerResumen.Start();
-
-            //Timer retencion           
-            // aTimerRetencion.Elapsed += new ElapsedEventHandler(tmrAlarmaRE_Tick);
-            // Set the Interval to 1 second.
-            //aTimerRetencion.Interval = 60000;
-            //aTimerRetencion.Enabled = true;
-            //aTimerRetencion.Start();
-
-            //Timer envio de comprobantes a web          
-            aTimerEnvio.Elapsed += new ElapsedEventHandler(runWorkerSendWeb);
-            // Set the Interval to 1 second.
-            aTimerEnvio.Interval = 240000;
-            aTimerEnvio.Enabled = true;
-            aTimerEnvio.Start();
-
 
         }
         private void runWorkerSendWeb(object sender, EventArgs e)
@@ -768,7 +672,7 @@ namespace FEI
 
                 clsEntityDeclarant declarante = new clsEntityDeclarant().cs_pxObtenerUnoPorId(DatabaseLocal.Cs_pr_Declarant_Id);
                 bool aux_existerutacertificadodigital = File.Exists(declarante.Cs_pr_Rutacertificadodigital);
-                
+
                 //Cristhian|17/08/2017|FEI2-323
                 /*Codigo para mostrar la alerta de vencimiento del Certificado Digital*/
                 /*MODIFICACIóN INICIO*/
@@ -790,12 +694,12 @@ namespace FEI
                         if (result >= 0)
                         {
                             /*Si el certificado ya se vencio entonces se muestra la notificacion con el siguiente mensaje*/
-                            MessageBox.Show("Su certificado digital ha expirado.Para renovar su certificado digital contáctese con su proveedor.","Aviso",MessageBoxButton.OK,MessageBoxImage.Warning);
-                            
+                            MessageBox.Show("Su certificado digital ha expirado.Para renovar su certificado digital contáctese con su proveedor.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+
                         }
                         else
                         {
-                            /*Se verifica si la alerta del Certificado Digital esta activado*/ 
+                            /*Se verifica si la alerta del Certificado Digital esta activado*/
                             if (declarante.Cs_pr_Alerta_Dias != "")
                             {
                                 /*Se obtiene el numero de dias que se establece en la alerta del Certificado Digital*/
@@ -826,7 +730,7 @@ namespace FEI
                                     ntiCertificadoDigital.BalloonTipText = "Su certificado digital ¡Vence HOY!. Para renovar su certificado digital contáctese con su proveedor.";
                                     ntiCertificadoDigital.BalloonTipTitle = "Aviso de Certificado Digital";
                                     ntiCertificadoDigital.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
-                                    ntiCertificadoDigital.ShowBalloonTip(1000);                                    
+                                    ntiCertificadoDigital.ShowBalloonTip(1000);
                                 }
                             }
                             else
@@ -943,567 +847,613 @@ namespace FEI
         }
         private void clkReporteFactura(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("01", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                //this.pageContainer.Source = new Uri("pages/Reporte_Factura.xaml", UriKind.RelativeOrAbsolute);
-                Reporte_Factura repSunat = new Reporte_Factura(DatabaseLocal);
-                this.pageContainer.Navigate(repSunat);
-                seleccionarItem(1, "4");
+                bool permitido = clsEntityPermisos.accesoPermitido("01", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    //this.pageContainer.Source = new Uri("pages/Reporte_Factura.xaml", UriKind.RelativeOrAbsolute);
+                    Reporte_Factura repSunat = new Reporte_Factura(DatabaseLocal);
+                    this.pageContainer.Navigate(repSunat);
+                    seleccionarItem(1, "4");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(1, "4");
+                }
+                //selectItem(1, 16);
             }
             else
             {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(1, "4");
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-
-            //selectItem(1, 16);
         }
         private void clkReporteResumen(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("02", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                //this.pageContainer.Source = new Uri("pages/Reporte_Resumen.xaml", UriKind.RelativeOrAbsolute);
-                Reporte_Resumen repResumen = new Reporte_Resumen(DatabaseLocal);
-                this.pageContainer.Navigate(repResumen);
-                seleccionarItem(2, "5");
+                bool permitido = clsEntityPermisos.accesoPermitido("02", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    //this.pageContainer.Source = new Uri("pages/Reporte_Resumen.xaml", UriKind.RelativeOrAbsolute);
+                    Reporte_Resumen repResumen = new Reporte_Resumen(DatabaseLocal);
+                    this.pageContainer.Navigate(repResumen);
+                    seleccionarItem(2, "5");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(2, "5");
+                }
+                //selectItem(2, 16);
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(2, "5");
-            }
-            //selectItem(2, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkReporteBoleta(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("03", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                // this.pageContainer.Source = new Uri("pages/Reporte_Boleta.xaml", UriKind.RelativeOrAbsolute);
-                Reporte_Boleta repBoleta = new Reporte_Boleta(DatabaseLocal);
-                this.pageContainer.Navigate(repBoleta);
-                seleccionarItem(3, "6");
+                bool permitido = clsEntityPermisos.accesoPermitido("03", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    // this.pageContainer.Source = new Uri("pages/Reporte_Boleta.xaml", UriKind.RelativeOrAbsolute);
+                    Reporte_Boleta repBoleta = new Reporte_Boleta(DatabaseLocal);
+                    this.pageContainer.Navigate(repBoleta);
+                    seleccionarItem(3, "6");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(3, "6");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(3, "6");
-            }
-            //selectItem(3, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkReporteBaja(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("04", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Reporte_ComunicacionBaja repComunicacionBaja = new Reporte_ComunicacionBaja(DatabaseLocal);
-                this.pageContainer.Navigate(repComunicacionBaja);
-                //this.pageContainer.Source = new Uri("pages/Reporte_ComunicacionBaja.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(4, "7");
+                bool permitido = clsEntityPermisos.accesoPermitido("04", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Reporte_ComunicacionBaja repComunicacionBaja = new Reporte_ComunicacionBaja(DatabaseLocal);
+                    this.pageContainer.Navigate(repComunicacionBaja);
+                    //this.pageContainer.Source = new Uri("pages/Reporte_ComunicacionBaja.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(4, "7");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(4, "7");
+                }
+                // selectItem(4, 16);
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(4, "7");
-            }
-            // selectItem(4, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkReporteRetencion(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("05", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Reporte_Retencion repRetencion = new Reporte_Retencion(DatabaseLocal);
-                this.pageContainer.Navigate(repRetencion);
-                //this.pageContainer.Source = new Uri("pages/Reporte_Retencion.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(5, "8");
+                bool permitido = clsEntityPermisos.accesoPermitido("05", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Reporte_Retencion repRetencion = new Reporte_Retencion(DatabaseLocal);
+                    this.pageContainer.Navigate(repRetencion);
+                    //this.pageContainer.Source = new Uri("pages/Reporte_Retencion.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(5, "8");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(5, "8");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(5, "8");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkReportGeneral(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("06", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Reporte_General repGeneral = new Reporte_General(DatabaseLocal);
-                this.pageContainer.Navigate(repGeneral);
-                // this.pageContainer.Source = new Uri("pages/Reporte_General.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(6, "9");
+                bool permitido = clsEntityPermisos.accesoPermitido("06", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Reporte_General repGeneral = new Reporte_General(DatabaseLocal);
+                    this.pageContainer.Navigate(repGeneral);
+                    // this.pageContainer.Source = new Uri("pages/Reporte_General.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(6, "9");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(6, "9");
+                }
+                // selectItem(5, 16);
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(6, "9");
-            }
-            // selectItem(5, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkFacturaSunat(object sender, RoutedEventArgs e)
         {
-            /*clsEntityDocument doc = new clsEntityDocument(DatabaseLocal);
-            doc.Cs_tag_ID = "B001-00001001";
-            string d=  doc.cs_pxInsertar(false,false);*/
-
-            bool permitido = clsEntityPermisos.accesoPermitido("07", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                //this.pageContainer.Source = new Uri("pages/Factura_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                Factura_Sunat facSunat = new Factura_Sunat(this, DatabaseLocal);
-                this.pageContainer.Navigate(facSunat);
+                Factura_Sunat factura_Sunat = new Factura_Sunat(this, DatabaseLocal);
+                pageContainer.Navigate(factura_Sunat);
                 seleccionarItem(7, "10");
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(7, "10");
-            }
-            // selectItem(6, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkFacturaAlerta(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("08", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Factura_Alerta facAlerta = new Factura_Alerta(alarm);
-                this.pageContainer.Navigate(facAlerta);
-                seleccionarItem(8, "11");
+                bool permitido = clsEntityPermisos.accesoPermitido("08", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Factura_Alerta facAlerta = new Factura_Alerta(alarm);
+                    this.pageContainer.Navigate(facAlerta);
+                    seleccionarItem(8, "11");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(8, "11");
+                }
+                //  selectItem(7, 16);
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(8, "11");
-            }
-            //  selectItem(7, 16);
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkResumenDiarioGenerar(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("09", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                // this.pageContainer.Source = new Uri("pages/ResumenDiario_Generar.xaml", UriKind.RelativeOrAbsolute);
-                ResumenDiario_Generar resDiarioGen = new ResumenDiario_Generar(this, DatabaseLocal);
-                this.pageContainer.Navigate(resDiarioGen);
-                seleccionarItem(9, "12");
+                bool permitido = clsEntityPermisos.accesoPermitido("09", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Generar.xaml", UriKind.RelativeOrAbsolute);
+                    ResumenDiario_Generar resDiarioGen = new ResumenDiario_Generar(this, DatabaseLocal);
+                    this.pageContainer.Navigate(resDiarioGen);
+                    seleccionarItem(9, "12");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(9, "12");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(9, "12");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkResumenDiarioSunat(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("10", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                ResumenDiario_Sunat resDiarioSun = new ResumenDiario_Sunat(this, DatabaseLocal);
-                this.pageContainer.Navigate(resDiarioSun);
-                // this.pageContainer.Source = new Uri("pages/ResumenDiario_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(10, "13");
+                bool permitido = clsEntityPermisos.accesoPermitido("10", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    ResumenDiario_Sunat resDiarioSun = new ResumenDiario_Sunat(this, DatabaseLocal);
+                    this.pageContainer.Navigate(resDiarioSun);
+                    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(10, "13");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(10, "13");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(10, "13");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkResumenDiarioAlerta(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("11", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                if (Empresa != null)
+                bool permitido = clsEntityPermisos.accesoPermitido("11", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
                 {
-                    ResumenDiario_Alerta rdalerta = new ResumenDiario_Alerta(alarmRD, Empresa.Cs_pr_Declarant_Id);
-                    this.pageContainer.Navigate(rdalerta);
-                    seleccionarItem(11, "14");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(11, "14");
-            }
-        }
-        private void clkComunicacionGenerar(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("12", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                ComunicacionBaja_Generar comBajaGen = new ComunicacionBaja_Generar(this, DatabaseLocal);
-                this.pageContainer.Navigate(comBajaGen);
-                //this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Generar.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(12, "15");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(12, "15");
-            }
-            //  selectItem(11, 16);
-        }
-        private void clkComunicacionSunat(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("13", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                ComunicacionBaja_Sunat comBajaSunat = new ComunicacionBaja_Sunat(this, DatabaseLocal);
-                this.pageContainer.Navigate(comBajaSunat);
-                // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(13, "16");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(13, "16");
-            }
-
-            //  selectItem(12, 16);
-        }
-        private void clkRetencionEnvio(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("14", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                Retencion_Sunat retSunat = new Retencion_Sunat(DatabaseLocal, this);
-                this.pageContainer.Navigate(retSunat);
-                //this.pageContainer.Source = new Uri("pages/Retencion_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(14, "17");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(14, "17");
-            }
-        }
-
-        private void clkRetencionAlertas(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("15", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Retencion_Alerta rdalerta = new Retencion_Alerta(alarmRE, Empresa.Cs_pr_Declarant_Id);
-                    this.pageContainer.Navigate(rdalerta);
-                    seleccionarItem(15, "18");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(15, "18");
-            }
-        }
-        private void clkConfiguracionBDLocal(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("16", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Configuracion_bdlocal confBDlocal = new Configuracion_bdlocal(Empresa);
-                    this.pageContainer.Navigate(confBDlocal);
-                    seleccionarItem(16, "21");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(16, "21");
-            }
-            //  selectItem(13, 16);
-        }
-        private void clkConfiguracionBDWeb(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("17", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Configuracion_bdweb confBDweb = new Configuracion_bdweb(Empresa);
-                    this.pageContainer.Navigate(confBDweb);
-                    seleccionarItem(17, "22");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(17, "22");
-            }
-            //  selectItem(14, 16);
-        }
-        private void clkConfiguracionEmpresa(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("18", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                Configuracion_declarante confDeclarante = new Configuracion_declarante(DatabaseLocal);
-                this.pageContainer.Navigate(confDeclarante);
-                //this.pageContainer.Source = new Uri("pages/Configuracion_declarante.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(18, "23");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(18, "23");
-            }
-            //  selectItem(15, 16);
-        }
-        private void clkConfiguracionUsuario(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("19", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                this.pageContainer.Source = new Uri("pages/Configuracion_usuarios.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(19, "24");
-            }
-            else
-            {
-                // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(19, "24");
-            }
-            //   selectItem(16, 16);
-        }
-        private void clkConfiguracionPermisos(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("20", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Configuracion_permisos confPermisosUsuario = new Configuracion_permisos(Empresa.Cs_pr_Declarant_Id, this);
-                    this.pageContainer.Navigate(confPermisosUsuario);
-                    seleccionarItem(20, "25");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(20, "25");
-            }
-
-        }
-        private void clkAcercaDe(object sender, RoutedEventArgs e)
-        {
-            seleccionarItem(27, "0");
-            
-            /*Llamando al modulo para obtener la version y el build del Compilado*/
-            FEI.Extension.ModVers VersionFEI = new FEI.Extension.ModVers();
-            
-            AcercaDe acercaDe = new AcercaDe(VersionFEI.Vers_Compilado(), VersionFEI.Build_Compilado());
-            acercaDe.ShowDialog();
-
-        }
-
-        private void clkConfiguracionGenbackup(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("21", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Utilitario_GeneracionBackup utilGenBackup = new Utilitario_GeneracionBackup(Empresa, this);
-                    this.pageContainer.Navigate(utilGenBackup);
-                    seleccionarItem(21, "26");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(21, "26");
-            }
-
-        }
-
-        private void clkConfiguracionRestbackup(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("22", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                if (Empresa != null)
-                {
-                    Utilitario_RestauracionBackup utilRestBackup = new Utilitario_RestauracionBackup(Empresa, this);
-                    this.pageContainer.Navigate(utilRestBackup);
-                    seleccionarItem(22, "27");
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(22, "27");
-            }
-        }
-
-        private void clkConfiguracionRuta(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("23", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                seleccionarItem(23, "28");
-                RutaArchivo frmRuta = new RutaArchivo();
-                frmRuta.ShowDialog();
-
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(23, "28");
-            }
-        }
-
-        private void clkConfiguracionEstructura(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("24", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                seleccionarItem(24, "29");
-                if (Empresa != null)
-                {
-                    if (System.Windows.Forms.MessageBox.Show("Se va proceder a verificar la estructura de la base de datos configurada para la sesión actual y actualizarla. ¿Está seguro que desea proceder con la operación?", "¿Está seguro?", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                    if (Empresa != null)
                     {
-                        new Loading(Empresa).ShowDialog();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder realizar esta acción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-
-            }
-            else
-            {
-                // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(24, "29");
-            }
-        }
-        private void clkConfiguracionLicencia(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("25", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                seleccionarItem(25, "30");
-                // string directory = Environment.CurrentDirectory;
-                StreamReader sr = new StreamReader(currentDirectory + "\\lcl.txt", System.Text.Encoding.Default);
-                string textoPeticion = sr.ReadToEnd();
-                sr.Close();
-                bool existe = new clsBaseLicencia().licenceExists();
-                // bool activo = clsBaseLicencia.licenceActive(DateTime.Now.ToString("yyyy-MM-dd"));
-                if (existe)
-                {
-                    string[] datosLicencia = new clsBaseLicencia().getDatosLicencia();
-                    if (datosLicencia != null)
-                    {
-                        string fecha = new clsBaseLicencia().getFechaVencimiento();
-                        string tipoLicencia = datosLicencia[6];
-                        string versionLicencia = datosLicencia[3];
-                        string codigoPeticion = textoPeticion;
-                        string codigoActivacion = datosLicencia[0];
-                        Licencia lic = new Licencia(codigoActivacion, fecha, tipoLicencia, codigoPeticion, versionLicencia);
-                        lic.ShowDialog();
+                        ResumenDiario_Alerta rdalerta = new ResumenDiario_Alerta(alarmRD, Empresa.Cs_pr_Declarant_Id);
+                        this.pageContainer.Navigate(rdalerta);
+                        seleccionarItem(11, "14");
                     }
                     else
                     {
-                        MessageBox.Show("Ha ocurrido un error al cargar los datos de la licencia. Contáctese con su proveedor");
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 else
                 {
-                    FEI.Extension.ModVers Version_Compilado = new Extension.ModVers();
-                    versionCompilado = Version_Compilado.Vers_Compilado();
-                    Activacion frmActivacion = new Activacion(textoPeticion, versionCompilado);
-                    frmActivacion.ShowDialog();
-                    if (frmActivacion.DialogResult.HasValue && frmActivacion.DialogResult.Value)
-                    {
-                        // MessageBox.Show("Se ha realizado la activacion");
-                    }
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(11, "14");
                 }
             }
             else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkComunicacionGenerar(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
             {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(25, "30");
+                bool permitido = clsEntityPermisos.accesoPermitido("12", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    ComunicacionBaja_Generar comBajaGen = new ComunicacionBaja_Generar(this, DatabaseLocal);
+                    this.pageContainer.Navigate(comBajaGen);
+                    //this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Generar.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(12, "15");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(12, "15");
+                }
+                //  selectItem(11, 16);
             }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkComunicacionSunat(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("13", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    ComunicacionBaja_Sunat comBajaSunat = new ComunicacionBaja_Sunat(this, DatabaseLocal);
+                    this.pageContainer.Navigate(comBajaSunat);
+                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(13, "16");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(13, "16");
+                }
+                //  selectItem(12, 16);
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkRetencionEnvio(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("14", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Retencion_Sunat retSunat = new Retencion_Sunat(DatabaseLocal, this);
+                    this.pageContainer.Navigate(retSunat);
+                    //this.pageContainer.Source = new Uri("pages/Retencion_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(14, "17");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(14, "17");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkRetencionAlertas(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("15", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    if (Empresa != null)
+                    {
+                        Retencion_Alerta rdalerta = new Retencion_Alerta(alarmRE, Empresa.Cs_pr_Declarant_Id);
+                        this.pageContainer.Navigate(rdalerta);
+                        seleccionarItem(15, "18");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(15, "18");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionEmpresa(object sender, RoutedEventArgs e)
+        {
+            Configuracion_declarante configuracion_Declarante = new Configuracion_declarante(data_Usuario);
+            this.pageContainer.Navigate(configuracion_Declarante);
+            seleccionarItem(18, "23");
+        }
+        private void clkConfiguracionUsuario(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("19", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    this.pageContainer.Source = new Uri("pages/Configuracion_usuarios.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(19, "24");
+                }
+                else
+                {
+                    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(19, "24");
+                }
+                //   selectItem(16, 16);
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionPermisos(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("20", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    if (Empresa != null)
+                    {
+                        Configuracion_permisos confPermisosUsuario = new Configuracion_permisos(Empresa.Cs_pr_Declarant_Id, this);
+                        this.pageContainer.Navigate(confPermisosUsuario);
+                        seleccionarItem(20, "25");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(20, "25");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkAcercaDe(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                seleccionarItem(27, "0");
+
+                /*Llamando al modulo para obtener la version y el build del Compilado*/
+                FEI.Extension.ModVers VersionFEI = new FEI.Extension.ModVers();
+
+                AcercaDe acercaDe = new AcercaDe(VersionFEI.Vers_Compilado(), VersionFEI.Build_Compilado());
+                acercaDe.ShowDialog();
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionGenbackup(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("21", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    if (Empresa != null)
+                    {
+                        Utilitario_GeneracionBackup utilGenBackup = new Utilitario_GeneracionBackup(Empresa, this);
+                        this.pageContainer.Navigate(utilGenBackup);
+                        seleccionarItem(21, "26");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(21, "26");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionRestbackup(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("22", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    if (Empresa != null)
+                    {
+                        Utilitario_RestauracionBackup utilRestBackup = new Utilitario_RestauracionBackup(Empresa, this);
+                        this.pageContainer.Navigate(utilRestBackup);
+                        seleccionarItem(22, "27");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(22, "27");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionRuta(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("23", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    seleccionarItem(23, "28");
+                    RutaArchivo frmRuta = new RutaArchivo();
+                    frmRuta.ShowDialog();
+
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(23, "28");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionEstructura(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("24", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    seleccionarItem(24, "29");
+                    if (Empresa != null)
+                    {
+                        if (System.Windows.Forms.MessageBox.Show("Se va proceder a verificar la estructura de la base de datos configurada para la sesión actual y actualizarla. ¿Está seguro que desea proceder con la operación?", "¿Está seguro?", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            new Loading(Empresa).ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder realizar esta acción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+
+                }
+                else
+                {
+                    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(24, "29");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkConfiguracionLicencia(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("25", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    seleccionarItem(25, "30");
+                    // string directory = Environment.CurrentDirectory;
+                    StreamReader sr = new StreamReader(currentDirectory + "\\lcl.txt", System.Text.Encoding.Default);
+                    string textoPeticion = sr.ReadToEnd();
+                    sr.Close();
+                    bool existe = new clsBaseLicencia().licenceExists();
+                    // bool activo = clsBaseLicencia.licenceActive(DateTime.Now.ToString("yyyy-MM-dd"));
+                    if (existe)
+                    {
+                        string[] datosLicencia = new clsBaseLicencia().getDatosLicencia();
+                        if (datosLicencia != null)
+                        {
+                            string fecha = new clsBaseLicencia().getFechaVencimiento();
+                            string tipoLicencia = datosLicencia[6];
+                            string versionLicencia = datosLicencia[3];
+                            string codigoPeticion = textoPeticion;
+                            string codigoActivacion = datosLicencia[0];
+                            Licencia lic = new Licencia(codigoActivacion, fecha, tipoLicencia, codigoPeticion, versionLicencia);
+                            lic.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ha ocurrido un error al cargar los datos de la licencia. Contáctese con su proveedor");
+                        }
+                    }
+                    else
+                    {
+                        FEI.Extension.ModVers Version_Compilado = new Extension.ModVers();
+                        versionCompilado = Version_Compilado.Vers_Compilado();
+                        Activacion frmActivacion = new Activacion(textoPeticion, versionCompilado);
+                        frmActivacion.ShowDialog();
+                        if (frmActivacion.DialogResult.HasValue && frmActivacion.DialogResult.Value)
+                        {
+                            // MessageBox.Show("Se ha realizado la activacion");
+                        }
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(25, "30");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
         private void clkAyuda(object sender, RoutedEventArgs e)
         {
-            //seleccionarItem(26,"0");
-            AyudaPrincipal ayuda = new AyudaPrincipal("0");
-            ayuda.ShowDialog();
-
+            if (disponible)
+            {
+                //seleccionarItem(26,"0");
+                AyudaPrincipal ayuda = new AyudaPrincipal("0");
+                ayuda.ShowDialog();
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
-
         private void clkReversionGenerar(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("28", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                if (Empresa != null)
+                bool permitido = clsEntityPermisos.accesoPermitido("28", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
                 {
-                    ReversionGenerar_Retencion reversionGenerarRetencion = new ReversionGenerar_Retencion(DatabaseLocal, this);
-                    this.pageContainer.Navigate(reversionGenerarRetencion);
-                    seleccionarItem(28, "19");
+                    if (Empresa != null)
+                    {
+                        ReversionGenerar_Retencion reversionGenerarRetencion = new ReversionGenerar_Retencion(DatabaseLocal, this);
+                        this.pageContainer.Navigate(reversionGenerarRetencion);
+                        seleccionarItem(28, "19");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(28, "19");
                 }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(28, "19");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
-
         private void clkReversionSunat(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("29", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                ReversionSunat_Retencion creversionCRESunat = new ReversionSunat_Retencion(this, DatabaseLocal);
-                this.pageContainer.Navigate(creversionCRESunat);
-                // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(29, "20");
+                bool permitido = clsEntityPermisos.accesoPermitido("29", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    ReversionSunat_Retencion creversionCRESunat = new ReversionSunat_Retencion(this, DatabaseLocal);
+                    this.pageContainer.Navigate(creversionCRESunat);
+                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(29, "20");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(29, "20");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(29, "20");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
 
         private void main_Form_KeyDown(object sender, KeyEventArgs e)
@@ -1536,119 +1486,150 @@ namespace FEI
 
         private void clkReceptorValidar(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("30", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                this.pageContainer.Navigate(receptorValidar);
-                // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(30, "20");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(30, "20");
-            }
-        }
-
-        private void clkReceptorCompras(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("31", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-                Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                this.pageContainer.Navigate(receptorCompras);
-                // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(31, "20");
-            }
-            else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(31, "20");
-            }
-        }
-        private void clkTransferenciaDatos(object sender, RoutedEventArgs e)
-        {
-            bool permitido = clsEntityPermisos.accesoPermitido("32", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
-            {
-               
-                if (Empresa != null)
+                bool permitido = clsEntityPermisos.accesoPermitido("30", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
                 {
-                    Process myProcess = new Process();
-                    string RutaInstalacion = Directory.GetCurrentDirectory();
-
-                    string ArchivoEjecutable = RutaInstalacion + "\\TransData.exe";
-                    myProcess.StartInfo.UseShellExecute = true;
-                    myProcess.StartInfo.FileName = ArchivoEjecutable;
-                    myProcess.StartInfo.Arguments = Empresa.Cs_pr_Declarant_Id;
-                    myProcess.StartInfo.CreateNoWindow = true;
-                    myProcess.Start();
-
+                    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                    this.pageContainer.Navigate(receptorValidar);
+                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(30, "20");
                 }
                 else
                 {
-                    MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(30, "20");
                 }
-                /* Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                 this.pageContainer.Navigate(receptorCompras);
-                */
-                seleccionarItem(32, "20");
             }
             else
-            {
-                seleccionarItem(32, "20");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
+        private void clkReceptorCompras(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("31", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                    this.pageContainer.Navigate(receptorCompras);
+                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(31, "20");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(31, "20");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+        private void clkTransferenciaDatos(object sender, RoutedEventArgs e)
+        {
+            if (disponible)
+            {
+                bool permitido = clsEntityPermisos.accesoPermitido("32", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
 
+                    if (Empresa != null)
+                    {
+                        Process myProcess = new Process();
+                        string RutaInstalacion = Directory.GetCurrentDirectory();
+
+                        string ArchivoEjecutable = RutaInstalacion + "\\TransData.exe";
+                        myProcess.StartInfo.UseShellExecute = true;
+                        myProcess.StartInfo.FileName = ArchivoEjecutable;
+                        myProcess.StartInfo.Arguments = Empresa.Cs_pr_Declarant_Id;
+                        myProcess.StartInfo.CreateNoWindow = true;
+                        myProcess.Start();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    /* Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                     this.pageContainer.Navigate(receptorCompras);
+                    */
+                    seleccionarItem(32, "20");
+                }
+                else
+                {
+                    seleccionarItem(32, "20");
+                }
+            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
         private void clkCertificadoDigital(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("33", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-               CertificadoDigital CertificadoDigital = new CertificadoDigital();
-               this.pageContainer.Navigate(CertificadoDigital);
-               
-                seleccionarItem(33, "20");
+                bool permitido = clsEntityPermisos.accesoPermitido("33", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    CertificadoDigital CertificadoDigital = new CertificadoDigital();
+                    this.pageContainer.Navigate(CertificadoDigital);
+
+                    seleccionarItem(33, "20");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(33, "20");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(33, "20");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
-
         private void clkAyudaSunat(object sender, RoutedEventArgs e)
         {
-            try
+            if (disponible)
             {
-                string carpeta_de_PDF = Directory.GetCurrentDirectory();
-                System.Diagnostics.Process.Start(carpeta_de_PDF + "\\PDF\\Listado-Errores-SUNAT.pdf");
+                try
+                {
+                    string carpeta_de_PDF = Directory.GetCurrentDirectory();
+                    System.Diagnostics.Process.Start(carpeta_de_PDF + "\\PDF\\Listado-Errores-SUNAT.pdf");
 
-                seleccionarItem(34, "20");
+                    seleccionarItem(34, "20");
+                }
+                catch (Exception ex)
+                {
+                    clsBaseLog.cs_pxRegistarAdd("Ver Lista Errores SUNAT: " + ex.ToString());
+                }
             }
-            catch (Exception ex)
-            {
-                clsBaseLog.cs_pxRegistarAdd("Ver Lista Errores SUNAT: " + ex.ToString());
-            }
+            else
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
-
         /*Creado para la Opcion de Validar XML*/
         private void clkReceptorVerificar(object sender, RoutedEventArgs e)
         {
-            bool permitido = clsEntityPermisos.accesoPermitido("35", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-            if (permitido)
+            if (disponible)
             {
-                Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                this.pageContainer.Navigate(receptorValidar);
-                // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                seleccionarItem(35, "20");
+                bool permitido = clsEntityPermisos.accesoPermitido("35", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                if (permitido)
+                {
+                    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                    this.pageContainer.Navigate(receptorValidar);
+                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                    seleccionarItem(35, "20");
+                }
+                else
+                {
+                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                    seleccionarItem(35, "20");
+                }
             }
             else
-            {
-                //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                seleccionarItem(35, "20");
-            }
+                MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        }
+
+        private void btnConfigurarDB_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

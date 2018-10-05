@@ -318,9 +318,6 @@
     <Compile Include="pages\Configuracion_bdlocal.xaml.cs">
       <DependentUpon>Configuracion_bdlocal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pages\Configuracion_bdweb.xaml.cs">
-      <DependentUpon>Configuracion_bdweb.xaml</DependentUpon>
-    </Compile>
     <Compile Include="pages\Configuracion_declarante.xaml.cs">
       <DependentUpon>Configuracion_declarante.xaml</DependentUpon>
     </Compile>
@@ -333,6 +330,9 @@
     <Compile Include="pages\DatePickerEx.cs" />
     <Compile Include="pages\DateTimeExtensions.cs" />
     <Compile Include="pages\DateTimeHelper.cs" />
+    <Compile Include="pages\Emisor.xaml.cs">
+      <DependentUpon>Emisor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\Factura_Alerta.xaml.cs">
       <DependentUpon>Factura_Alerta.xaml</DependentUpon>
     </Compile>
@@ -410,6 +410,9 @@
       <DependentUpon>ProgressWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="classes\RepresentacionImpresa.cs" />
+    <Compile Include="Registro_Empresa_Declarante.xaml.cs">
+      <DependentUpon>Registro_Empresa_Declarante.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RutaArchivo.xaml.cs">
       <DependentUpon>RutaArchivo.xaml</DependentUpon>
     </Compile>
@@ -645,10 +648,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="pages\Configuracion_bdweb.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="pages\Configuracion_declarante.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -660,6 +659,10 @@
     <Page Include="pages\Configuracion_usuarios.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pages\Emisor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pages\Factura_Alerta.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -746,6 +749,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProgressDialog\ProgressWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro_Empresa_Declarante.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1128,13 +1135,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="InternalDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InternalDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>InternalDB.mdf</DependentUpon>
-    </Content>
     <Content Include="x64\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
