@@ -15,40 +15,52 @@ namespace DataLayer.CRUD
         
         public bool Alter_Usuario(string storedProcedure)
         {
-            Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
+            Connection connection   =   new Connection();
+            SqlCommand sqlCommand   =   new SqlCommand
+            {
+                CommandText =   storedProcedure,
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
 
-            SqlParameter paramIdUsuario         = new SqlParameter();
-            paramIdUsuario.SqlDbType            = SqlDbType.NVarChar;
-            paramIdUsuario.ParameterName        = "@IdUsuario";
-            paramIdUsuario.Value                = IdUsuario;
+            SqlParameter paramIdUsuario         =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@IdUsuario",
+                Value           =   IdUsuario
+            };
             sqlCommand.Parameters.Add(paramIdUsuario);
-            
-            SqlParameter paramPassContrasenia   = new SqlParameter();
-            paramPassContrasenia.SqlDbType      = SqlDbType.NVarChar;
-            paramPassContrasenia.ParameterName  = "@PassContrasenia";
-            paramPassContrasenia.Value          = PassContrasenia;
+
+            SqlParameter paramPassContrasenia   =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@PassContrasenia",
+                Value           =   PassContrasenia
+            };
             sqlCommand.Parameters.Add(paramPassContrasenia);
 
-            SqlParameter paramContrasenia       = new SqlParameter();
-            paramContrasenia.SqlDbType          = SqlDbType.NVarChar;
-            paramContrasenia.ParameterName      = "@Contrasenia";
-            paramContrasenia.Value              = Contrasenia;
+            SqlParameter paramContrasenia       =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@Contrasenia",
+                Value           =   Contrasenia
+            };
             sqlCommand.Parameters.Add(paramContrasenia);
 
-            SqlParameter paramIdRol             = new SqlParameter();
-            paramIdRol.SqlDbType                = SqlDbType.SmallInt;
-            paramIdRol.ParameterName            = "@IdRol";
-            paramIdRol.Value                    = IdRol;
+            SqlParameter paramIdRol         =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.SmallInt,
+                ParameterName   =   "@IdRol",
+                Value           =   IdRol
+            };
             sqlCommand.Parameters.Add(paramIdRol);
 
-            SqlParameter paramComprobacion      = new SqlParameter();
-            paramComprobacion.Direction         = ParameterDirection.Output;
-            paramComprobacion.SqlDbType         = SqlDbType.Bit;
-            paramComprobacion.ParameterName     = "@Validation";
+            SqlParameter paramComprobacion  =   new SqlParameter
+            {
+                Direction       =   ParameterDirection.Output,
+                SqlDbType       =   SqlDbType.Bit,
+                ParameterName   =   "@Validation"
+            };
             sqlCommand.Parameters.Add(paramComprobacion);
 
             connection.Connect();
@@ -60,34 +72,44 @@ namespace DataLayer.CRUD
 
         public bool Security_Authenticate_Usuario()
         {
-            Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = "[dbo].[Security_Authenticate_Usuario]";
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
+            Connection connection   =   new Connection();
+            SqlCommand sqlCommand   =   new SqlCommand
+            {
+                CommandText =   "[dbo].[Security_Authenticate_Usuario]",
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
 
-            SqlParameter paramIdUsuario         = new SqlParameter();
-            paramIdUsuario.SqlDbType            = SqlDbType.NVarChar;
-            paramIdUsuario.ParameterName        = "@IdUsuario";
-            paramIdUsuario.Value                = IdUsuario;
+            SqlParameter paramIdUsuario =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@IdUsuario",
+                Value           =   IdUsuario
+            };
             sqlCommand.Parameters.Add(paramIdUsuario);
-            
-            SqlParameter paramPassContrasenia   = new SqlParameter();
-            paramPassContrasenia.SqlDbType      = SqlDbType.NVarChar;
-            paramPassContrasenia.ParameterName  = "@PassContrasenia";
-            paramPassContrasenia.Value          = PassContrasenia;
+
+            SqlParameter paramPassContrasenia   =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@PassContrasenia",
+                Value           =   PassContrasenia
+            };
             sqlCommand.Parameters.Add(paramPassContrasenia);
 
-            SqlParameter paramContrasenia       = new SqlParameter();
-            paramContrasenia.SqlDbType          = SqlDbType.NVarChar;
-            paramContrasenia.ParameterName      = "@Contrasenia";
-            paramContrasenia.Value              = Contrasenia;
+            SqlParameter paramContrasenia       =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@Contrasenia",
+                Value           =   Contrasenia
+            };
             sqlCommand.Parameters.Add(paramContrasenia);
 
-            SqlParameter paramComprobacion      = new SqlParameter();
-            paramComprobacion.Direction         = ParameterDirection.Output;
-            paramComprobacion.SqlDbType         = SqlDbType.Bit;
-            paramComprobacion.ParameterName     = "@Validation";
+            SqlParameter paramComprobacion      =   new SqlParameter
+            {
+                Direction       =   ParameterDirection.Output,
+                SqlDbType       =   SqlDbType.Bit,
+                ParameterName   =   "@Validation"
+            };
             sqlCommand.Parameters.Add(paramComprobacion);
 
             connection.Connect();
@@ -100,27 +122,35 @@ namespace DataLayer.CRUD
         public bool Create_User_Empresa()
         {
             Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = "[dbo].[Create_User_Empresa]";
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
+            SqlCommand sqlCommand   = new SqlCommand
+            {
+                CommandText =   "[dbo].[Create_User_Empresa]",
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
 
-            SqlParameter paramIdUsuario         = new SqlParameter();
-            paramIdUsuario.SqlDbType            = SqlDbType.NVarChar;
-            paramIdUsuario.ParameterName        = "@IdUsuario";
-            paramIdUsuario.Value                = IdUsuario;
+            SqlParameter paramIdUsuario     =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@IdUsuario",
+                Value           =   IdUsuario
+            };
             sqlCommand.Parameters.Add(paramIdUsuario);
 
-            SqlParameter paramIdDatosFox  = new SqlParameter();
-            paramIdDatosFox.SqlDbType     = SqlDbType.SmallInt;
-            paramIdDatosFox.ParameterName = "@IdDatosFox";
-            paramIdDatosFox.Value         = IdDatosFox;
+            SqlParameter paramIdDatosFox    =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.SmallInt,
+                ParameterName   =   "@IdDatosFox",
+                Value           =   IdDatosFox
+            };
             sqlCommand.Parameters.Add(paramIdDatosFox);
 
-            SqlParameter paramComprobacion      = new SqlParameter();
-            paramComprobacion.Direction         = ParameterDirection.Output;
-            paramComprobacion.SqlDbType         = SqlDbType.Bit;
-            paramComprobacion.ParameterName     = "@Validation";
+            SqlParameter paramComprobacion  =   new SqlParameter
+            {
+                Direction       =   ParameterDirection.Output,
+                SqlDbType       =   SqlDbType.Bit,
+                ParameterName   =   "@Validation"
+            };
             sqlCommand.Parameters.Add(paramComprobacion);
 
             connection.Connect();
@@ -129,5 +159,6 @@ namespace DataLayer.CRUD
 
             return bool.Parse(sqlCommand.Parameters["@Validation"].Value.ToString());
         }
+        
     }
 }

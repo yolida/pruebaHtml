@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace DataLayer.CRUD
 {
@@ -20,44 +21,6 @@ namespace DataLayer.CRUD
         public Int16    IdDatosFox { get; set; }
 
         private string PassContrasenia = "w6nun3rTcDspjUCkc6Z6Sqf2wYHAR8xfAWWn5bdTHU2TaUUZ";
-
-        public void Read_AccesosSunat()
-        {
-            string storedProcedure  = "[dbo].[Read_AccesosSunat]";
-            Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
-
-            SqlParameter paramIdAccesosSunat    = new SqlParameter();
-            paramIdAccesosSunat.SqlDbType       = SqlDbType.Int;
-            paramIdAccesosSunat.ParameterName   = "@IdAccesosSunat";
-            paramIdAccesosSunat.Value           = IdAccesosSunat;
-            sqlCommand.Parameters.Add(paramIdAccesosSunat);
-
-            SqlParameter paramPassContrasenia   = new SqlParameter();
-            paramPassContrasenia.SqlDbType      = SqlDbType.NVarChar;
-            paramPassContrasenia.ParameterName  = "@PassContrasenia";
-            paramPassContrasenia.Value          = PassContrasenia;
-            sqlCommand.Parameters.Add(paramPassContrasenia);
-
-            connection.Connect();
-            
-            using (SqlDataReader reader = sqlCommand.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    IdAccesosSunat      =   Convert.ToInt32(reader["IdAccesosSunat"].ToString());
-                    CertificadoDigital  =   reader["CertificadoDigital"].ToString();
-                    ClaveCertificado    =   reader["ClaveCertificado"].ToString();
-                    UsuarioSol          =   reader["UsuarioSol"].ToString();
-                    ClaveSol            =   reader["ClaveSol"].ToString();          
-                }
-            }
-
-            connection.Disconnect();
-        }
 
         public bool Create_AccesosSunat()
         {
@@ -139,6 +102,48 @@ namespace DataLayer.CRUD
             connection.Disconnect();
 
             return bool.Parse(sqlCommand.Parameters["@Validation"].Value.ToString());
+        }
+
+        public void Read_AccesosSunat()
+        {
+            Connection connection   =   new Connection();
+            SqlCommand sqlCommand   =   new SqlCommand
+            {
+                CommandText =   "[dbo].[Read_AccesosSunat]",
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
+
+            SqlParameter paramIdAccesosSunat    =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.Int,
+                ParameterName   =   "@IdAccesosSunat",
+                Value           =   IdAccesosSunat
+            };
+            sqlCommand.Parameters.Add(paramIdAccesosSunat);
+
+            SqlParameter paramPassContrasenia   =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@PassContrasenia",
+                Value           =   PassContrasenia
+            };
+            sqlCommand.Parameters.Add(paramPassContrasenia);
+
+            connection.Connect();
+            using (SqlDataReader reader =   sqlCommand.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    CertificadoDigital  =   reader["CertificadoDigital"].ToString();
+                    ClaveCertificado    =   reader["ClaveCertificado"].ToString();
+                    UsuarioSol          =   reader["UsuarioSol"].ToString();
+                    ClaveSol            =   reader["ClaveSol"].ToString();
+                }
+            }
+
+            sqlCommand.ExecuteNonQuery();
+            connection.Disconnect();
         }
     }
 }

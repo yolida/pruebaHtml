@@ -15,15 +15,15 @@ namespace BusinessLayer
         public EnviarSunat()
         {
             Serializador serializador   =   new Serializador();
-            ISerializador _serializador =   (ISerializador)serializador;    // Vefr
+            _serializador               =   (ISerializador)serializador;
 
             ServicioSunatDocumentos servicioSunatDocumentos     =   new ServicioSunatDocumentos();
-            IServicioSunatDocumentos _servicioSunatDocumentos   =   (IServicioSunatDocumentos)servicioSunatDocumentos;
+            _servicioSunatDocumentos    =   (IServicioSunatDocumentos)servicioSunatDocumentos;
         }
 
         public EnviarDocumentoRequest Data(string tramaXmlFirmado, Data_Documentos data_Documento, string endPointUrl)
         {
-            Data_AccesosSunat data_AccesosSunat = new Data_AccesosSunat(data_Documento.IdEmisor);
+            Data_AccesosSunat data_AccesosSunat     =   new Data_AccesosSunat(data_Documento.IdEmisor);
             data_AccesosSunat.Read_AccesosSunat();
 
             Data_Contribuyente  data_Contribuyente  =   new Data_Contribuyente(data_Documento.IdEmisor);

@@ -220,8 +220,6 @@
                         </Grid>
 
                         <ControlTemplate.Triggers>
-
-                            <!-- No ToolTip highlighting if IValueConverter returned null -->
                             <DataTrigger Value="{x:Null}">
                                 <DataTrigger.Binding>
                                     <MultiBinding Converter="{local:HighlightDateConverter}">
@@ -245,44 +243,8 @@
         </Style>
 
         <Style x:Key="calendarWithGotToTodayStyle" TargetType="{x:Type Calendar}">
-            <!--<Setter Property="Foreground"
-                    Value="#FF333333" />
-            <Setter Property="Background"
-                    Value="White" />
-            <Setter Property="BorderBrush"
-                    Value="DarkGray" />
-            <Setter Property="BorderThickness"
-                    Value="1" />-->
-            <Setter Property="CalendarDayButtonStyle"
-                    Value="{StaticResource CalendarDayButtonStyleEx}" />
-           <!--<Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Calendar}">
-                       <Border BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel x:Name="PART_Root"
-                                            HorizontalAlignment="Center">
-                                    <CalendarItem x:Name="PART_CalendarItem"
-                                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                                    BorderThickness="{TemplateBinding BorderThickness}"
-                                                    Background="{TemplateBinding Background}"
-                                                    Style="{TemplateBinding CalendarItemStyle}" />
-                                    <Button  x:Name="PART_GoToTodayButton"
-                                                HorizontalAlignment="Center"
-                                                VerticalAlignment="Center"
-                                                Margin="10"
-                                                Content="Go To Today" />
-                                </StackPanel>
-                            </StackPanel>
-                        </Border>
-
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>-->
+            <Setter Property="CalendarDayButtonStyle" Value="{StaticResource CalendarDayButtonStyleEx}" />
         </Style>
-
 
         <ContextMenu x:Key="MyContextMenu">
             <MenuItem Header="Detalle del documento" Click="DetalleItem_Click"  />
@@ -344,10 +306,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Grid.Row="0" x:Name="label" Content="Envió de facturas electrónicas" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Calibri" Background="#dbeaf9" />
-        <Border Grid.Column="0" Grid.Row="1" Margin="10,10,10,10"
-              BorderBrush="#DBDBDB" 
-              CornerRadius="0" BorderThickness="1, 1, 1, 1" 
-               >
+        <Border Grid.Column="0" Grid.Row="1" Margin="10,10,10,10" BorderBrush="#DBDBDB" CornerRadius="0" BorderThickness="1, 1, 1, 1" >
             <Grid  Margin="0,0,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -370,14 +329,11 @@
                     </Grid.ColumnDefinitions>
                     <Label  Grid.Column="0" Grid.Row="0" Content="Fecha de Inicio" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="0,6"/>
                     <Label  Grid.Column="0" Grid.Row="1" Content="Fecha de Fin" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="0,6"/>
-                    <!--<DatePicker   x:Name="datePick_inicio" Grid.Column="1" Grid.Row="0" Margin="0,5,5,5"  IsDropDownOpen="False" IsTodayHighlighted="True" RenderTransformOrigin="0.5,0.5" >
-                        
-                    </DatePicker>-->
                     <local:DatePickerEx x:Name="datePick_inicio" Grid.Column="1" Grid.Row="0" Margin="0,5,5,5"  AlternativeCalendarStyle="{StaticResource calendarWithGotToTodayStyle}" />
 
                     <local:DatePickerEx   x:Name="datePick_fin" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5"  IsDropDownOpen="False" IsTodayHighlighted="True"  />
-                    <Label  Grid.Column="2" Grid.Row="0" Content="Tipo de comprobante" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="0,6"/>
-                    <ComboBox  x:Name="lstTipoComprobante" Grid.Column="3" Grid.Row="0" Margin="0,5,5,5" Style="{StaticResource ComboBoxFlatStyle}"/>
+                    <Label  Grid.Column="2" Grid.Row="0" Content="Tipo de documento" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="0,6"/>
+                    <ComboBox  x:Name="lstTipoDocumento" Grid.Column="3" Grid.Row="0" Margin="0,5,5,5" Style="{StaticResource ComboBoxFlatStyle}"/>
                     <StackPanel  Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <Button Width="80" Margin="0,0,5,0" Click="btnConsultar_Click">
                             <StackPanel Orientation="Horizontal">
@@ -387,7 +343,7 @@
                         </Button>
                     </StackPanel>
                 </Grid>
-                <DataGrid Grid.Column="0" Grid.Row="1" Margin="40,10,40,0" FrozenColumnCount ="0" x:Name="dgDocumentos" ColumnHeaderStyle="{DynamicResource HeaderStyle}"
+                <DataGrid Grid.Column="0" Grid.Row="1" Margin="5" Padding="5" FrozenColumnCount ="0" x:Name="dgDocumentos" ColumnHeaderStyle="{DynamicResource HeaderStyle}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   SelectionMode="Single"
@@ -408,7 +364,7 @@
                             </DataGridTemplateColumn.Header>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox Name="chkDiscontinue"  IsChecked="{Binding Path=Check,Mode=TwoWay}" Margin="0 2 0 0" Checked="chkDiscontinue_Checked" Unchecked="chkDiscontinue_Unchecked"  />
+                                    <CheckBox Name="chkCell"  IsChecked="{Binding Path=Check,Mode=TwoWay}" Margin="0 2 0 0" Checked="chkCell_Checked" Unchecked="chkCell_Unchecked" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                             <DataGridTemplateColumn.CellStyle>
@@ -418,9 +374,10 @@
                                 </Style>
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Binding="{Binding SerieCorrelativo}" IsReadOnly="True" MinWidth="150" CanUserReorder="False" Width="*">
+                        
+                        <DataGridTextColumn Binding="{Binding TDDescripcion}" IsReadOnly="True" MinWidth="150" CanUserReorder="False" Width="*">
                             <DataGridTextColumn.Header>
-                                <TextBlock  Text="Comprobante" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                                <TextBlock  Text="Tipo de documento" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
@@ -430,33 +387,8 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Binding="{Binding EstadoSCC}" IsReadOnly="True" MinWidth="70"   CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*"  >
-                            <DataGridTextColumn.Header>
-                                <TextBlock  Text="Estado SCC" VerticalAlignment="Center" HorizontalAlignment="Center"  />
-                            </DataGridTextColumn.Header>
-                            <DataGridTextColumn.ElementStyle>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
-                                    <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="Text" Value="ENVIADO">
-                                            <Setter Property="Foreground" Value="Green"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="PENDIENTE (CORRECTO)">
-                                            <Setter Property="Foreground" Value="RoyalBlue"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="PENDIENTE (ERRORES)">
-                                            <Setter Property="Foreground" Value="Red"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </DataGridTextColumn.ElementStyle>
-                        </DataGridTextColumn>
-                        <DataGridTextColumn Binding="{Binding EnviadoSunat}" IsReadOnly="True" MinWidth="90" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="*">
+
+                        <DataGridTextColumn Binding="{Binding EstadoSunat}" IsReadOnly="True" MinWidth="90" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Estado SUNAT" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -466,29 +398,17 @@
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                     <Style.Triggers>
-                                        <Trigger Property="Text" Value="ACEPTADO">
-                                            <Setter Property="Foreground" Value="Green"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="RECHAZADO">
-                                            <Setter Property="Foreground" Value="Brown"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="SIN RESPUESTA">
+                                        <Trigger Property="Text" Value="Rechazado">
                                             <Setter Property="Foreground" Value="Red"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
-                                        </Trigger>
-                                        <Trigger Property="Text" Value="DE BAJA">
-                                            <Setter Property="Foreground" Value="Salmon"/>
-                                            <!--<Setter Property="Text" Value="Factura"/>-->
                                         </Trigger>
                                     </Style.Triggers>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Binding="{Binding SerieNumero}" IsReadOnly="True" MinWidth="90" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*" >
+
+                        <DataGridTextColumn Binding="{Binding SerieCorrelativo}" IsReadOnly="True" MinWidth="90" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*" >
                             <DataGridTextColumn.Header>
-                                <TextBlock  Text="Serie-Número" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                                <TextBlock  Text="Serie correlativo" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
@@ -498,9 +418,10 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
+
                         <DataGridTextColumn Binding="{Binding FechaEmision}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
                             <DataGridTextColumn.Header>
-                                <TextBlock  Text="Fecha de Emisión" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                                <TextBlock  Text="Fecha de emisión" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
@@ -510,9 +431,10 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Binding="{Binding FechaEnvio}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+
+                        <DataGridTextColumn Binding="{Binding HoraEmision}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
                             <DataGridTextColumn.Header>
-                                <TextBlock  Text="Fecha de Envío" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                                <TextBlock  Text="Hora de emisión" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
@@ -522,6 +444,38 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
+
+                        <DataGridTextColumn Binding="{Binding FechaEmisionSUNAT}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                            <DataGridTextColumn.Header>
+                                <TextBlock  Text="Fecha de envío" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                            </DataGridTextColumn.Header>
+                            <DataGridTextColumn.ElementStyle>
+                                <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                                    <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Binding="{Binding TextComunicacionBaja}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                            <DataGridTextColumn.Header>
+                                <TextBlock  Text="Dado de baja" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                            </DataGridTextColumn.Header>
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}" >
+                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
+                                    <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="Text" Value="Si">
+                                            <Setter Property="Foreground" Value="Red"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+
                         <DataGridTextColumn Binding="{Binding ComentarioDocumento}"  Width="2*" MinWidth="200" IsReadOnly="True"  CanUserSort="False" CanUserReorder="False" CanUserResize="False"  >
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Comentario" VerticalAlignment="Center" HorizontalAlignment="Center"  />
@@ -535,6 +489,7 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
+                        
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid  Grid.Column="0" Grid.Row="2" Margin="40,20,40,20">
@@ -557,14 +512,14 @@
                             </StackPanel>
                         </Button>
                     </DockPanel>
-                    <DockPanel Grid.Column="0" Grid.Row="0">
-                        <Button Margin="0,0,0,0" x:Name="btnDescartar" HorizontalAlignment="Left" Click="btnDescartar_Click"  VerticalAlignment="Bottom"   >
+                    <!--<DockPanel Grid.Column="0" Grid.Row="0">
+                        <Button Margin="0,0,0,0" x:Name="btnDescartar" HorizontalAlignment="Left" VerticalAlignment="Bottom"   >
                             <StackPanel Orientation="Horizontal">
                                 <Image  Source="/FEI;component/images/remove-icon.png" Height="18" Width="26" />
-                                <Label  Content="Descartar"/>
+                                <Label  Content="Eliminar o dar de baja al documento"/>
                             </StackPanel>
                         </Button>
-                    </DockPanel>
+                    </DockPanel>-->
                 </Grid>
             </Grid>
         </Border>

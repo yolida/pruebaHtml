@@ -18,10 +18,13 @@ namespace DataLayer.CRUD
         {
             string storedProcedure  = "[dbo].[Read_Contribuyente]";
             Connection connection   = new Connection();
-            SqlCommand sqlCommand   = new SqlCommand();
-            sqlCommand.CommandText  = storedProcedure;
-            sqlCommand.CommandType  = CommandType.StoredProcedure;
-            sqlCommand.Connection   = connection.connectionString;
+
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                CommandText =   storedProcedure,
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
 
             SqlParameter paramIdContribuyente  = new SqlParameter();
             paramIdContribuyente.SqlDbType     = SqlDbType.Int;

@@ -68,12 +68,13 @@ namespace FEI
         private string mensaje          =   string.Empty;
         private string mensajeCabecera  =   string.Empty;
         Data_Usuario data_Usuario       =   new Data_Usuario();
+        Data_DatosFox data_DatosFox;
         public MainWindow(Int16 IdDatosFox, Data_Usuario usuario)
         {
             InitializeComponent();
             data_Usuario = usuario;
 
-            Data_DatosFox data_DatosFox =   new Data_DatosFox(IdDatosFox);
+            data_DatosFox =   new Data_DatosFox(IdDatosFox);
             data_DatosFox.Read_DatosFox();
             Data_Contribuyente data_Contribuyente   =   new Data_Contribuyente(data_DatosFox.IdEmisor);
             data_Contribuyente.Read_Contribuyente();
@@ -981,7 +982,7 @@ namespace FEI
         {
             if (disponible)
             {
-                Factura_Sunat factura_Sunat = new Factura_Sunat(this, DatabaseLocal);
+                Factura_Sunat factura_Sunat = new Factura_Sunat(this, data_DatosFox, DatabaseLocal);
                 pageContainer.Navigate(factura_Sunat);
                 seleccionarItem(7, "10");
             }

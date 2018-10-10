@@ -163,9 +163,9 @@ namespace FEI.pages
                 Data_Documentos data_Documento  =   new Data_Documentos("20186C16-C1DC-4717-8F46-407447D225BC");
                 data_Documento.Read_Documento();
 
-                GenerarFactura generarFactura =   new GenerarFactura();
+                GenerarFactura generarFactura   =   new GenerarFactura();
 
-                DocumentoElectronico documento  =   generarFactura.data(data_Documento);
+                DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO
                 var response                    =   await generarFactura.Post(documento);
 
                 if (!response.Exito)
@@ -176,7 +176,7 @@ namespace FEI.pages
                 Firmar firmar   =   new Firmar();
 
                 FirmadoRequest firmadoRequest   =   firmar.Data(data_Documento.IdEmisor, response.TramaXmlSinFirma);
-                FirmadoResponse firmadoResponse =   await firmar.Post(firmadoRequest);  //  Ya se obtuvo el documento firmado
+                FirmadoResponse firmadoResponse =   await firmar.Post(firmadoRequest);      //  Ya se obtuvo el documento firmado
 
                 if (firmadoResponse.Exito)  //  Comprobamos que se haya firmado de forma correcta
                     File.WriteAllBytes(rutaArchivo, Convert.FromBase64String(firmadoResponse.TramaXmlFirmado));

@@ -19,6 +19,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Forms;
 using System.Windows.Input;
+using CheckBox = System.Windows.Controls.CheckBox;
 
 namespace FEI.pages
 {
@@ -26,7 +27,7 @@ namespace FEI.pages
     {
         List<ComboBoxPares> tipos_comprobante = new List<ComboBoxPares>();
         List<clsEntityDocument> registros;
-        List<ReporteDocumento> lista_reporte;
+        //List<ReporteDocumento> lista_reporte;
         ReporteDocumento itemRow;
         ComboBoxPares cbpTipoComprobante;
         string fecha_inicio_formato;
@@ -35,38 +36,46 @@ namespace FEI.pages
 
         ReadGeneralData readGeneralData =   new ReadGeneralData();
         private readonly IData_Documentos _Documentos;
+        Data_DatosFox data_DatosFox;
+        List<Data_Documentos> data_Documentos;
         private Window padre;
 
-        public Factura_Sunat(Window parent,clsEntityDatabaseLocal local)
+        public Factura_Sunat(Window parent, Data_DatosFox datosFox, clsEntityDatabaseLocal local)
         {
             InitializeComponent();
             padre = parent;
             localDB = local;
             Data_Documentos documentos  =   new Data_Documentos();
             _Documentos = (IData_Documentos)documentos;
+            data_DatosFox   = datosFox;
         }
         //Evento de carga de la ventana principal.
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
+                Mouse.OverrideCursor    =   System.Windows.Input.Cursors.Wait;
 
-                DataTable dataTable =   readGeneralData.GetDataTable("[dbo].[Read_TipoDocumentos]");
+                DataTable dataTable     =   readGeneralData.GetDataTable("[dbo].[Read_TipoDocumentos]");
+                DataRow row             =   dataTable.NewRow();
+                row["Descripcion"]      =   "Todos los documentos";
+                row["IdTipoDocumento"]  =   0;
+                dataTable.Rows.Add(row);
+
                 var items           =   (dataTable as IListSource).GetList();
-                lstTipoComprobante.ItemsSource          =   items;
-                lstTipoComprobante.DisplayMemberPath    =   "Descripcion";
-                lstTipoComprobante.SelectedValuePath    =   "IdTipoDocumento";
-                lstTipoComprobante.SelectedIndex        =   0;
+                lstTipoDocumento.ItemsSource        =   items;
+                lstTipoDocumento.DisplayMemberPath  =   "Descripcion";
+                lstTipoDocumento.SelectedValuePath  =   "IdTipoDocumento";
+                lstTipoDocumento.SelectedIndex      =   dataTable.Rows.Count - 1;
 
-                datePick_inicio.Text = DateTime.Now.Date.ToString();
-                datePick_fin.Text = DateTime.Now.Date.ToString();
+                datePick_inicio.Text    =   DateTime.Now.Date.ToString();
+                datePick_fin.Text       =   DateTime.Now.Date.ToString();
 
                 LoadGrid();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                System.Windows.MessageBox.Show("La base de datos ha sido alterada, contacte con soporte.", "Base de datos alterada", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show($"La base de datos ha sido alterada, contacte con soporte. Detalle: {ex}", "Base de datos alterada", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -78,163 +87,69 @@ namespace FEI.pages
             dgDocumentos.ItemsSource    =   null;
             dgDocumentos.Items.Clear();
 
-            //Data_Documentos data = new Data_Documentos();
-            //List<Data_Documentos> data_Documentos = data.pruebaSimple(DateTime.Parse(datePick_inicio.SelectedDate.ToString()), DateTime.Parse(datePick_fin.SelectedDate.ToString()));
-
-            dgDocumentos.ItemsSource    =   await GetDocumentos();
-            //dgDocumentos.ItemsSource = data_Documentos;
+            try
+            {
+                Mouse.OverrideCursor        =   System.Windows.Input.Cursors.Wait;
+                dgDocumentos.ItemsSource    =   await GetDocumentos();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show($"Ha ocurrido un error al cargar los registros, detalle del error: {ex}", 
+                    "Error al cargar los datos", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally {
+                Mouse.OverrideCursor = null;
+            }
         }
 
         public async Task<List<Data_Documentos>> GetDocumentos()
         {
-            var listDocumentos = new List<Data_Documentos>();
+            var listDocumentos  =   new List<Data_Documentos>();
             try
             {
-                listDocumentos = await _Documentos.GetListFiltered(
-                    DateTime.Parse(datePick_inicio.SelectedDate.ToString()), DateTime.Parse(datePick_fin.SelectedDate.ToString()));
+                listDocumentos  =   await _Documentos.GetListFiltered(data_DatosFox.IdDatosFox, DateTime.Parse(datePick_inicio.SelectedDate.ToString()), 
+                                    DateTime.Parse(datePick_fin.SelectedDate.ToString()), int.Parse(lstTipoDocumento.SelectedValue.ToString()));
             }
             catch (Exception)
             {
-                listDocumentos = new List<Data_Documentos>();
+                listDocumentos  =   new List<Data_Documentos>();
             }
 
             return listDocumentos;
         }
+        private void chkCell_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox               =   (CheckBox)e.OriginalSource;
+            DataGridRow dataGridRow         =   VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
+            Data_Documentos data_Documentos =   (Data_Documentos)dataGridRow.DataContext;
+            data_Documentos.Selectable      =   true;
+        }
 
+        private void chkCell_Unchecked(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox               =   (CheckBox)e.OriginalSource;
+            DataGridRow dataGridRow         =   VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
+            Data_Documentos data_Documentos =   (Data_Documentos)dataGridRow.DataContext;
+            data_Documentos.Selectable      =   false;
+        }
 
-        private void AddBlackOutDates(DatePicker dp, int offset)
-        {
-            Dictionary<CalendarDateRange, string> blackoutDatesTextLookup = new Dictionary<CalendarDateRange, string>();
-            for (int i = 0; i < offset; i++)
-            {
-                CalendarDateRange range = new CalendarDateRange(DateTime.Now.AddDays(i));
-                dp.BlackoutDates.Add(range);
-                blackoutDatesTextLookup.Add(range, string.Format("This is a simulated BlackOut date {0}", range.Start.ToLongDateString()));
-            }
-            dp.SetValue(CalendarProps.BlackOutDatesTextLookupProperty, blackoutDatesTextLookup);
-        }
-        //Metodo para cargar la grilla del listado de comprobantes.
-        private void cs_pxCargarDgvComprobanteselectronicos(string tipo, string fechainicio, string fechafin)
-        {
-            dgDocumentos.ItemsSource = null;
-            dgDocumentos.Items.Clear();
-            //Obtener los registros para facturas.
-
-            //clsBaseLog.cs_pxRegistarAdd(localDB.cs_prConexioncadenabasedatos()+" "+fechainicio +" "+fechafin+" " +tipo );
-            registros = new clsEntityDocument(localDB).cs_pxObtenerFiltroEnvioSunatFacturas(tipo, "2", "", fechainicio, fechafin, "'01','07','08'", false);
-            lista_reporte = new List<ReporteDocumento>();
-           // clsBaseLog.cs_pxRegistarAdd(registros.Count.ToString());
-            //Recorrer los registros para rellenar el grid.
-            if (registros != null)
-            {
-                foreach (var item in registros) // Se instacia todos los atributos de la clase ReporteDocumento, para los documentos
-                {
-                   /* bool verificar = new clsNegocioValidar(localDB).cs_pxVerificarComprobante(item.Cs_pr_Document_Id);
-                    if (!verificar)
-                    {
-                        item.Cs_pr_EstadoSCC = "01";
-                    }*/
-                    itemRow = new ReporteDocumento();
-                    itemRow.Id = item.Cs_pr_Document_Id;
-                    itemRow.Tipo = item.Cs_tag_InvoiceTypeCode;
-                    itemRow.SerieNumero = item.Cs_tag_ID;
-                    itemRow.FechaEmision = item.Cs_tag_IssueDate;
-                    itemRow.FechaEnvio = item.comprobante_fechaenviodocumento;
-                    itemRow.Ruc = item.Cs_tag_AccountingCustomerParty_CustomerAssignedAccountID;
-                    itemRow.RazonSocial = item.Cs_tag_AccountingCustomerParty_Party_PartyLegalEntity_RegistrationName;
-                    itemRow.Comentario = item.Cs_pr_ComentarioSUNAT;
-                    itemRow.ComunicacionBaja = item.Cs_pr_ComunicacionBaja;
-                    itemRow.ResumenDiario = item.Cs_pr_Resumendiario;
-                    itemRow.DocumentoReferencia = item.Cs_tag_BillingReference_DocumentTypeCode;
-                    itemRow.TipoTexto = clsBaseUtil.cs_fxComprobantesElectronicos_descripcion(item.Cs_tag_InvoiceTypeCode);
-                    itemRow.EstadoSCC = clsBaseUtil.cs_fxComprobantesEstadosSCC_descripcion(Convert.ToInt16(item.Cs_pr_EstadoSCC)).ToUpper();
-                    itemRow.EstadoSunat = clsBaseUtil.cs_fxComprobantesEstadosSUNAT_descripcion(Convert.ToInt16(item.Cs_pr_EstadoSUNAT)).ToUpper();
-                    lista_reporte.Add(itemRow);
-                }
-            }
-            dgDocumentos.ItemsSource = lista_reporte;
-        }
-        //Evento check para cada item del listado.
-        private void chkDiscontinue_Checked(object sender, RoutedEventArgs e)
-        {
-            //Obtener el elemento seleccionado.
-            System.Windows.Controls.CheckBox checkBox = (System.Windows.Controls.CheckBox)e.OriginalSource;
-            //Obtener la fila seleccionada y objeto asociado.
-            DataGridRow dataGridRow = VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
-            ReporteDocumento comprobante = (ReporteDocumento)dataGridRow.DataContext;
-
-            if ((bool)checkBox.IsChecked)
-            {
-                comprobante.Check = true;
-            }
-            e.Handled = true;
-        }
-        //Evento uncheck para cada item del listado.
-        private void chkDiscontinue_Unchecked(object sender, RoutedEventArgs e)
-        {
-            //Obtener el elemento seleccionado.
-            System.Windows.Controls.CheckBox checkBox = (System.Windows.Controls.CheckBox)e.OriginalSource;
-            //Obtener la fila seleccionada y objeto asociado.
-            DataGridRow dataGridRow = VisualTreeHelpers.FindAncestor<DataGridRow>(checkBox);
-            ReporteDocumento comprobante = (ReporteDocumento)dataGridRow.DataContext;
-
-            if ((bool)checkBox.IsChecked == false)
-            {
-                comprobante.Check = false;
-            }
-            e.Handled = true;
-        }
-        //Evento click para consulta sobre filtro.
-        private void btnConsultar_Click(object sender, RoutedEventArgs e)
-        {
-            LoadGrid();
-        }
-        
-        private void refrescarGrilla()
-        {
-            cbpTipoComprobante = (ComboBoxPares)lstTipoComprobante.SelectedItem;
-            if (datePick_inicio.SelectedDate != null)
-            {
-                DateTime fecha_inicio = (DateTime)datePick_inicio.SelectedDate;
-                fecha_inicio_formato = fecha_inicio.ToString("yyyy-MM-dd");
-            }
-            else
-            {
-                fecha_inicio_formato = string.Empty;
-            }
-            if (datePick_fin.SelectedDate != null)
-            {
-                DateTime fecha_fin = (DateTime)datePick_fin.SelectedDate;
-                fecha_fin_formato = fecha_fin.ToString("yyyy-MM-dd");
-            }
-            else
-            {
-                fecha_fin_formato = string.Empty;
-            }
-            //Cargar comrpbantes segun filtro.
-            cs_pxCargarDgvComprobanteselectronicos(cbpTipoComprobante._Id, fecha_inicio_formato, fecha_fin_formato);
-        }
-        //Evento envio a sunat de comprobantes.
         private void btnEnviar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //Recorrer la grilla para obtener los documentos seleccionados de la grilla.
-                List<ReporteDocumento> seleccionados = new List<ReporteDocumento>();
-                foreach (var item in lista_reporte)
+                List<Data_Documentos> selected_data_Documentos = new List<Data_Documentos>();
+                foreach (var data_Documento in data_Documentos)
                 {
-                    if (item.Check == true)
-                    {
-                        seleccionados.Add(item); // Almacena todo un ReporteDocumento, se llena con todos los datos de esas clases, consume muchos 
-                    }   // ciclos de reloj
+                    if (data_Documento.Selectable == true)
+                        selected_data_Documentos.Add(data_Documento);
                 }
-                //If existen los elementos seleccionados.
-                if (seleccionados.Count() > 0)
+
+                if (selected_data_Documentos.Count() > 0)
                 {
                     string enviados = string.Empty;
                     ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
+                        // AQUI  ME QUEDE DEBO ENVIAR A SUNAT UNO O MAS DOCUMENTOS SELECCIONADOS
                         //enviados = sendToSunat(seleccionados);
-                        enviados = sendToSunat(seleccionados);
                     });
                     if (enviados.Trim().Length > 0)
                     {
@@ -249,9 +164,9 @@ namespace FEI.pages
                         obj.InstructionIcon = CustomDialogIcons.Information;
                         obj.InstructionText = "Los comprobantes han sido enviados correctamente.";
                         CustomDialogResults objResults = obj.Show();
-                    }                  
-                    refrescarGrilla();
-                   
+                    }
+                    LoadGrid();
+
                 }
                 else
                 {
@@ -264,8 +179,10 @@ namespace FEI.pages
                 clsBaseMensaje.cs_pxMsgEr("ERR15", ex.Message);
                 clsBaseLog.cs_pxRegistarAdd("Enviar a sunat factura" + ex.Message);
             }
-           
+
         }
+        
+        private void btnConsultar_Click(object sender, RoutedEventArgs e)   =>  LoadGrid();
            
         private string sendToSunat(List<ReporteDocumento> seleccionados)
         {
@@ -281,22 +198,6 @@ namespace FEI.pages
             }
             return retornar;
         }
-
-        private string sendToSunatTest(List<ReporteDocumento> seleccionados)
-        {
-            string retornar = string.Empty;
-            //Por cada elemento seleccionado se envia a la sunat.
-            foreach (var item in seleccionados)
-            {
-                bool resultado = new clsBaseSunat(localDB).cs_pxEnviarCE(item.Id, true);
-                if (resultado)
-                {
-                    retornar += item.SerieNumero + "\n";
-                }
-            }
-            return retornar;
-        }
-
 
         private void DetalleItem_Click(object sender, RoutedEventArgs e)
         {
@@ -411,100 +312,39 @@ namespace FEI.pages
         {
             try
             {
-                if (lista_reporte.Count > 0)
+                if (data_Documentos.Count > 0)
                 {
-                    //checkall
-                    foreach (ReporteDocumento item in lista_reporte)
-                    {
-                        item.Check = true;
-                    }
-                    dgDocumentos.ItemsSource = null;
+                    foreach (Data_Documentos data_Documento in data_Documentos)
+                        data_Documento.Selectable   =   true;
+
+                    dgDocumentos.ItemsSource    =   null;
                     dgDocumentos.Items.Clear();
-                    dgDocumentos.ItemsSource = lista_reporte;
+                    dgDocumentos.ItemsSource    =   data_Documentos;
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
+                System.Windows.MessageBox.Show($"Error al seleccionar todo, detalle del error: {ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
 
         private void chkAll_Unchecked(object sender, RoutedEventArgs e)
         {
-
             try
             {
-                if (lista_reporte.Count > 0)
+                if (data_Documentos.Count > 0)
                 {
-                    //checkall
-                    foreach (ReporteDocumento item in lista_reporte)
-                    {
-                        item.Check = false;
-                    }
-                    dgDocumentos.ItemsSource = null;
+                    foreach (Data_Documentos data_Documento in data_Documentos)
+                        data_Documento.Selectable   =   false;
+
+                    dgDocumentos.ItemsSource    =   null;
                     dgDocumentos.Items.Clear();
-                    dgDocumentos.ItemsSource = lista_reporte;
+                    dgDocumentos.ItemsSource    =   data_Documentos;
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
-            }
-        }
-
-        private void btnDescartar_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //Verificar si hay elementos seleccionados              
-                List<ReporteDocumento> seleccionados = new List<ReporteDocumento>();
-                foreach (var item in lista_reporte)
-                {
-                    if (item.Check == true)
-                    {
-                        seleccionados.Add(item);
-                    }
-                }
-
-                if (seleccionados.Count > 0)
-                {
-                    if (System.Windows.Forms.MessageBox.Show("¿Está seguro que desea descartar los documentos seleccionados?\nEstos documentos serán eliminados completamente de la base de datos.", "¿Está seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        string mensaje = string.Empty;
-                        foreach (ReporteDocumento row in seleccionados)
-                        {                            
-                            bool resultado = new clsEntityDocument(localDB).cs_pxEliminarDocumento(row.Id);
-                            if (resultado == true)
-                            {
-                                mensaje += row.SerieNumero+"\n";
-                            }                                                      
-                        }
-
-                        if (mensaje.Length > 0)
-                        {
-                            CustomDialogWindow obj = new CustomDialogWindow();
-                            obj.AdditionalDetailsText = "Los comprobantes son:\n" + mensaje;
-                            obj.Buttons = CustomDialogButtons.OK;
-                            obj.Caption = "Mensaje";
-                            obj.DefaultButton = CustomDialogResults.OK;
-                            // obj.FooterIcon = CustomDialogIcons.Shield;
-                            // obj.FooterText = "This is a secure program";
-                            obj.InstructionHeading = "Documentos eliminados";
-                            obj.InstructionIcon = CustomDialogIcons.Information;
-                            obj.InstructionText = "Los documentos se eliminaron correctamente de la base de datos.";
-                            CustomDialogResults objResults = obj.Show();
-                           // System.Windows.Forms.MessageBox.Show("Los siguientes documentos se eliminaron correctamente de la base de datos.\n"+mensaje,"Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        }
-                        refrescarGrilla();
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                clsBaseLog.cs_pxRegistarAdd("delete factura" + ex.ToString());
-                //clsBaseMensaje.cs_pxMsgEr("ERR15", ex.Message);
+                System.Windows.MessageBox.Show($"Error al deseleccionar todo, detalle del error: {ex}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

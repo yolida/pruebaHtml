@@ -24,12 +24,18 @@ namespace BusinessLayer
         }
         public string       IdDocumento     { get; set; }
         
+        /// <summary>
+        /// IMPORTANTE
+        /// Este método obtiene todos los datos  del documento electrónico, por el momento esta como sincrono para testing pero en producción se pondrá como asíncrono
+        /// </summary>
+        /// <param name="data_Documento"></param>
+        /// <returns></returns>
         public DocumentoElectronico data(Data_Documentos data_Documento)
         {
             Data_CabeceraDocumento cabeceraDocumento    =   new Data_CabeceraDocumento(data_Documento.IdCabeceraDocumento);
             cabeceraDocumento.Read_CabeceraDocumento();
 
-            var    documento    =   new DocumentoElectronico()  //    Documento principal
+            var documento    =   new DocumentoElectronico()  //  Documento principal
             {
                 SerieCorrelativo    =   data_Documento.SerieCorrelativo,
                 TipoDocumento       =   data_Documento.TipoDocumento ?? string.Empty,
@@ -170,14 +176,14 @@ namespace BusinessLayer
             List<Anticipo> anticipos = null;
             List<Descuento> item_descuentos = null;
 
-            documento.Notas = notas;
-            documento.Relacionados = documentoRelacionados;
-            documento.OtrosDocumentosRelacionados = otrosDocumentosRelacionados;
-            documento.Entregas = entregas;
-            documento.MedioPagos = medioPagos;
-            documento.Anticipos = anticipos;
-            documento.Descuentos = item_descuentos;
-            documento.PeriodosFactura = periodoFacturas;
+            documento.Notas                         = notas;
+            documento.Relacionados                  = documentoRelacionados;
+            documento.OtrosDocumentosRelacionados   = otrosDocumentosRelacionados;
+            documento.Entregas                      = entregas;
+            documento.MedioPagos                    = medioPagos;
+            documento.Anticipos                     = anticipos;
+            documento.Descuentos                    = item_descuentos;
+            documento.PeriodosFactura               = periodoFacturas;
 
             return documento;
         }
