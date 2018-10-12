@@ -89,11 +89,12 @@
     <None Include="Connected Services\Consultas\ServicesSunat.Consultas.statusResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Documentos\billService.wsdl" />
-    <None Include="Connected Services\Documentos\billService.xsd">
+    <None Include="Connected Services\Documentos\billService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Documentos\billService1.wsdl" />
+    <None Include="Connected Services\Documentos\billService2.wsdl" />
+    <None Include="Connected Services\Documentos\billService21.wsdl" />
+    <None Include="Connected Services\Documentos\billService22.wsdl" />
     <None Include="Connected Services\Documentos\ServicesSunat.Documentos.getStatusResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

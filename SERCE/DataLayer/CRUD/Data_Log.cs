@@ -39,12 +39,20 @@ namespace DataLayer.CRUD
             };
             sqlCommand.Parameters.Add(paramComentario);
 
+            SqlParameter paramIdUser_Empresa    =   new SqlParameter() {
+                SqlDbType       =   SqlDbType.Int,
+                ParameterName   =   "@IdUser_Empresa",
+                Value           =   IdUser_Empresa
+            };
+            sqlCommand.Parameters.Add(paramIdUser_Empresa);
+
             SqlParameter paramComprobacion      =   new SqlParameter() {
                 Direction       =   ParameterDirection.Output,
                 SqlDbType       =   SqlDbType.Bit,
                 ParameterName   =   "@Validation"
             };
-
+            sqlCommand.Parameters.Add(paramComprobacion);
+            
             connection.Connect();
             sqlCommand.ExecuteNonQuery();
             connection.Disconnect();

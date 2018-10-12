@@ -923,7 +923,10 @@ namespace FEI.Extension.Base
                             //clsBaseConfiguracion configuracion = new clsBaseConfiguracion();
                             clsEntityDeclarant declarante = new clsEntityDeclarant().cs_pxObtenerUnoPorId(local.Cs_pr_Declarant_Id);
                             SecurityBindingElement binding = SecurityBindingElement.CreateUserNameOverTransportBindingElement(); binding.IncludeTimestamp = false;
-                            www.sunat.gob.pe.billServiceClient bsc = new www.sunat.gob.pe.billServiceClient(new CustomBinding(binding, new TextMessageEncodingBindingElement(MessageVersion.Soap11, Encoding.UTF8), new HttpsTransportBindingElement()), new EndpointAddress(cs_fxObtenerWS(declarante, "1")));
+
+                            www.sunat.gob.pe.billServiceClient bsc = new www.sunat.gob.pe.billServiceClient(
+                                new CustomBinding(binding, new TextMessageEncodingBindingElement(MessageVersion.Soap11, Encoding.UTF8), 
+                                new HttpsTransportBindingElement()), new EndpointAddress(cs_fxObtenerWS(declarante, "1")));
 
                             string comprobante_electronico = declarante.Cs_pr_Ruc + "-RC-" + DateTime.Now.ToString("yyyy-MM-dd").Replace("-", "") + "-" + SummaryDocuments.Cs_tag_ID.Split('-')[2].Trim().ToString() + ".zip";
                             bsc.ClientCredentials.UserName.UserName = declarante.Cs_pr_Ruc + declarante.Cs_pr_Usuariosol;

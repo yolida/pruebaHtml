@@ -12,16 +12,17 @@ namespace BusinessLayer
 {
     public class ProcesarEnvio
     {
-        int Id_User_Empresa;
+        Data_Usuario data_Usuario;
         string IdDocumento  =   string.Empty;
         Data_Log data_Log;
-        public ProcesarEnvio(int idUser_Empresa, string idDocumento)
+
+        public ProcesarEnvio(Data_Usuario idUser_Empresa, string idDocumento)
         {
-            Id_User_Empresa =   idUser_Empresa;
+            data_Usuario    =   idUser_Empresa;
             IdDocumento     =   idDocumento;
         }
 
-        public async void prueba()
+        public async void Post()
         {
             try
             {
@@ -36,7 +37,12 @@ namespace BusinessLayer
 
                 if (!response.Exito)
                 {
-                    Data_Log data_Log   =   new Data_Log() { DetalleError   =   response.MensajeError, Comentario   =   "El XML no se pudo generar" };
+                    Data_Log data_Log   =   new Data_Log()
+                    {
+                        DetalleError    =   response.MensajeError,
+                        Comentario      =   $"El XML con serie correlativo: {documento.SerieCorrelativo} no se pudo generar",
+                        IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                    };
                     data_Log.Create_Log();
                 }
 
@@ -49,32 +55,49 @@ namespace BusinessLayer
 
                 if (firmadoResponse.Exito)  //  Comprobamos que se haya firmado de forma correcta
                 {
-                    Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento);
-                    if (!actualizacionXML.Update_Documento_XML(Encoding.UTF8.GetString(Convert.FromBase64String(firmadoResponse.TramaXmlFirmado))))
+                    Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento) { XmlFirmado = Encoding.UTF8.GetString(Convert.FromBase64String(firmadoResponse.TramaXmlFirmado)) };
+                    if (!actualizacionXML.Update_Documento_OneColumn("[dbo].[Update_Documento_SignedXML]"))
                     {
-                        data_Log = new Data_Log() { DetalleError = "Error al actualizar el xmlFirmado del documento", Comentario = "Error con la base de datos" };
+                        data_Log = new Data_Log()
+                        {
+                            DetalleError    =   "Error al actualizar el xmlFirmado del documento",
+                            Comentario      =   "Error con la base de datos",
+                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                        };
                         data_Log.Create_Log();
                     }
                 }
                 else
                 {
-                    data_Log    =   new Data_Log() { DetalleError   =   response.MensajeError, Comentario   =   "Error al firmar el documento"     };
+                    data_Log = new Data_Log() { DetalleError = response.MensajeError, Comentario = "Error al firmar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
                     data_Log.Create_Log();
                 }
 
                 EnviarSunat enviarSunat =   new EnviarSunat();
 
                 EnviarDocumentoRequest enviarDocumentoRequest   =   enviarSunat.Data(firmadoResponse.TramaXmlFirmado, data_Documento, 
-                                                                    GetURL());  // Obtenemos los datos para EnviarDocumentoRequest
+                                                                    GetURL(data_Documento.TipoDocumento));  // Obtenemos los datos para EnviarDocumentoRequest
 
                 EnviarDocumentoResponse enviarDocumentoResponse =   await enviarSunat.Post_Documento(enviarDocumentoRequest);
 
                 //  enviarDocumentoResponse =   jsonEnvioDocumento  ;   respuestaComunConArchivo    =   respuestaEnvio
 
-                System.Windows.MessageBox.Show(enviarDocumentoResponse.MensajeRespuesta);   //  Temporal para pruebas
+                string mensajeRespuesta = enviarDocumentoResponse.MensajeRespuesta;//  Temporal para pruebas
 
                 if (enviarDocumentoResponse.Exito && !string.IsNullOrEmpty(enviarDocumentoResponse.TramaZipCdr))    // Comprobar envío a sunat
                 {
+                    Data_Documentos actualizacionCDR    =   new Data_Documentos() { IdDocumento = IdDocumento,   CdrSunat    = enviarDocumentoResponse.TramaZipCdr };
+                    if (!actualizacionCDR.Update_Documento_OneColumn("[dbo].[Update_Documento_CDR]"))
+                    {
+                        data_Log = new Data_Log()
+                        {
+                            DetalleError    =   "Error al actualizar el CDR del documento",
+                            Comentario      =   "Error con la base de datos",
+                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                        };
+                        data_Log.Create_Log();
+                    }  
+
                     if (!Directory.Exists($"{data_Documento.Ruta}\\{enviarDocumentoResponse.NombreArchivo}"))
                         Directory.CreateDirectory($"{data_Documento.Ruta}\\{enviarDocumentoResponse.NombreArchivo}");
 
@@ -87,16 +110,42 @@ namespace BusinessLayer
                     File.WriteAllBytes($"{data_Documento.Ruta}\\{enviarDocumentoResponse.NombreArchivo}\\CDR\\R-{enviarDocumentoResponse.NombreArchivo}.zip",
                         Convert.FromBase64String(enviarDocumentoResponse.TramaZipCdr));
                 }
+                else
+                {
+                    data_Log = new Data_Log() { DetalleError = enviarDocumentoResponse.MensajeError, Comentario = "Error al enviar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
+                    //  IMPORTANTE
+                    // Aquí se debe crear un registro del enviarDocumentoResponse.MensajeError en comentarios del documento igual si tiene éxito
+                }
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show($"A ocurrido un error: {ex}");
+                data_Log = new Data_Log() { DetalleError = $"A ocurrido un error: {ex}", Comentario = "Error al procesar el envío del documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
+                data_Log.Create_Log();
             }
         }
 
-        public string GetURL()
+        public string GetURL(string tipoDocumento)
         {
-            
+            string url  =   string.Empty;
+            Data_AccesosSunat data_AccesosSunat =   new Data_AccesosSunat(data_Usuario.IdAccesosSunat);
+            data_AccesosSunat.Read_AccesosSunat();
+
+            if (tipoDocumento.Equals("03")) // Aquí se debe identificar si es guía de remisión
+            {
+                if (data_AccesosSunat.UsuarioSol.Equals("MODDATOS"))
+                    url =   "https://e-beta.sunat.gob.pe/ol-ti-itemision-guia-gem-beta/billService?wsdl";
+                else
+                    url =   "https://e-guiaremision.sunat.gob.pe/ol-ti-itemision-guia-gem/billService?wsdl";
+            }
+            else
+            {
+                if (data_AccesosSunat.UsuarioSol.Equals("MODDATOS"))
+                    url =   "https://e-beta.sunat.gob.pe/ol-ti-itcpfegem-beta/billService";
+                else
+                    url =   "https://e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService?wsdl";
+            }
+            //https://e-beta.sunat.gob.pe/ol-ti-itcpfegem-beta/billService
+            return url;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using BusinessLayer;
+using DataLayer;
 using DataLayer.CRUD;
 using FEI.ayuda;
 using FEI.Base;
@@ -37,17 +38,20 @@ namespace FEI.pages
         ReadGeneralData readGeneralData =   new ReadGeneralData();
         private readonly IData_Documentos _Documentos;
         Data_DatosFox data_DatosFox;
-        List<Data_Documentos> data_Documentos;
+        Data_Usuario data_Usuario;
+        List<Data_Documentos> data_Documentos   =   new List<Data_Documentos>();
         private Window padre;
 
-        public Factura_Sunat(Window parent, Data_DatosFox datosFox, clsEntityDatabaseLocal local)
+        public Factura_Sunat(Window parent, Data_Usuario usuario)
         {
             InitializeComponent();
             padre = parent;
-            localDB = local;
             Data_Documentos documentos  =   new Data_Documentos();
-            _Documentos = (IData_Documentos)documentos;
-            data_DatosFox   = datosFox;
+            _Documentos     =   (IData_Documentos)documentos;
+            data_Usuario    =   usuario;
+
+            data_DatosFox   =   new Data_DatosFox(data_Usuario.IdDatosFox);
+            data_DatosFox.Read_DatosFox();
         }
         //Evento de carga de la ventana principal.
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -90,7 +94,8 @@ namespace FEI.pages
             try
             {
                 Mouse.OverrideCursor        =   System.Windows.Input.Cursors.Wait;
-                dgDocumentos.ItemsSource    =   await GetDocumentos();
+                data_Documentos             =   await GetDocumentos();
+                dgDocumentos.ItemsSource    =   data_Documentos;
             }
             catch (Exception ex)
             {
@@ -148,7 +153,11 @@ namespace FEI.pages
                 {
                     string enviados = string.Empty;
                     ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
-                        // AQUI  ME QUEDE DEBO ENVIAR A SUNAT UNO O MAS DOCUMENTOS SELECCIONADOS
+                        foreach (var selected_data_Documento in selected_data_Documentos)
+                        {
+                            ProcesarEnvio procesarEnvio =   new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
+                            procesarEnvio.Post();
+                        }
                         //enviados = sendToSunat(seleccionados);
                     });
                     if (enviados.Trim().Length > 0)
@@ -320,6 +329,11 @@ namespace FEI.pages
                     dgDocumentos.ItemsSource    =   null;
                     dgDocumentos.Items.Clear();
                     dgDocumentos.ItemsSource    =   data_Documentos;
+                }
+                else
+                {
+                    e.Handled           =   false;
+                    chkAll.IsChecked    =   false;
                 }
             }
             catch(Exception ex)

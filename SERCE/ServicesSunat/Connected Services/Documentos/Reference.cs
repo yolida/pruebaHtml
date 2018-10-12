@@ -155,10 +155,10 @@ namespace ServicesSunat.Documentos {
         public sendBillRequest() {
         }
         
-        public sendBillRequest(string fileName, byte[] contentFile, string partyType) {
+        public sendBillRequest(string fileName, byte[] contentFile /*, string partyType*/) {
             this.fileName = fileName;
             this.contentFile = contentFile;
-            this.partyType = partyType;
+            //this.partyType = partyType;
         }
     }
     
@@ -327,11 +327,11 @@ namespace ServicesSunat.Documentos {
             return base.Channel.sendBill(request);
         }
         
-        public byte[] sendBill(string fileName, byte[] contentFile, string partyType) {
+        public byte[] sendBill(string fileName, byte[] contentFile /*, string partyType*/) {
             ServicesSunat.Documentos.sendBillRequest inValue = new ServicesSunat.Documentos.sendBillRequest();
             inValue.fileName = fileName;
             inValue.contentFile = contentFile;
-            inValue.partyType = partyType;
+            //inValue.partyType = partyType;
             ServicesSunat.Documentos.sendBillResponse retVal = ((ServicesSunat.Documentos.billService)(this)).sendBill(inValue);
             return retVal.applicationResponse;
         }
@@ -341,11 +341,11 @@ namespace ServicesSunat.Documentos {
             return base.Channel.sendBillAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServicesSunat.Documentos.sendBillResponse> sendBillAsync(string fileName, byte[] contentFile, string partyType) {
+        public System.Threading.Tasks.Task<ServicesSunat.Documentos.sendBillResponse> sendBillAsync(string fileName, byte[] contentFile/*, string partyType*/) {
             ServicesSunat.Documentos.sendBillRequest inValue = new ServicesSunat.Documentos.sendBillRequest();
             inValue.fileName = fileName;
             inValue.contentFile = contentFile;
-            inValue.partyType = partyType;
+            //inValue.partyType = partyType;
             return ((ServicesSunat.Documentos.billService)(this)).sendBillAsync(inValue);
         }
         

@@ -69,23 +69,23 @@ namespace FEI
         private string mensajeCabecera  =   string.Empty;
         Data_Usuario data_Usuario       =   new Data_Usuario();
         Data_DatosFox data_DatosFox;
-        public MainWindow(Int16 IdDatosFox, Data_Usuario usuario)
+        public MainWindow(int idUserEmpresa)
         {
             InitializeComponent();
-            data_Usuario = usuario;
+            data_Usuario.Read_Id_User_Empresa(idUserEmpresa);
 
-            data_DatosFox =   new Data_DatosFox(IdDatosFox);
-            data_DatosFox.Read_DatosFox();
-            Data_Contribuyente data_Contribuyente   =   new Data_Contribuyente(data_DatosFox.IdEmisor);
-            data_Contribuyente.Read_Contribuyente();
+            if (!string.IsNullOrEmpty(data_Usuario.IdUser_Empresa.ToString()) && data_Usuario.IdUser_Empresa != 0)
+            {
+                data_DatosFox   =   new Data_DatosFox(data_Usuario.IdDatosFox);
+                data_DatosFox.Read_DatosFox();
+                disponible      =   true;
+                Data_Contribuyente data_Contribuyente   =   new Data_Contribuyente(data_DatosFox.IdEmisor);
+                data_Contribuyente.Read_Contribuyente();
+                lblEmpresa.Content  =   data_Contribuyente.NombreLegal;
+                lblUsuario.Content  =   data_Usuario.IdUsuario;
+            }
 
-            lblEmpresa.Content  =   data_Contribuyente.NombreLegal;
-            lblUsuario.Content  =   data_Usuario.IdUsuario;
-
-            if (IdDatosFox != 0)
-                disponible = true;
-
-            if (disponible == false)    // Validación inicial para la apertura de todos los reportes
+            if (disponible == false)    //  Validación inicial para la apertura de todos los reportes
             {
                 mensaje         =   "Antes de proceder debe registrar los datos de acceso de emisor en 'Configuración de sistema -> Información del declarante' ";
                 mensajeCabecera =   "Registro necesario";
@@ -982,7 +982,7 @@ namespace FEI
         {
             if (disponible)
             {
-                Factura_Sunat factura_Sunat = new Factura_Sunat(this, data_DatosFox, DatabaseLocal);
+                Factura_Sunat factura_Sunat = new Factura_Sunat(this, data_Usuario);
                 pageContainer.Navigate(factura_Sunat);
                 seleccionarItem(7, "10");
             }

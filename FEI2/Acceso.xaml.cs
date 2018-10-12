@@ -35,7 +35,7 @@ namespace FEI
                 Data_Usuario data_Usuario   =   new Data_Usuario() { IdUsuario  =   txtUsuario.Text.ToString().Trim(), Contrasenia  =   txtPassword.Password.ToString().Trim() };
                 if (data_Usuario.Security_Authenticate_Usuario())
                 {
-                    MainWindow mainWindow   =   new MainWindow(Int16.Parse(lstEmpresas.SelectedValue.ToString()), data_Usuario);
+                    MainWindow mainWindow   =   new MainWindow(Int16.Parse(lstEmpresas.SelectedValue.ToString()));
                     mainWindow.Show();
                     try
                     {
@@ -67,7 +67,7 @@ namespace FEI
                 {
                     DataRow row     =   dataTable.NewRow();
                     row["NombreLegal"]  =   "Sin empresa";
-                    row["IdDatosFox"]   =   0;
+                    row["IdAccesosSunat"]   =   0;
                     dataTable.Rows.Add(row);
                 }
 
@@ -75,7 +75,7 @@ namespace FEI
 
                 lstEmpresas.ItemsSource         = items;
                 lstEmpresas.DisplayMemberPath   = "NombreLegal";
-                lstEmpresas.SelectedValuePath   = "IdDatosFox";
+                lstEmpresas.SelectedValuePath   = "IdAccesosSunat";
                 lstEmpresas.SelectedIndex       = 0;
             }
         }

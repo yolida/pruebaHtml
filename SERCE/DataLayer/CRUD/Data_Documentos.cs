@@ -34,6 +34,8 @@ namespace DataLayer.CRUD
         public bool     ComunicacionBaja    { get; set; }
         public string  TextComunicacionBaja { get; set; }
         public string   XmlFirmado          { get; set; }
+        public String   FechaEmision        { get; set; }
+        public String   HoraEmision         { get; set; }
         public bool Selectable { get; set; }
 
         public Data_Documentos(string idDocumento)
@@ -182,6 +184,7 @@ namespace DataLayer.CRUD
                 {
                     row = dataTable.Rows[i];
                     data_Documento  =   new Data_Documentos();
+                    data_Documento.IdDocumento          =   row["IdDocumento"].ToString();
                     data_Documento.NombreModulo         =   row["NombreModulo"].ToString();
                     data_Documento.CodigoEmpresa        =   row["CodigoEmpresa"].ToString();
                     data_Documento.Ruta                 =   row["Ruta"].ToString();
@@ -247,6 +250,9 @@ namespace DataLayer.CRUD
                     else
                         data_Documento.TextComunicacionBaja =   "No";
                     #endregion ComunicacionBaja
+
+                    data_Documento.FechaEmision         =   DateTime.Parse(row["FechaEmision"].ToString()).ToShortDateString();
+                    data_Documento.HoraEmision          =   row["HoraEmision"].ToString();
                     data_Documento.Selectable           =   false;
                     data_Documentos.Add(data_Documento);
                 }
@@ -256,12 +262,12 @@ namespace DataLayer.CRUD
             return await task;
         }
 
-        public bool Update_Documento_XML(string xmlFirmado)
+        public bool Update_Documento_OneColumn(string storedProcedure)
         {
             Connection connection   =   new Connection();
 
             SqlCommand sqlCommand   =   new SqlCommand() {
-                CommandText     =   "[dbo].[Update_Documento_XML]",
+                CommandText     =   storedProcedure,
                 CommandType     =   CommandType.StoredProcedure,
                 Connection      =   connection.connectionString
             };
@@ -271,24 +277,40 @@ namespace DataLayer.CRUD
                 ParameterName   =   "@IdDocumento",
                 Value           =   IdDocumento
             };
+            sqlCommand.Parameters.Add(paramIdDocumento);
 
-            SqlParameter paramXmlFirmado    =   new SqlParameter() {
-                SqlDbType       =   SqlDbType.NVarChar,
-                ParameterName   =   "@XmlFirmado",
-                Value           =   xmlFirmado
-            };
-
+            switch (storedProcedure)
+            {
+                case "[dbo].[Update_Documento_SignedXML]":
+                    SqlParameter paramXmlFirmado    =   new SqlParameter() {
+                        SqlDbType       =   SqlDbType.NVarChar,
+                        ParameterName   =   "@XmlFirmado",
+                        Value           =   XmlFirmado
+                    };
+                    sqlCommand.Parameters.Add(paramXmlFirmado);
+                    break;
+                case "[dbo].[Update_Documento_CDR]":
+                    SqlParameter paramCdrSunat      =   new SqlParameter() {
+                        SqlDbType       =   SqlDbType.NVarChar,
+                        ParameterName   =   "@CdrSunat",
+                        Value           =   CdrSunat
+                    };
+                    sqlCommand.Parameters.Add(paramCdrSunat);
+                    break;
+            }
+            
             SqlParameter paramComprobacion  =   new SqlParameter() {
                 Direction       =   ParameterDirection.Output,
                 SqlDbType       =   SqlDbType.Bit,
                 ParameterName   =   "Validation"
             };
+            sqlCommand.Parameters.Add(paramComprobacion);
 
             connection.Connect();
             sqlCommand.ExecuteNonQuery();
             connection.Disconnect();
     
-            return Convert.ToBoolean(sqlCommand.Parameters[""]);
+            return Convert.ToBoolean(sqlCommand.Parameters["Validation"].Value.ToString());
         }
     }
 }

@@ -54,7 +54,7 @@ namespace ServicesSunat.SOAP
             try
             {
                 _proxyDocumentos.Open();
-                var resultado   =   _proxyDocumentos.sendBill(request.NombreArchivo,    dataOrigen, "0");   //  Parámetro PartyType puesto en código duro como cero.
+                var resultado   =   _proxyDocumentos.sendBill(request.NombreArchivo,    dataOrigen);   //  Parámetro PartyType puesto en código duro como cero.
 
                 _proxyDocumentos.Close();
 

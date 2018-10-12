@@ -364,7 +364,7 @@
                             </DataGridTemplateColumn.Header>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox Name="chkCell"  IsChecked="{Binding Path=Check,Mode=TwoWay}" Margin="0 2 0 0" Checked="chkCell_Checked" Unchecked="chkCell_Unchecked" />
+                                    <CheckBox Name="chkCell"  IsChecked="{Binding Path=Selectable, Mode=TwoWay}" Margin="0 2 0 0" Checked="chkCell_Checked" Unchecked="chkCell_Unchecked" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                             <DataGridTemplateColumn.CellStyle>
@@ -375,7 +375,7 @@
                             </DataGridTemplateColumn.CellStyle>
                         </DataGridTemplateColumn>
                         
-                        <DataGridTextColumn Binding="{Binding TDDescripcion}" IsReadOnly="True" MinWidth="150" CanUserReorder="False" Width="*">
+                        <DataGridTextColumn Binding="{Binding TDDescripcion}" IsReadOnly="True" CanUserReorder="False" Width="1.2*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Tipo de documento" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -388,13 +388,13 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding EstadoSunat}" IsReadOnly="True" MinWidth="90" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="*">
+                        <DataGridTextColumn Binding="{Binding EstadoSunat}" IsReadOnly="True" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="1*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Estado SUNAT" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                     <Style.Triggers>
@@ -406,7 +406,7 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding SerieCorrelativo}" IsReadOnly="True" MinWidth="90" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*" >
+                        <DataGridTextColumn Binding="{Binding SerieCorrelativo}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1*" >
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Serie correlativo" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -419,33 +419,33 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding FechaEmision}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                        <DataGridTextColumn Binding="{Binding FechaEmision}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Fecha de emisión" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding HoraEmision}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                        <DataGridTextColumn Binding="{Binding HoraEmision}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Hora de emisión" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding FechaEmisionSUNAT}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                        <DataGridTextColumn Binding="{Binding FechaEmisionSUNAT}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Fecha de envío" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -458,13 +458,13 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding TextComunicacionBaja}" IsReadOnly="True" MinWidth="100" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="*">
+                        <DataGridTextColumn Binding="{Binding TextComunicacionBaja}" IsReadOnly="True" Width="1*" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Dado de baja" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}" >
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                     <Style.Triggers>
@@ -476,7 +476,7 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding ComentarioDocumento}"  Width="2*" MinWidth="200" IsReadOnly="True"  CanUserSort="False" CanUserReorder="False" CanUserResize="False"  >
+                        <DataGridTextColumn Binding="{Binding ComentarioDocumento}"  Width="2*" IsReadOnly="True"  CanUserSort="False" CanUserReorder="False" CanUserResize="False"  >
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Comentario" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>

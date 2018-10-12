@@ -2,6 +2,7 @@
 using Models.Intercambio;
 using Security;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace BusinessLayer
@@ -21,12 +22,14 @@ namespace BusinessLayer
             Data_AccesosSunat data_AccesosSunat =   new Data_AccesosSunat(IdEmisor);
             data_AccesosSunat.Read_AccesosSunat();
 
+            string certificado  = Convert.ToBase64String(File.ReadAllBytes(data_AccesosSunat.CertificadoDigital));
+
             var firmadoRequest = new FirmadoRequest()
             {
                 TramaXmlSinFirma    =   tramaXmlSinFirma,
-                CertificadoDigital  =   data_AccesosSunat.CertificadoDigital,
+                CertificadoDigital  =   certificado,
                 PasswordCertificado =   data_AccesosSunat.ClaveCertificado,
-                UnSoloNodoExtension =   false
+                UnSoloNodoExtension =   true
             };
 
             return firmadoRequest;

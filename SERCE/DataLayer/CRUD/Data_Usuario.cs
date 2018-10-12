@@ -12,7 +12,9 @@ namespace DataLayer.CRUD
         public Int16 IdRol { get; set; }  // Aún no se le dará uso
         public Int16 IdDatosFox { get; set; }
         private string PassContrasenia  = "8xfCkc6Z6SnTHU2TaUUZqf2wYHAAWWn5un3rTcDspjURbdw6";
-        
+        public int IdUser_Empresa { get; set; }
+        public int IdAccesosSunat { get; set; }
+
         public bool Alter_Usuario(string storedProcedure)
         {
             Connection connection   =   new Connection();
@@ -117,6 +119,36 @@ namespace DataLayer.CRUD
             connection.Disconnect();
 
             return bool.Parse(sqlCommand.Parameters["@Validation"].Value.ToString());
+        }
+
+        public void Read_Id_User_Empresa(int id)
+        {
+            Connection connection = new Connection();
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                CommandText =   "[dbo].[Read_Id_User_Empresa]",
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
+
+            SqlParameter paramIdUser_Empresa    =   new SqlParameter() {
+                SqlDbType       =   SqlDbType.Int,
+                ParameterName   =   "@IdUser_Empresa",
+                Value           =   id
+            };
+            sqlCommand.Parameters.Add(paramIdUser_Empresa);
+
+            connection.Connect();
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                IdDatosFox      =   Convert.ToInt16(reader["IdDatosFox"].ToString());
+                IdUsuario       =   reader["IdUsuario"].ToString();
+                IdAccesosSunat  =   Convert.ToInt32(reader["IdAccesosSunat"].ToString());
+                IdUser_Empresa  =   Convert.ToInt32(reader["IdUser_Empresa"].ToString());
+            }
+            connection.Disconnect();
         }
 
         public bool Create_User_Empresa()
