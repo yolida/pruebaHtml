@@ -28,7 +28,7 @@ namespace GenerateXML
                 IssueDate       = documento.FechaEmision,       // Fecha de emisión yyyy-mm-dd
                 IssueTime       = documento.HoraEmision,        // Hora de emisión hh-mm-ss.0z
                 DueDate         = documento.FechaVencimiento,   // Fecha de vencimiento yyyy-mm-dd | Fecha de Pago
-                InvoiceTypeCode = new InvoiceTypeCode() { Value = documento.TipoDocumento,    }, // Código de tipo de documento
+                InvoiceTypeCode = new InvoiceTypeCode() { Value = documento.TipoDocumento, ListID = documento.TipoOperacion }, // Código de tipo de documento
                 // Note
                 DocumentCurrencyCode    = new DocumentCurrencyCode() { Value = documento.Moneda }, // Código de tipo de moneda en la cual se emite la factura electrónica
                 LineCountNumeric        = documento.CantidadItems,
@@ -39,7 +39,8 @@ namespace GenerateXML
                 // AdditionalDocumentReference
                 Signature = new Signature
                 {
-                    Id = documento.SerieCorrelativo,
+                    //Id = documento.SerieCorrelativo,
+                    Id = documento.Emisor.NroDocumento,
                     SignatoryParty = new SignatoryParty
                     {
                         PartyIdentification = new PartyIdentification

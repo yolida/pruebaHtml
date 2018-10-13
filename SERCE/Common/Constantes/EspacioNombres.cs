@@ -13,6 +13,11 @@
         public const string sac                     = "urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1";
         public const string cac                     = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2";
         public const string cbc                     = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2";
+        //public const string cbc                     = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2";
+        //public const string cac                     = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2";
+
+
+
         public const string udt                     = "urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2";
         public const string ccts                    = "urn:un:unece:uncefact:documentation:2";
         public const string ext                     = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2";
@@ -26,5 +31,6 @@
         public const string nodoResponseTime        = "ar:ApplicationResponse/cbc:ResponseTime";
         public const string nodoResponseCode        = "/ar:ApplicationResponse/cac:DocumentResponse/cac:Response/cbc:ResponseCode";
         public const string nodoDescription         = "/ar:ApplicationResponse/cac:DocumentResponse/cac:Response/cbc:Description";
+        public const string xsd                     = "http://www.w3.org/2001/XMLSchema";
     }
 }

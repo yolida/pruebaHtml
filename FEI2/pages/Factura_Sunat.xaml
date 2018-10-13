@@ -352,7 +352,7 @@
                   Background="White"
                   HeadersVisibility="Column"
                   VerticalGridLinesBrush="#000000"
-                  GridLinesVisibility="None" SelectionUnit="FullRow"  MaxHeight="285" MinHeight="250"  >
+                  GridLinesVisibility="None" SelectionUnit="FullRow" MinHeight="250"  >
                     <DataGrid.Resources>
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#DEDCD9"/>
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
@@ -381,14 +381,14 @@
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
-                                    <Setter Property="TextBlock.TextAlignment" Value="Left" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding EstadoSunat}" IsReadOnly="True" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="1*">
+                        <DataGridTextColumn Binding="{Binding EstadoSunat}" IsReadOnly="True" CanUserReorder="False"  SortDirection="Ascending" CanUserSort="True" Width="0.8*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Estado SUNAT" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -445,7 +445,7 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding FechaEmisionSUNAT}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1*">
+                        <DataGridTextColumn Binding="{Binding FechaEmisionSUNAT}" IsReadOnly="True" CanUserReorder="False" SortDirection="Ascending" CanUserSort="True" Width="1.2*">
                             <DataGridTextColumn.Header>
                                 <TextBlock  Text="Fecha de envío" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </DataGridTextColumn.Header>
@@ -492,7 +492,7 @@
                         
                     </DataGrid.Columns>
                 </DataGrid>
-                <Grid  Grid.Column="0" Grid.Row="2" Margin="40,20,40,20">
+                <Grid Margin="6 10" Grid.Column="0" Grid.Row="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
@@ -502,13 +502,20 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    <DockPanel Grid.Column="5" Grid.Row="0">
+                    <DockPanel Grid.Column="3" Grid.Row="0">
+                        <Button Margin="0,0,0,0" x:Name="btnDescargarXML" HorizontalAlignment="Right" Click="btnDescargarXML_Click"  VerticalAlignment="Bottom"   >
+                            <StackPanel Orientation="Horizontal">
+                                <Image x:Name="imgBtnDescargarXML" Source="/FEI;component/images/download_24.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
+                                <Label x:Name="lblBtnDescargarXML" Content="Descargar XML"/>
+                            </StackPanel>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel Grid.Column="4" Grid.Row="0">
                         <Button Margin="0,0,0,0" x:Name="btnEnviar" HorizontalAlignment="Right" Click="btnEnviar_Click"  VerticalAlignment="Bottom"   >
                             <StackPanel Orientation="Horizontal">
                                 <Image x:Name="image" Source="/FEI;component/images/send.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
-                                <Label x:Name="TextBoton" Content="Sunat"/>
+                                <Label x:Name="TextBoton" Content="Enviar a Sunat"/>
                             </StackPanel>
                         </Button>
                     </DockPanel>

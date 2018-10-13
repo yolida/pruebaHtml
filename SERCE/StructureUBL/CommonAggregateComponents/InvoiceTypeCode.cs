@@ -23,6 +23,8 @@ namespace StructureUBL.CommonAggregateComponents
         /// </summary>
         public string ListID { get; set; }
 
+        public string Name { get; set; }
+
         /// <summary>
         /// cbc:InvoiceTypeCode
         /// CATALOGO No. 01
@@ -35,10 +37,11 @@ namespace StructureUBL.CommonAggregateComponents
 
         public InvoiceTypeCode()
         {
-            ListAgencyName = /*"SUNAT:Identificador de Tipo de Operación"*/ "PE:SUNAT";
-            ListName = /*"Tipo de Documento"*/ "Tipo de Operacion";
-            ListURI = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01";
-            ListSchemeURI = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51"; // Nuevo
+            ListAgencyName  =   /*"SUNAT:Identificador de Tipo de Operación"*/ "PE:SUNAT";
+            ListName        =   /*"Tipo de Documento"*/ "Tipo de Documento";
+            ListURI         =   "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01";
+            ListSchemeURI   =   "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51"; // Nuevo
+            Name            =   "Tipo de Operacion";
         }
     }
 }

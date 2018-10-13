@@ -59,7 +59,6 @@ namespace Security
 
                     keyInfo.AddClause(x509Data);
                     xmlSignature.KeyInfo    =   keyInfo;
-                    //xmlSignature.Id = "SignOpenInvoicePeru";
                     xmlSignature.Id         =   "SignatureSP";
                     signedXml.ComputeSignature();
 
@@ -73,7 +72,7 @@ namespace Security
 
                     using (var memDoc   =   new MemoryStream())
                     {
-                        using (var writer   =   XmlWriter.Create(memDoc,    new XmlWriterSettings { Encoding    =   Encoding.GetEncoding(Formatos.EncodingIso) }))
+                        using (var writer = XmlWriter.Create(memDoc, new XmlWriterSettings { Encoding = Encoding.GetEncoding(Formatos.EncodingIso) }))
                         {
                             xmlDoc.WriteTo(writer);
                         }

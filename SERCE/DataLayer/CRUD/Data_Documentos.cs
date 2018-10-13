@@ -297,6 +297,22 @@ namespace DataLayer.CRUD
                     };
                     sqlCommand.Parameters.Add(paramCdrSunat);
                     break;
+                case "[dbo].[Update_Documento_Comentario]":
+                    SqlParameter paramComentarioDocumento = new SqlParameter() {
+                        SqlDbType       =   SqlDbType.NVarChar,
+                        ParameterName   =   "@ComentarioDocumento",
+                        Value           =   ComentarioDocumento
+                    };
+                    sqlCommand.Parameters.Add(paramComentarioDocumento);
+                    break;
+                case "[dbo].[Update_Documento_EstadoSunat]":
+                    SqlParameter paramEstadoSunat   =   new SqlParameter() {
+                        SqlDbType       =   SqlDbType.NVarChar,
+                        ParameterName   =   "@EstadoSunat",
+                        Value           =   EstadoSunat
+                    };
+                    sqlCommand.Parameters.Add(paramEstadoSunat);
+                    break;
             }
             
             SqlParameter paramComprobacion  =   new SqlParameter() {
