@@ -32,7 +32,8 @@ namespace BusinessLayer
 
                 GenerarFactura generarFactura   =   new GenerarFactura();
 
-                DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO
+                DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO\
+                
                 var response                    =   await generarFactura.Post(documento);
 
                 if (!response.Exito)
@@ -55,7 +56,7 @@ namespace BusinessLayer
 
                 if (firmadoResponse.Exito)  //  Comprobamos que se haya firmado de forma correcta
                 {
-                    Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento) { XmlFirmado = Encoding.UTF8.GetString(Convert.FromBase64String(firmadoResponse.TramaXmlFirmado)) };
+                    Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento) { XmlFirmado = firmadoResponse.TramaXmlFirmado };
                     if (!actualizacionXML.Update_Documento_OneColumn("[dbo].[Update_Documento_SignedXML]"))
                     {
                         data_Log = new Data_Log()

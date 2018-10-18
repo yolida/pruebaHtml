@@ -237,7 +237,6 @@ namespace DataLayer.CRUD
                     data_Documento.EstadoSunat          =   row["EstadoSunat"].ToString();
                     data_Documento.ComentarioDocumento  =   row["ComentarioDocumento"].ToString();
                     data_Documento.SerieCorrelativo     =   row["SerieCorrelativo"].ToString();
-                    data_Documento.CdrSunat             =   row["CdrSunat"].ToString();
                     data_Documento.Eliminado            =   Convert.ToBoolean(row["Eliminado"].ToString());
                     data_Documento.Anulado              =   Convert.ToBoolean(row["Anulado"].ToString());
                     data_Documento.TDDescripcion        =   row["TDDescripcion"].ToString();

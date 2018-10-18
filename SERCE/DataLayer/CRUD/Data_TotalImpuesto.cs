@@ -22,9 +22,7 @@ namespace DataLayer.CRUD
         public List<TotalImpuesto> Read_TotalImpuestos(int tipo)
         {
             List<TotalImpuesto> totalImpuestos  =   new List<TotalImpuesto>();
-
-            ReadGeneralData readGeneralData;
-            readGeneralData     = new ReadGeneralData();
+            ReadGeneralData readGeneralData     =   new ReadGeneralData();
             DataTable dataTable;
 
             switch (tipo)
@@ -40,15 +38,10 @@ namespace DataLayer.CRUD
                     break;
             }
 
-            int cantidadLineas  =   0;
-
-            cantidadLineas      =   dataTable.Rows.Count;
-
             DataRow row;
-            
             TotalImpuesto totalImpuesto;
 
-            for (int i = 0; i < cantidadLineas; i++)
+            for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 row     =   dataTable.Rows[i];
                 totalImpuesto =   new TotalImpuesto() {

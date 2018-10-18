@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace Models.Modelos
 {
     /// <summary>
-    /// Nombre de la tabla: MediosPago
+    /// NombreTributo de la tabla: MediosPago
     /// </summary>
     public class MedioPago
     {

@@ -19,14 +19,14 @@ namespace Models.Modelos
         public string TipoDocumento { get; set; }
 
         /// <summary>
-        /// Nombre Comercial
+        /// NombreTributo Comercial
         /// </summary>
         [JsonProperty(Order = 4)]
         public string NombreComercial { get; set; }
 
         /// <summary>
         /// Apellidos y nombres, denominación o razón social
-        /// Nombre o razón social del emisor
+        /// NombreTributo o razón social del emisor
         /// </summary>
         [JsonProperty(Order = 3, Required = Required.Always)]
         public string NombreLegal { get; set; }

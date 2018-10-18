@@ -70,15 +70,17 @@ namespace Models.Modelos
         public List<PropiedadAdicional> PropiedadesAdicionales { get; set; }
 
         public List<Entrega> Entregas { get; set; }
+        public List<Nota> Notas { get; set; }
 
         public DetalleDocumento()
         {
-            Descripciones           = new List<Descripcion>();
-            PreciosAlternativos     = new List<PrecioAlternativo>();
-            Descuentos              = new List<Descuento>();
-            TotalImpuestos          = new List<TotalImpuesto>();
-            PropiedadesAdicionales  = new List<PropiedadAdicional>();
-            Entregas                = new List<Entrega>();
+            Descripciones           =   new List<Descripcion>();
+            PreciosAlternativos     =   new List<PrecioAlternativo>();
+            Descuentos              =   new List<Descuento>();
+            TotalImpuestos          =   new List<TotalImpuesto>();
+            PropiedadesAdicionales  =   new List<PropiedadAdicional>();
+            Entregas                =   new List<Entrega>();
+            Notas                   =   new List<Nota>();
         }
     }
 }

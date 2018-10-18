@@ -2241,3 +2241,6 @@ D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Emisor.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\Registro_Empresa_Declarante.g.cs
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\pages\Emisor.baml
 D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\obj\Debug\Registro_Empresa_Declarante.baml
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\Ookii.Dialogs.Wpf.dll
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\Ookii.Dialogs.Wpf.pdb
+D:\Jorge Luis\FEICONT21\pruebaHtml\FEI2\bin\Debug\Ookii.Dialogs.Wpf.xml

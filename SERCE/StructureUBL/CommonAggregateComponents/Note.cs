@@ -7,6 +7,6 @@ namespace StructureUBL.CommonAggregateComponents
     {
         public string LanguageLocaleID { get; set; } //Código de leyenda
 
-        public string Leyenda { get; set; } // Leyenda an..100
+        public string Value { get; set; } // Leyenda an..100
     }
 }

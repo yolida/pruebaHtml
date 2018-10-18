@@ -104,21 +104,21 @@ namespace FEI
                 process.Close();
             }
 
-            worker = new BackgroundWorker()
-            {
-                WorkerSupportsCancellation = true,
-                WorkerReportsProgress = true
-            };
-            worker.DoWork += worker_DoWork;
-            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+            //worker = new BackgroundWorker()
+            //{
+            //    WorkerSupportsCancellation = true,
+            //    WorkerReportsProgress = true
+            //};
+            //// worker.DoWork += worker_DoWork; // Se hará el desarrollo de las alarmas despues de terminar las prioridades
+            //worker.RunWorkerCompleted += worker_RunWorkerCompleted;
 
-            workerWeb = new BackgroundWorker()
-            {
-                WorkerSupportsCancellation = true,
-                WorkerReportsProgress = true
-            };
-            workerWeb.DoWork += workerWeb_DoWork;
-            workerWeb.RunWorkerCompleted += workerWeb_RunWorkerCompleted;
+            //workerWeb = new BackgroundWorker()
+            //{
+            //    WorkerSupportsCancellation = true,
+            //    WorkerReportsProgress = true
+            //};
+            //workerWeb.DoWork += workerWeb_DoWork;
+            //workerWeb.RunWorkerCompleted += workerWeb_RunWorkerCompleted;
             //string fecha = clsBaseLicencia.getFechaVencimiento();
             // lblAlerta.Content = fecha;
         }
@@ -850,20 +850,20 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("01", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    //this.pageContainer.Source = new Uri("pages/Reporte_Factura.xaml", UriKind.RelativeOrAbsolute);
-                    Reporte_Factura repSunat = new Reporte_Factura(DatabaseLocal);
-                    this.pageContainer.Navigate(repSunat);
-                    seleccionarItem(1, "4");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(1, "4");
-                }
-                //selectItem(1, 16);
+                //bool permitido = clsEntityPermisos.accesoPermitido("01", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    //this.pageContainer.Source = new Uri("pages/Reporte_Factura.xaml", UriKind.RelativeOrAbsolute);
+                //    Reporte_Factura repSunat = new Reporte_Factura(DatabaseLocal);
+                //    this.pageContainer.Navigate(repSunat);
+                //    seleccionarItem(1, "4");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(1, "4");
+                //}
+                ////selectItem(1, 16);
             }
             else
             {
@@ -874,19 +874,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("02", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    //this.pageContainer.Source = new Uri("pages/Reporte_Resumen.xaml", UriKind.RelativeOrAbsolute);
-                    Reporte_Resumen repResumen = new Reporte_Resumen(DatabaseLocal);
-                    this.pageContainer.Navigate(repResumen);
-                    seleccionarItem(2, "5");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(2, "5");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("02", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    //this.pageContainer.Source = new Uri("pages/Reporte_Resumen.xaml", UriKind.RelativeOrAbsolute);
+                //    Reporte_Resumen repResumen = new Reporte_Resumen(DatabaseLocal);
+                //    this.pageContainer.Navigate(repResumen);
+                //    seleccionarItem(2, "5");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(2, "5");
+                //}
                 //selectItem(2, 16);
             }
             else
@@ -896,19 +896,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("03", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    // this.pageContainer.Source = new Uri("pages/Reporte_Boleta.xaml", UriKind.RelativeOrAbsolute);
-                    Reporte_Boleta repBoleta = new Reporte_Boleta(DatabaseLocal);
-                    this.pageContainer.Navigate(repBoleta);
-                    seleccionarItem(3, "6");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(3, "6");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("03", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    // this.pageContainer.Source = new Uri("pages/Reporte_Boleta.xaml", UriKind.RelativeOrAbsolute);
+                //    Reporte_Boleta repBoleta = new Reporte_Boleta(DatabaseLocal);
+                //    this.pageContainer.Navigate(repBoleta);
+                //    seleccionarItem(3, "6");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(3, "6");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -917,19 +917,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("04", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Reporte_ComunicacionBaja repComunicacionBaja = new Reporte_ComunicacionBaja(DatabaseLocal);
-                    this.pageContainer.Navigate(repComunicacionBaja);
-                    //this.pageContainer.Source = new Uri("pages/Reporte_ComunicacionBaja.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(4, "7");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(4, "7");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("04", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Reporte_ComunicacionBaja repComunicacionBaja = new Reporte_ComunicacionBaja(DatabaseLocal);
+                //    this.pageContainer.Navigate(repComunicacionBaja);
+                //    //this.pageContainer.Source = new Uri("pages/Reporte_ComunicacionBaja.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(4, "7");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(4, "7");
+                //}
                 // selectItem(4, 16);
             }
             else
@@ -939,19 +939,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("05", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Reporte_Retencion repRetencion = new Reporte_Retencion(DatabaseLocal);
-                    this.pageContainer.Navigate(repRetencion);
-                    //this.pageContainer.Source = new Uri("pages/Reporte_Retencion.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(5, "8");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(5, "8");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("05", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Reporte_Retencion repRetencion = new Reporte_Retencion(DatabaseLocal);
+                //    this.pageContainer.Navigate(repRetencion);
+                //    //this.pageContainer.Source = new Uri("pages/Reporte_Retencion.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(5, "8");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(5, "8");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -960,19 +960,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("06", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Reporte_General repGeneral = new Reporte_General(DatabaseLocal);
-                    this.pageContainer.Navigate(repGeneral);
-                    // this.pageContainer.Source = new Uri("pages/Reporte_General.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(6, "9");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(6, "9");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("06", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Reporte_General repGeneral = new Reporte_General(DatabaseLocal);
+                //    this.pageContainer.Navigate(repGeneral);
+                //    // this.pageContainer.Source = new Uri("pages/Reporte_General.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(6, "9");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(6, "9");
+                //}
                 // selectItem(5, 16);
             }
             else
@@ -993,18 +993,18 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("08", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Factura_Alerta facAlerta = new Factura_Alerta(alarm);
-                    this.pageContainer.Navigate(facAlerta);
-                    seleccionarItem(8, "11");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(8, "11");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("08", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Factura_Alerta facAlerta = new Factura_Alerta(alarm);
+                //    this.pageContainer.Navigate(facAlerta);
+                //    seleccionarItem(8, "11");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(8, "11");
+                //}
                 //  selectItem(7, 16);
             }
             else
@@ -1014,19 +1014,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("09", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Generar.xaml", UriKind.RelativeOrAbsolute);
-                    ResumenDiario_Generar resDiarioGen = new ResumenDiario_Generar(this, DatabaseLocal);
-                    this.pageContainer.Navigate(resDiarioGen);
-                    seleccionarItem(9, "12");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(9, "12");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("09", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Generar.xaml", UriKind.RelativeOrAbsolute);
+                //    ResumenDiario_Generar resDiarioGen = new ResumenDiario_Generar(this, DatabaseLocal);
+                //    this.pageContainer.Navigate(resDiarioGen);
+                //    seleccionarItem(9, "12");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(9, "12");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1035,19 +1035,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("10", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    ResumenDiario_Sunat resDiarioSun = new ResumenDiario_Sunat(this, DatabaseLocal);
-                    this.pageContainer.Navigate(resDiarioSun);
-                    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(10, "13");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(10, "13");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("10", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    ResumenDiario_Sunat resDiarioSun = new ResumenDiario_Sunat(this, DatabaseLocal);
+                //    this.pageContainer.Navigate(resDiarioSun);
+                //    // this.pageContainer.Source = new Uri("pages/ResumenDiario_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(10, "13");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(10, "13");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1056,25 +1056,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("11", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        ResumenDiario_Alerta rdalerta = new ResumenDiario_Alerta(alarmRD, Empresa.Cs_pr_Declarant_Id);
-                        this.pageContainer.Navigate(rdalerta);
-                        seleccionarItem(11, "14");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(11, "14");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("11", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        ResumenDiario_Alerta rdalerta = new ResumenDiario_Alerta(alarmRD, Empresa.Cs_pr_Declarant_Id);
+                //        this.pageContainer.Navigate(rdalerta);
+                //        seleccionarItem(11, "14");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(11, "14");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1083,19 +1083,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("12", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    ComunicacionBaja_Generar comBajaGen = new ComunicacionBaja_Generar(this, DatabaseLocal);
-                    this.pageContainer.Navigate(comBajaGen);
-                    //this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Generar.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(12, "15");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(12, "15");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("12", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    ComunicacionBaja_Generar comBajaGen = new ComunicacionBaja_Generar(this, DatabaseLocal);
+                //    this.pageContainer.Navigate(comBajaGen);
+                //    //this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Generar.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(12, "15");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(12, "15");
+                //}
                 //  selectItem(11, 16);
             }
             else
@@ -1105,19 +1105,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("13", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    ComunicacionBaja_Sunat comBajaSunat = new ComunicacionBaja_Sunat(this, DatabaseLocal);
-                    this.pageContainer.Navigate(comBajaSunat);
-                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(13, "16");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(13, "16");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("13", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    ComunicacionBaja_Sunat comBajaSunat = new ComunicacionBaja_Sunat(this, DatabaseLocal);
+                //    this.pageContainer.Navigate(comBajaSunat);
+                //    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(13, "16");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(13, "16");
+                //}
                 //  selectItem(12, 16);
             }
             else
@@ -1127,19 +1127,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("14", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Retencion_Sunat retSunat = new Retencion_Sunat(DatabaseLocal, this);
-                    this.pageContainer.Navigate(retSunat);
-                    //this.pageContainer.Source = new Uri("pages/Retencion_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(14, "17");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(14, "17");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("14", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Retencion_Sunat retSunat = new Retencion_Sunat(DatabaseLocal, this);
+                //    this.pageContainer.Navigate(retSunat);
+                //    //this.pageContainer.Source = new Uri("pages/Retencion_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(14, "17");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(14, "17");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1148,25 +1148,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("15", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        Retencion_Alerta rdalerta = new Retencion_Alerta(alarmRE, Empresa.Cs_pr_Declarant_Id);
-                        this.pageContainer.Navigate(rdalerta);
-                        seleccionarItem(15, "18");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(15, "18");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("15", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        Retencion_Alerta rdalerta = new Retencion_Alerta(alarmRE, Empresa.Cs_pr_Declarant_Id);
+                //        this.pageContainer.Navigate(rdalerta);
+                //        seleccionarItem(15, "18");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(15, "18");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1181,17 +1181,17 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("19", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    this.pageContainer.Source = new Uri("pages/Configuracion_usuarios.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(19, "24");
-                }
-                else
-                {
-                    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(19, "24");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("19", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    this.pageContainer.Source = new Uri("pages/Configuracion_usuarios.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(19, "24");
+                //}
+                //else
+                //{
+                //    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(19, "24");
+                //}
                 //   selectItem(16, 16);
             }
             else
@@ -1201,25 +1201,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("20", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        Configuracion_permisos confPermisosUsuario = new Configuracion_permisos(Empresa.Cs_pr_Declarant_Id, this);
-                        this.pageContainer.Navigate(confPermisosUsuario);
-                        seleccionarItem(20, "25");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(20, "25");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("20", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        Configuracion_permisos confPermisosUsuario = new Configuracion_permisos(Empresa.Cs_pr_Declarant_Id, this);
+                //        this.pageContainer.Navigate(confPermisosUsuario);
+                //        seleccionarItem(20, "25");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(20, "25");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1243,25 +1243,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("21", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        Utilitario_GeneracionBackup utilGenBackup = new Utilitario_GeneracionBackup(Empresa, this);
-                        this.pageContainer.Navigate(utilGenBackup);
-                        seleccionarItem(21, "26");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(21, "26");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("21", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        Utilitario_GeneracionBackup utilGenBackup = new Utilitario_GeneracionBackup(Empresa, this);
+                //        this.pageContainer.Navigate(utilGenBackup);
+                //        seleccionarItem(21, "26");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(21, "26");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1270,25 +1270,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("22", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        Utilitario_RestauracionBackup utilRestBackup = new Utilitario_RestauracionBackup(Empresa, this);
-                        this.pageContainer.Navigate(utilRestBackup);
-                        seleccionarItem(22, "27");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(22, "27");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("22", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        Utilitario_RestauracionBackup utilRestBackup = new Utilitario_RestauracionBackup(Empresa, this);
+                //        this.pageContainer.Navigate(utilRestBackup);
+                //        seleccionarItem(22, "27");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(22, "27");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1297,19 +1297,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("23", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    seleccionarItem(23, "28");
-                    RutaArchivo frmRuta = new RutaArchivo();
-                    frmRuta.ShowDialog();
+                //bool permitido = clsEntityPermisos.accesoPermitido("23", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    seleccionarItem(23, "28");
+                //    RutaArchivo frmRuta = new RutaArchivo();
+                //    frmRuta.ShowDialog();
 
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(23, "28");
-                }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(23, "28");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1318,28 +1318,27 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("24", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    seleccionarItem(24, "29");
-                    if (Empresa != null)
-                    {
-                        if (System.Windows.Forms.MessageBox.Show("Se va proceder a verificar la estructura de la base de datos configurada para la sesión actual y actualizarla. ¿Está seguro que desea proceder con la operación?", "¿Está seguro?", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
-                        {
-                            new Loading(Empresa).ShowDialog();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder realizar esta acción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-
-                }
-                else
-                {
-                    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(24, "29");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("24", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    seleccionarItem(24, "29");
+                //    if (Empresa != null)
+                //    {
+                //        if (System.Windows.Forms.MessageBox.Show("Se va proceder a verificar la estructura de la base de datos configurada para la sesión actual y actualizarla. ¿Está seguro que desea proceder con la operación?", "¿Está seguro?", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                //        {
+                //            new Loading(Empresa).ShowDialog();
+                //        }
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder realizar esta acción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    // MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(24, "29");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1348,51 +1347,51 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("25", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    seleccionarItem(25, "30");
-                    // string directory = Environment.CurrentDirectory;
-                    StreamReader sr = new StreamReader(currentDirectory + "\\lcl.txt", System.Text.Encoding.Default);
-                    string textoPeticion = sr.ReadToEnd();
-                    sr.Close();
-                    bool existe = new clsBaseLicencia().licenceExists();
-                    // bool activo = clsBaseLicencia.licenceActive(DateTime.Now.ToString("yyyy-MM-dd"));
-                    if (existe)
-                    {
-                        string[] datosLicencia = new clsBaseLicencia().getDatosLicencia();
-                        if (datosLicencia != null)
-                        {
-                            string fecha = new clsBaseLicencia().getFechaVencimiento();
-                            string tipoLicencia = datosLicencia[6];
-                            string versionLicencia = datosLicencia[3];
-                            string codigoPeticion = textoPeticion;
-                            string codigoActivacion = datosLicencia[0];
-                            Licencia lic = new Licencia(codigoActivacion, fecha, tipoLicencia, codigoPeticion, versionLicencia);
-                            lic.ShowDialog();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ha ocurrido un error al cargar los datos de la licencia. Contáctese con su proveedor");
-                        }
-                    }
-                    else
-                    {
-                        FEI.Extension.ModVers Version_Compilado = new Extension.ModVers();
-                        versionCompilado = Version_Compilado.Vers_Compilado();
-                        Activacion frmActivacion = new Activacion(textoPeticion, versionCompilado);
-                        frmActivacion.ShowDialog();
-                        if (frmActivacion.DialogResult.HasValue && frmActivacion.DialogResult.Value)
-                        {
-                            // MessageBox.Show("Se ha realizado la activacion");
-                        }
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(25, "30");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("25", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    seleccionarItem(25, "30");
+                //    // string directory = Environment.CurrentDirectory;
+                //    StreamReader sr = new StreamReader(currentDirectory + "\\lcl.txt", System.Text.Encoding.Default);
+                //    string textoPeticion = sr.ReadToEnd();
+                //    sr.Close();
+                //    bool existe = new clsBaseLicencia().licenceExists();
+                //    // bool activo = clsBaseLicencia.licenceActive(DateTime.Now.ToString("yyyy-MM-dd"));
+                //    if (existe)
+                //    {
+                //        string[] datosLicencia = new clsBaseLicencia().getDatosLicencia();
+                //        if (datosLicencia != null)
+                //        {
+                //            string fecha = new clsBaseLicencia().getFechaVencimiento();
+                //            string tipoLicencia = datosLicencia[6];
+                //            string versionLicencia = datosLicencia[3];
+                //            string codigoPeticion = textoPeticion;
+                //            string codigoActivacion = datosLicencia[0];
+                //            Licencia lic = new Licencia(codigoActivacion, fecha, tipoLicencia, codigoPeticion, versionLicencia);
+                //            lic.ShowDialog();
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Ha ocurrido un error al cargar los datos de la licencia. Contáctese con su proveedor");
+                //        }
+                //    }
+                //    else
+                //    {
+                //        FEI.Extension.ModVers Version_Compilado = new Extension.ModVers();
+                //        versionCompilado = Version_Compilado.Vers_Compilado();
+                //        Activacion frmActivacion = new Activacion(textoPeticion, versionCompilado);
+                //        frmActivacion.ShowDialog();
+                //        if (frmActivacion.DialogResult.HasValue && frmActivacion.DialogResult.Value)
+                //        {
+                //            // MessageBox.Show("Se ha realizado la activacion");
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(25, "30");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1412,25 +1411,25 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("28", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    if (Empresa != null)
-                    {
-                        ReversionGenerar_Retencion reversionGenerarRetencion = new ReversionGenerar_Retencion(DatabaseLocal, this);
-                        this.pageContainer.Navigate(reversionGenerarRetencion);
-                        seleccionarItem(28, "19");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(28, "19");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("28", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    if (Empresa != null)
+                //    {
+                //        ReversionGenerar_Retencion reversionGenerarRetencion = new ReversionGenerar_Retencion(DatabaseLocal, this);
+                //        this.pageContainer.Navigate(reversionGenerarRetencion);
+                //        seleccionarItem(28, "19");
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(28, "19");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1439,19 +1438,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("29", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    ReversionSunat_Retencion creversionCRESunat = new ReversionSunat_Retencion(this, DatabaseLocal);
-                    this.pageContainer.Navigate(creversionCRESunat);
-                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(29, "20");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(29, "20");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("29", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    ReversionSunat_Retencion creversionCRESunat = new ReversionSunat_Retencion(this, DatabaseLocal);
+                //    this.pageContainer.Navigate(creversionCRESunat);
+                //    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(29, "20");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(29, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1489,19 +1488,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("30", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                    this.pageContainer.Navigate(receptorValidar);
-                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(30, "20");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(30, "20");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("30", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                //    this.pageContainer.Navigate(receptorValidar);
+                //    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(30, "20");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(30, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1510,19 +1509,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("31", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                    this.pageContainer.Navigate(receptorCompras);
-                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(31, "20");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(31, "20");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("31", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                //    this.pageContainer.Navigate(receptorCompras);
+                //    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(31, "20");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(31, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1531,36 +1530,36 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("32", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
+                //bool permitido = clsEntityPermisos.accesoPermitido("32", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
 
-                    if (Empresa != null)
-                    {
-                        Process myProcess = new Process();
-                        string RutaInstalacion = Directory.GetCurrentDirectory();
+                //    if (Empresa != null)
+                //    {
+                //        Process myProcess = new Process();
+                //        string RutaInstalacion = Directory.GetCurrentDirectory();
 
-                        string ArchivoEjecutable = RutaInstalacion + "\\TransData.exe";
-                        myProcess.StartInfo.UseShellExecute = true;
-                        myProcess.StartInfo.FileName = ArchivoEjecutable;
-                        myProcess.StartInfo.Arguments = Empresa.Cs_pr_Declarant_Id;
-                        myProcess.StartInfo.CreateNoWindow = true;
-                        myProcess.Start();
+                //        string ArchivoEjecutable = RutaInstalacion + "\\TransData.exe";
+                //        myProcess.StartInfo.UseShellExecute = true;
+                //        myProcess.StartInfo.FileName = ArchivoEjecutable;
+                //        myProcess.StartInfo.Arguments = Empresa.Cs_pr_Declarant_Id;
+                //        myProcess.StartInfo.CreateNoWindow = true;
+                //        myProcess.Start();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    }
-                    /* Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                     this.pageContainer.Navigate(receptorCompras);
-                    */
-                    seleccionarItem(32, "20");
-                }
-                else
-                {
-                    seleccionarItem(32, "20");
-                }
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Debe iniciar sesión con una empresa para poder configurar esta opción.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    }
+                //    /* Receptor_Compras receptorCompras = new Receptor_Compras(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                //     this.pageContainer.Navigate(receptorCompras);
+                //    */
+                //    seleccionarItem(32, "20");
+                //}
+                //else
+                //{
+                //    seleccionarItem(32, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1569,19 +1568,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("33", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    CertificadoDigital CertificadoDigital = new CertificadoDigital();
-                    this.pageContainer.Navigate(CertificadoDigital);
+                //bool permitido = clsEntityPermisos.accesoPermitido("33", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    CertificadoDigital CertificadoDigital = new CertificadoDigital();
+                //    this.pageContainer.Navigate(CertificadoDigital);
 
-                    seleccionarItem(33, "20");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(33, "20");
-                }
+                //    seleccionarItem(33, "20");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(33, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -1610,19 +1609,19 @@ namespace FEI
         {
             if (disponible)
             {
-                bool permitido = clsEntityPermisos.accesoPermitido("35", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
-                if (permitido)
-                {
-                    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
-                    this.pageContainer.Navigate(receptorValidar);
-                    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
-                    seleccionarItem(35, "20");
-                }
-                else
-                {
-                    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
-                    seleccionarItem(35, "20");
-                }
+                //bool permitido = clsEntityPermisos.accesoPermitido("35", Perfil.Cs_pr_Account_Id, Perfil.Cs_pr_Users_Id);
+                //if (permitido)
+                //{
+                //    Receptor_Validar receptorValidar = new Receptor_Validar(DatabaseLocal, this, Empresa.Cs_pr_Ruc);
+                //    this.pageContainer.Navigate(receptorValidar);
+                //    // this.pageContainer.Source = new Uri("pages/ComunicacionBaja_Sunat.xaml", UriKind.RelativeOrAbsolute);
+                //    seleccionarItem(35, "20");
+                //}
+                //else
+                //{
+                //    //MessageBox.Show("No tiene permiso para acceder a este módulo.", "Mensaje", MessageBoxButton.OK, MessageBoxImage.Stop);
+                //    seleccionarItem(35, "20");
+                //}
             }
             else
                 MessageBox.Show(mensaje, mensajeCabecera, MessageBoxButton.OK, MessageBoxImage.Exclamation);

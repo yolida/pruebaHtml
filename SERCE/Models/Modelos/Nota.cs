@@ -4,11 +4,13 @@ namespace Models.Modelos
 {
     public class Nota
     {
+        public int IdNota { get; set; }
+
         /// <summary>
         /// /Invoice/cbc:Note  (Descripción de la leyenda)
         /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
-        public string Leyenda { get; set; }
+        public string Descripcion { get; set; }
 
         /// <summary>
         /// /Invoice/cbc:Note@languageLocaleID (Código de la leyenda)

@@ -67,7 +67,7 @@ namespace GenerateXML
                 { // Emisor y Receptor son instancias de la clase Contribuyente, por lo que comparten los mismos atributos
                     Party = new Party()
                     {
-                        PartyName = new PartyName() { Name = documento.Emisor.NombreComercial }, // Nombre Comercial del emisor
+                        PartyName = new PartyName() { Name = documento.Emisor.NombreComercial }, // NombreTributo Comercial del emisor
                         PartyIdentification = new PartyIdentification()
                         {   // RUC
                             Id = new PartyIdentificationId() { Value = documento.Emisor.NroDocumento, SchemeId = documento.Emisor.TipoDocumento }
@@ -90,10 +90,10 @@ namespace GenerateXML
                         #region PartyTaxScheme
                         PartyTaxScheme = new PartyTaxScheme()
                         {
-                            RegistrationName = documento.Emisor.NombreLegal, // Nombre o razón social del emisor
+                            RegistrationName = documento.Emisor.NombreLegal, // NombreTributo o razón social del emisor
                             CompanyID = new CompanyID() { SchemeID = documento.Emisor.TipoDocumento, Value = documento.Emisor.NroDocumento }, // Número de RUC del emisor
                             RegistrationAddress = new RegistrationAddress() { AddressTypeCode = new AddressTypeCode() {
-                                Value = "" /*documento.Emisor.Ubigeo.ToString()*/ // Cambiar esto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                Value = "0000" /*documento.Emisor.Ubigeo.ToString()*/ // Cambiar esto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                 }
                             }
                         }
@@ -104,7 +104,7 @@ namespace GenerateXML
                 {   // de la clase AccountingContributorParty, por lo que comparten los mismos atributos
                     Party = new Party()
                     {
-                        PartyName = new PartyName() { Name = documento.Receptor.NombreComercial ?? string.Empty }, // Nombre Comercial del Receptor
+                        PartyName = new PartyName() { Name = documento.Receptor.NombreComercial ?? string.Empty }, // NombreTributo Comercial del Receptor
                         PartyIdentification = new PartyIdentification()
                         {   // Número de documento
                             Id = new PartyIdentificationId() { Value = documento.Receptor.NroDocumento, SchemeId = documento.Receptor.TipoDocumento }
@@ -121,14 +121,15 @@ namespace GenerateXML
                                 CountrySubentity    = documento.Receptor.Departamento,
                                 District            = documento.Receptor.Distrito,
                                 Country             = new Country() { IdentificationCode = new IdentificationCode() { Value = documento.Receptor.Pais } },
+                                AddressTypeCode     = new AddressTypeCode() {  }    // Investigar mas sobre este valor, por ahora no irá   
                             }
                         },
-                        
+
                         #region PartyTaxScheme
-                        //PartyTaxScheme = new PartyTaxScheme() // Tambien se excluyó, decreto de SUNAT 30/06/2018
-                        //{   // Número de RUC del Receptor
-                        //    CompanyID = new CompanyID() { SchemeID = documento.Receptor.TipoDocumento, Value = documento.Receptor.NroDocumento }
-                        //},
+                        PartyTaxScheme = new PartyTaxScheme() // Tambien se excluyó, decreto de SUNAT 30/06/2018
+                        {   // Número de RUC del Receptor
+                            CompanyID = new CompanyID() { SchemeID = documento.Receptor.TipoDocumento, Value = documento.Receptor.NroDocumento }
+                        },
                         #endregion PartyTaxScheme
                     },
 
@@ -198,20 +199,20 @@ namespace GenerateXML
             }
 
             // Datos en lista
-            //if (documento.Notas.Count > 0 && documento.Notas != null)
-            //{
-            //    foreach (var nota in documento.Notas)
-            //    {
-            //        if (!string.IsNullOrEmpty(nota.Leyenda.ToString()))
-            //        {
-            //            invoice.Notes.Add(new Note // Se agrega al objeto Note
-            //            {
-            //                LanguageLocaleID    = nota.Codigo,  // Código de leyenda
-            //                Leyenda             = nota.Leyenda  // Leyenda
-            //            });
-            //        }
-            //    }
-            //}
+            if (documento.Notas.Count > 0 && documento.Notas != null)
+            {
+                foreach (var nota in documento.Notas)
+                {
+                    if (!string.IsNullOrEmpty(nota.Descripcion.ToString()))
+                    {
+                        invoice.Notes.Add(new Note // Se agrega al objeto Note
+                        {
+                            LanguageLocaleID    =   nota.Codigo,    //  Código de leyenda
+                            Value               =   nota.Descripcion    //  Descripcion
+                        });
+                    }
+                }
+            }
 
             #region Get out InvoicePeriod
             // Ciclo de facturación
@@ -529,13 +530,11 @@ namespace GenerateXML
                                 Value       = subTotalImpuestos.MontoTotal          // Monto total del impuesto
                             },
                             TaxCategory = new TaxCategory {
-                                TaxCategoryId   = new TaxCategoryId {
-                                    Value       = subTotalImpuestos.CategoriaImpuestos  // Categoría de impuestos
-                                },
-                                TaxScheme = new TaxScheme {
-                                    TaxSchemeId = new TaxSchemeId { Value   = subTotalImpuestos.PlanImpuestosID },  // Código de tributo
-                                    Name        = subTotalImpuestos.PlanImpuestosNombre,    // Nombre de tributo
-                                    TaxTypeCode = subTotalImpuestos.PlanImpuestosCodigo     // Código internacional tributo
+                                TaxCategoryId   = new TaxCategoryId { Value = subTotalImpuestos.CategoriaImpuestos }, // Categoría de impuestos
+                                TaxScheme   = new TaxScheme {
+                                    TaxSchemeId = new TaxSchemeId { Value   = subTotalImpuestos.CodigoTributo },  // Código de tributo
+                                    Name        = subTotalImpuestos.NombreTributo,    // NombreTributo de tributo
+                                    TaxTypeCode = subTotalImpuestos.CodigoInternacional     // Código internacional tributo
                                 }
                             }
                         });
@@ -545,39 +544,36 @@ namespace GenerateXML
             }
 
             // InvoiceLine o DetalleFactura
-            foreach (var item in documento.DetalleDocumentos)
+            foreach (var detalleDocumento in documento.DetalleDocumentos)
             {
                 var linea = new InvoiceLine {
-                    IdInvoiceLine = item.NumeroOrden, // Número de orden del Ítem | No debe repetirse
+                    IdInvoiceLine = detalleDocumento.NumeroOrden, // Número de orden del Ítem | No debe repetirse
                     InvoicedQuantity = new InvoicedQuantity() {
-                        Value = item.Cantidad,    // Cantidad de unidades por ítem
-                        UnitCode = item.UnidadMedida // Unidad de medida por ítem | (Catálogo No. 03)
+                        Value = detalleDocumento.Cantidad,    // Cantidad de unidades por ítem
+                        UnitCode = detalleDocumento.UnidadMedida // Unidad de medida por ítem | (Catálogo No. 03)
                     },
-                    LineExtensionAmount = new PayableAmount() { CurrencyId = item.Moneda, Value = item.ValorVenta },    // Valor de venta por ítem
+                    LineExtensionAmount = new PayableAmount() { CurrencyId = detalleDocumento.Moneda, Value = detalleDocumento.ValorVenta },    // Valor de venta por ítem
                     //TaxPointDate = "", // Se omitió esta etiqueta en la documentacion EXCEL de SUNAT
                     PricingReference = new PricingReference() { AlternativeConditionPrices = new List<AlternativeConditionPrice>() }, // La implementación esta dentro de la region AlternativeConditionPrice
                     // AllowanceCharge
-                    TaxTotals = new List<TaxTotal>(),   // Implementado en la región TaxTotal
+                    //TaxTotals = new List<TaxTotal>(),   // Implementado en la región TaxTotal
                     Item = new Item() {
                         Descriptions = new List<Description>(), // Se implementa líneas abajo
-                        SellersItemIdentification = new SellersItemIdentification() { Id = item.CodigoProducto }, // Código de producto
+                        SellersItemIdentification = new SellersItemIdentification() { Id = detalleDocumento.CodigoProducto }, // Código de producto
                         CommodityClassification = new CommodityClassification() // No hay una tabla con este listado, debido a inestabilidad de Sunat y por ser demasiado extenso
                         {   // Codigo producto de SUNAT | (Catálogo No. 25) | Es excluyente cuando el tipo de operación esta entre 0200 a 0208
-                            ItemClassificationCode = new ItemClassificationCode() { Value = item.CodigoProductoSunat ?? string.Empty }
+                            ItemClassificationCode = new ItemClassificationCode() { Value = detalleDocumento.CodigoProductoSunat ?? string.Empty }
                         },  // Si tipo de operación es 0112, no debe haber productos con código de Sunat igual a 84121901 o 80131501
                         // StandardItemIdentification  = new StandardItemIdentification() { } Codigo de barras, no se agregará a pedido de Tania
                         AdditionalItemProperties = new List<AdditionalItemProperty>()   // Implementado en la región AdditionalItemProperty
                     },
-                    Price = new Price()
-                    {   // Valor unitario por ítem
-                        PriceAmount = new PayableAmount() { CurrencyId = item.Moneda, Value = item.ValorVenta } // Debe existir
-                    },
+                    Price = new Price() { PriceAmount = new PayableAmount() { CurrencyId = detalleDocumento.Moneda, Value = detalleDocumento.ValorVenta } }, // Valor unitario por ítem
                     Deliveries = new List<Delivery>()
                 };
 
                 //if (true) Aun no se completa debido a que en la documentación especificada por Tania no se contempla estas etiquetas
                 //{
-                //    foreach (var entrega in item.Entregas)
+                //    foreach (var entrega in detalleDocumento.Entregas)
                 //    {
                 //        linea.Deliveries.Add(new Delivery()
                 //        {
@@ -593,9 +589,9 @@ namespace GenerateXML
                 //}
 
                 #region AlternativeConditionPrice
-                if (item.PreciosAlternativos.Count > 0)
+                if (detalleDocumento.PreciosAlternativos.Count > 0)
                 {
-                    foreach (var precioAlternativo in item.PreciosAlternativos)
+                    foreach (var precioAlternativo in detalleDocumento.PreciosAlternativos)
                     {
                         if (precioAlternativo.Monto != null)
                         {
@@ -610,9 +606,9 @@ namespace GenerateXML
                 #endregion AlternativeConditionPrice
 
                 #region AllowanceCharge
-                if (item.Descuentos.Count > 0) // Validar
+                if (detalleDocumento.Descuentos.Count > 0) // Validar
                 {
-                    foreach (var descuento in item.Descuentos)
+                    foreach (var descuento in detalleDocumento.Descuentos)
                     {   // De estar vacio o nulo, este boleano indicara si se debe llenar el nodo o no ya que es nodo requerido para su nodo padre
                         if (!string.IsNullOrEmpty(descuento.Indicador.ToString()))
                         {   
@@ -630,9 +626,9 @@ namespace GenerateXML
                 #endregion AllowanceCharge
                     
                 #region TaxTotal
-                if (item.TotalImpuestos.Count > 0)
+                if (detalleDocumento.TotalImpuestos.Count > 0)
                 {   // Monto total de impuestos del ítem
-                    foreach (var totalImpuesto in item.TotalImpuestos)
+                    foreach (var totalImpuesto in detalleDocumento.TotalImpuestos)
                     {   // Total de impuestos para cada ítem
                         var lineaTotalImpuestos = new TaxTotal
                         {   // Monto total de impuestos por línea
@@ -662,9 +658,9 @@ namespace GenerateXML
 
                                     TaxScheme = new TaxScheme
                                     {
-                                        TaxSchemeId = new TaxSchemeId { Value = subTotalImpuestos.PlanImpuestosID },    // Código de tributo por línea | Catálogo No. 05
-                                        Name        = subTotalImpuestos.PlanImpuestosNombre,    // Nombre de tributo
-                                        TaxTypeCode = subTotalImpuestos.PlanImpuestosCodigo     // Código internacional tributo
+                                        TaxSchemeId = new TaxSchemeId { Value = subTotalImpuestos.CodigoTributo },    // Código de tributo por línea | Catálogo No. 05
+                                        Name        = subTotalImpuestos.NombreTributo,    // NombreTributo de tributo
+                                        TaxTypeCode = subTotalImpuestos.CodigoInternacional     // Código internacional tributo
                                     }
                                 }
                             });
@@ -675,9 +671,9 @@ namespace GenerateXML
                 #endregion TaxTotal
 
                 #region Description
-                if (item.Descripciones.Count > 0) // Validar
+                if (detalleDocumento.Descripciones.Count > 0) // Validar
                 {
-                    foreach (var descripcion in item.Descripciones)
+                    foreach (var descripcion in detalleDocumento.Descripciones)
                     {   // Descripción detallada del servicio prestado, bien vendido o cedido en uso, indicando las características.
                         linea.Item.Descriptions.Add(new Description() { Detail = descripcion.Detalle ?? string.Empty});
                     }
@@ -685,9 +681,9 @@ namespace GenerateXML
                 #endregion Description
 
                 #region AdditionalItemProperty
-                if (item.PropiedadesAdicionales.Count > 0) // validar
+                if (detalleDocumento.PropiedadesAdicionales.Count > 0) // validar
                 {
-                    foreach (var propiedadAdicional in item.PropiedadesAdicionales)
+                    foreach (var propiedadAdicional in detalleDocumento.PropiedadesAdicionales)
                     {
                         linea.Item.AdditionalItemProperties.Add(new AdditionalItemProperty()
                         {

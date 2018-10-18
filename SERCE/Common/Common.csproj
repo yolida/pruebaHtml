@@ -49,5 +49,31 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DirectorySaveFiles.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Validation\common\CCTS_CCT_SchemaModule-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-CommonAggregateComponents-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-CommonBasicComponents-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-CommonExtensionComponents-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-ExtensionContentDataType-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-QualifiedDataTypes-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\common\UBL-UnqualifiedDataTypes-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Validation\UBL-Invoice-2.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,36 +18,28 @@ namespace DataLayer.CRUD
         public List<SubTotalImpuestos> Read_SubTotalImpuesto()
         {
             List<SubTotalImpuestos> subTotalImpuestos   =   new List<SubTotalImpuestos>();
-
-            ReadGeneralData readGeneralData;
-            readGeneralData     =   new ReadGeneralData();
+            ReadGeneralData readGeneralData =   new ReadGeneralData();
             DataTable dataTable =   readGeneralData.GetDataTable("[dbo].[Read_SubTotalImpuesto]", "@IdTotalImpuestos", IdTotalImpuestos);
 
-            int cantidadLineas = 0;
-
-            cantidadLineas = dataTable.Rows.Count;
-
             DataRow row;
-
             SubTotalImpuestos subTotalImpuesto;
-
-            for (int i = 0; i < cantidadLineas; i++)
+            
+            for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 row = dataTable.Rows[i];
                 subTotalImpuesto = new SubTotalImpuestos()
                 {
-                    IdTotalImpuestos    =   Convert.ToInt32(row["IdTotalImpuestos"]),
-                    BaseImponible       =   Convert.ToDecimal(row["BaseImponible"]),
+                    IdTotalImpuestos    =   Convert.ToInt32(row["IdTotalImpuestos"].ToString()),
+                    BaseImponible       =   Convert.ToDecimal(row["BaseImponible"].ToString()),
                     TipoMonedaBase      =   row["MBMoneda"].ToString(),
-                    MontoTotal          =   Convert.ToDecimal(row["MontoTotal"]),
+                    MontoTotal          =   Convert.ToDecimal(row["MontoTotal"].ToString()),
                     TipoMonedaTotal     =   row["MTMoneda"].ToString(),
-                    CategoriaImpuestos  =   string.Empty,   // Pendiente de verificación
-                    PorcentajeImp       =   Convert.ToDecimal(row["PorcentajeImp"]),
+                    PorcentajeImp       =   Convert.ToDecimal(row["PorcentajeImp"].ToString()),
                     TipoAfectacion      =   row["TipoAfectacion"].ToString(),
-                    TipoSistemaISC      =   string.Empty,
-                    PlanImpuestosID = string.Empty, // Pendiente de verificación
-                    PlanImpuestosNombre  = string.Empty, // Pendiente de verificación
-                    PlanImpuestosCodigo = string.Empty // Pendiente de verificación
+                    TipoSistemaISC      =   string.Empty,   // Se considera irrelevante por parte de operaciones
+                    CodigoTributo       =   row["CodigoTributo"].ToString(), 
+                    CodigoInternacional =   row["CodigoInternacional"].ToString(),
+                    NombreTributo       =   row["NombreTributo"].ToString()
                 };
                 subTotalImpuestos.Add(subTotalImpuesto);
             }

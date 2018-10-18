@@ -34,13 +34,19 @@ namespace Models.Modelos
 
         /// <summary>
         /// En la versión antigua de la documentación toma los valores de la columna UN/ECE 5305- Duty or tax or fee category code*
-        /// En la nueva versión esta columna se llama "Nombre del Tributo"
+        /// En la nueva versión esta columna se llama "NombreTributo del Tributo"
         /// cac:TaxCategory > cbc:ID
         /// Categoría de impuestos | [0..1]
+        /// Esta etiqueta estuvo presente en la documentacióm antigua, pero en la actual ya no se le considera
+        /// Ejemplo: <code> "cbc:ID schemeID="UN/ECE 5305" schemeName="Tax Category Identifier" schemeAgencyName="United Nations Economic Commission for Europe">E>/cbc:ID" </code>
         /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
         public string CategoriaImpuestos { get; set; }
 
+        /// <summary>
+        /// Tasa del IGV o  Tasa del IVAP | Tasa del tributo
+        /// Percent
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
         public decimal PorcentajeImp { get; set; }
 
@@ -59,14 +65,15 @@ namespace Models.Modelos
         /// diferente a '40'. | ERROR 2642 | Operaciones de exportacion, deben consignar Tipo Afectacion igual a 40 },
         /// { Si 'Afectación al IGV o IVAP' es '17' y  'Monto base' es mayor a cero, y existe otra línea con 'Afectación al IGV o IVAP' diferente 
         /// de '17' y 'Monto base' mayor a cero | ERROR	2644 | Comprobante operacion sujeta IVAP solo debe tener ítems con código de afectación del IGV igual a 17 }
-    /// </summary>
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
         public string TipoAfectacion { get; set; }
-        
+
         /// <summary>
         /// cbc:TierRange
         /// Código de tipo de sistema de ISC
         /// 0..1 | an2 | Catálogo 08
+        /// Se considera irrelevante por parte de operaciones
         /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
         public string TipoSistemaISC { get; set; }
@@ -76,14 +83,24 @@ namespace Models.Modelos
         /// {{ El valor del Tag UBL debe tener por lo menos uno de los siguientes valores en el comprobante: '1000' 
         /// (Gravada), '1016' (IVAP), '9995' (Exportacion), '9996' (Gratuita), '9997' (Exonerada), '9998' (Inafecta) |ERROR	3105 | 
         /// El XML debe contener al menos un tributo por linea de afectacion por IGV (Gravada, Exonerada, Inafecta, Exportación)
+        /// Código de tributo
+        /// cac:TaxScheme > cbc:ID | Código de tributo | [0..1] | an..3
         /// </summary>
-        [JsonProperty(Required = Required.AllowNull)]
-        public string PlanImpuestosID { get; set; } // cac:TaxScheme > cbc:ID | Código de tributo | [0..1] | an..3
+        [JsonProperty(Required = Required.Always)]
+        public string CodigoTributo { get; set; }
 
-        [JsonProperty(Required = Required.AllowNull)]
-        public string PlanImpuestosNombre { get; set; } // cac:TaxScheme > cbc:Name | [0..1]
+        /// <summary>
+        /// Catálogo 5: Código de tipos de tributos y otros conceptos
+        /// CodigoInternacional  =  cac:TaxScheme > cbc:TaxTypeCode | [0..1]
+        /// </summary>
+        [JsonProperty(Required = Required.Always)]
+        public string CodigoInternacional { get; set; }
 
-        [JsonProperty(Required = Required.AllowNull)]
-        public string PlanImpuestosCodigo { get; set; } // cac:TaxScheme > cbc:TaxTypeCode | [0..1]
+        /// <summary>
+        /// Catálogo 5: Código de tipos de tributos y otros conceptos
+        /// NombreTributo  =   cac:TaxScheme > cbc:Name | [0..1]
+        /// </summary>
+        [JsonProperty(Required = Required.Always)]
+        public string NombreTributo { get; set; }
     }
 }

@@ -7,6 +7,8 @@ using FEI.CustomDialog;
 using FEI.Extension.Base;
 using FEI.Extension.Datos;
 using FEI.Extension.Negocio;
+using Models.Modelos;
+using Ookii.Dialogs.Wpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +22,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Xml.Linq;
+using System.Xml.Schema;
 using CheckBox = System.Windows.Controls.CheckBox;
 
 namespace FEI.pages
@@ -39,6 +43,7 @@ namespace FEI.pages
         private readonly IData_Documentos _Documentos;
         Data_DatosFox data_DatosFox;
         Data_Usuario data_Usuario;
+        Data_Contribuyente data_Contribuyente;
         List<Data_Documentos> data_Documentos   =   new List<Data_Documentos>();
         Data_Log data_Log;
         private Window padre;
@@ -53,6 +58,9 @@ namespace FEI.pages
 
             data_DatosFox   =   new Data_DatosFox(data_Usuario.IdDatosFox);
             data_DatosFox.Read_DatosFox();
+
+            data_Contribuyente  =   new Data_Contribuyente(data_DatosFox.IdEmisor);
+            data_Contribuyente.Read_Contribuyente();
         }
         //Evento de carga de la ventana principal.
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -202,6 +210,7 @@ namespace FEI.pages
             catch (Exception ex)
             {
                 var msg =   string.Concat(ex.InnerException?.Message,   ex.Message);
+                System.Windows.MessageBox.Show(msg, "Error al enviar el documento a sunat", MessageBoxButton.OK, MessageBoxImage.Error);
                 data_Log = new Data_Log() { DetalleError = $"Detalle del error: {msg}", Comentario = "Error al enviar el documento a sunat desde la interfaz", IdUser_Empresa = data_Usuario.IdUser_Empresa };
                 data_Log.Create_Log();
             }
@@ -392,66 +401,166 @@ namespace FEI.pages
         {
             try
             {
+                int documentosSinXML    =   0;
+                string mensajeFinal     =   string.Empty;
+
                 List<Data_Documentos> selected_data_Documentos = new List<Data_Documentos>();
                 foreach (var data_Documento in data_Documentos)
                 {
-                    if (data_Documento.Selectable == true)
+                    if (data_Documento.Selectable   ==  true)
                         selected_data_Documentos.Add(data_Documento);
+
+                    if (data_Documento.EstadoSunat  ==  "Pendiente")
+                        documentosSinXML++;
                 }
 
                 if (selected_data_Documentos.Count() > 0)
                 {
-                    string enviados     =   string.Empty;
-                    string noEnviados   =   string.Empty;
-                    string mensajeFinal =   string.Empty;
-
-                    ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
-                        foreach (var selected_data_Documento in selected_data_Documentos)
-                        {
-                            ProcesarEnvio procesarEnvio =   new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
-                            procesarEnvio.Post();
-                        }
-                    });
-                    
-                    foreach (var selected_data_Documento in selected_data_Documentos)
+                    if (documentosSinXML > 0)
                     {
-                        if (selected_data_Documento.EnviadoSunat == true)
-                        {
-                            enviados    +=  $", {selected_data_Documento.SerieCorrelativo}";
-                        }
+                        System.Windows.MessageBox.Show("Ha seleccionado uno o más documentos que aún no se envían a Sunat (Pendiente), por este motivo aún no se ha" +
+                            " generado su respectivo XML, envíe el(los) documentos y vuelva a intentarlo", "Documento sin XML", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    }
+                    else
+                    {
+                        string pdfsNoEncontrados    =   string.Empty;
+                        string rutaDescarga         =   Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                        VistaFolderBrowserDialog dialog =   new VistaFolderBrowserDialog();
+                        dialog.Description              =   "Seleccione el directorio donde desea guardar los archivos.";
+                        dialog.UseDescriptionForTitle   =   true;
+                        
+
+                        if (!VistaFolderBrowserDialog.IsVistaFolderDialogSupported)
+                            System.Windows.MessageBox.Show("Estimado usuario estas empleando una versión muy antigua de Windows, algunas funciones están restringidas, tu documento será " +
+                                "descargado en el directorio MIS DOCUMENTOS.", "Algunas funciones no están soportadas en tu sistema operativo", MessageBoxButton.OK, MessageBoxImage.Information);
                         else
                         {
-                            noEnviados  +=  $", {selected_data_Documento.SerieCorrelativo}";
+                            var resultado   =   dialog.ShowDialog();
+                            if (resultado.HasValue  &&  resultado.Value)
+                            {
+                                rutaDescarga    =   dialog.SelectedPath;
+
+                                ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
+                                    foreach (var selected_data_Documento in selected_data_Documentos)
+                                    {
+                                        var nombreArchivo = $"{data_Contribuyente.NroDocumento}-{selected_data_Documento.TipoDocumento}-{selected_data_Documento.SerieCorrelativo}";
+
+                                        if (!Directory.Exists($"{rutaDescarga}\\{nombreArchivo}"))
+                                            Directory.CreateDirectory($"{rutaDescarga}\\{nombreArchivo}");
+
+                                        #region PDF
+                                        try
+                                        {
+                                            if (!File.Exists($"{selected_data_Documento.Ruta}\\{selected_data_Documento.SerieCorrelativo}.pdf"))
+                                                pdfsNoEncontrados += $"{selected_data_Documento.SerieCorrelativo}, ";
+                                            else
+                                            {
+                                                File.Copy($"{selected_data_Documento.Ruta}\\{selected_data_Documento.SerieCorrelativo}.pdf", 
+                                                    $"{rutaDescarga}\\{selected_data_Documento.SerieCorrelativo}\\", true);
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            var msg     =   string.Concat(ex.InnerException?.Message,   ex.Message);
+                                            data_Log    =   new Data_Log()
+                                            {
+                                                DetalleError    =   $"Detalle del error: {msg}",
+                                                Comentario      =   "Error al leer o guardar PDF de representación impresa",
+                                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                                            };
+                                            data_Log.Create_Log();
+                                        }
+                                        #endregion PDF
+
+                                        DataTable datosDocumento = readGeneralData.GetDataTable("[dbo].[Query_Scalar_GetXml_Documento]", "@IdDocumento", selected_data_Documento.IdDocumento);
+                                        DataRow row     =   datosDocumento.Rows[0];
+
+                                        File.WriteAllBytes($"{rutaDescarga}\\{nombreArchivo}\\{nombreArchivo}.xml", Convert.FromBase64String(row["XmlFirmado"].ToString()));
+
+                                        if (!string.IsNullOrEmpty(row["CdrSunat"].ToString()))
+                                            File.WriteAllBytes($"{rutaDescarga}\\{nombreArchivo}\\R-{nombreArchivo}.zip", Convert.FromBase64String(row["CdrSunat"].ToString()));
+                                        
+                                        datosDocumento.Clear();
+                                    }
+                                });
+
+                                if (!string.IsNullOrEmpty(pdfsNoEncontrados))
+                                {
+                                    mensajeFinal    =   $"El(los) documento(s) xml fueron guardados en :{dialog.SelectedPath} pero no hemos podido encontrar la" +
+                                        $" representación impresa de los siguientes documentos: {pdfsNoEncontrados}";
+                                }
+                                else
+                                    mensajeFinal    =   $"El(los) documento(s) fueron guardados en :{dialog.SelectedPath}";
+
+                                CustomDialogWindow customDialogWindow       =   new CustomDialogWindow();
+                                customDialogWindow.Buttons                  =   CustomDialogButtons.OK;
+                                customDialogWindow.Caption                  =   "Detalle";
+                                customDialogWindow.DefaultButton            =   CustomDialogResults.OK;
+                                customDialogWindow.InstructionHeading       =   "Resultados de la descarga del documento(s)";
+                                customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
+                                customDialogWindow.InstructionText          =   mensajeFinal;
+                                CustomDialogResults customDialogResults     =   customDialogWindow.Show();
+
+                                LoadGrid();
+                            }
                         }
                     }
-
-                    if (string.IsNullOrEmpty(enviados)) //  Ningún enviado, puros rechazados como voz
-                        mensajeFinal    =   $"No se pudo enviar ningún documento, los documentos rechazados son:\n {noEnviados}";
-
-                    if (!string.IsNullOrEmpty(enviados) && string.IsNullOrEmpty(noEnviados))    //  Sin ningún documento rechazado
-                        mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados}";
-
-                    if (!string.IsNullOrEmpty(enviados) && !string.IsNullOrEmpty(noEnviados))   //  Con al menos un documento rechazado
-                        mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados} y se han rechazado los siguientes documentos:\n {noEnviados}";
-
-                    CustomDialogWindow customDialogWindow       =   new CustomDialogWindow();
-                    customDialogWindow.Buttons                  =   CustomDialogButtons.OK;
-                    customDialogWindow.Caption                  =   "Mensaje";
-                    customDialogWindow.DefaultButton            =   CustomDialogResults.OK;
-                    customDialogWindow.InstructionHeading       =   "Resultados del envío a Sunat";
-                    customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
-                    customDialogWindow.InstructionText          =   mensajeFinal;
-                    CustomDialogResults customDialogResults     =   customDialogWindow.Show();
-
-                    LoadGrid();
                 }
                 else
                     System.Windows.Forms.MessageBox.Show("Debe seleccionar al menos un documento");
             }
             catch (Exception ex)
             {
-                var msg =   string.Concat(ex.InnerException?.Message,   ex.Message);
-                data_Log = new Data_Log() { DetalleError = $"Detalle del error: {msg}", Comentario = "Error al enviar el documento a sunat desde la interfaz", IdUser_Empresa = data_Usuario.IdUser_Empresa };
+                var msg     =   string.Concat(ex.InnerException?.Message,   ex.Message);
+                System.Windows.MessageBox.Show(msg, "Error al descargar los archivos del documento", MessageBoxButton.OK, MessageBoxImage.Error);
+                data_Log    =   new Data_Log()
+                {
+                    DetalleError    =   $"Detalle del error: {msg}",
+                    Comentario      =   "Error al descargar los archivos del documento",
+                    IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                };
+                data_Log.Create_Log();
+            }
+        }
+
+        private void btnValidar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int documentosSinXML    =   0;
+                string mensajeFinal     =   string.Empty;
+
+                XmlSchemaSet xmlSchemaSet   =   new XmlSchemaSet();
+                xmlSchemaSet.Add(null, @"D:\Jorge Luis\FEICONT21\pruebaHtml\SERCE\Common\Validation\UBL-Invoice-2.1.xsd");
+                XDocument document      =   XDocument.Load(@"D:\Jorge Luis\tempParaPruebasSunat\20541388061-01-F001-00004\20541388061-01-F001-00004.xml");
+                //XDocument document      =   XDocument.Load(@"D:\Jorge Luis\tempParaPruebasSunat\20541388061-01-F001-0000004\20541388061-01-F001-0000004.xml");
+                bool validationErrors   =   false;
+                document.Validate(xmlSchemaSet, (s, ev) => { mensajeFinal = ev.Message; validationErrors = true; });
+
+                if (validationErrors)
+                    mensajeFinal    +=  mensajeFinal + "errores";
+                else
+                    mensajeFinal    +=  mensajeFinal + "sin errores";
+
+                CustomDialogWindow customDialogWindow       =   new CustomDialogWindow();
+                customDialogWindow.Buttons                  =   CustomDialogButtons.OK;
+                customDialogWindow.Caption                  =   "Detalle";
+                customDialogWindow.DefaultButton            =   CustomDialogResults.OK;
+                customDialogWindow.InstructionHeading       =   "Resultados de la descarga del documento(s)";
+                customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
+                customDialogWindow.InstructionText          =   mensajeFinal;
+                CustomDialogResults customDialogResults     =   customDialogWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                var msg     =   string.Concat(ex.InnerException?.Message,   ex.Message);
+                data_Log    =   new Data_Log()
+                {
+                    DetalleError    =   $"Detalle del error: {msg}",
+                    Comentario      =   "Error al enviar el documento a sunat desde la interfaz",
+                    IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                };
                 data_Log.Create_Log();
             }
         }

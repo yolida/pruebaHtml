@@ -76,6 +76,7 @@ namespace BusinessLayer
             {
                 foreach (var detalleDocumento in detalleDocumentos)
                 {
+                    #region lineaTotalImpuesto
                     Data_TotalImpuesto lineaTotalImpuesto   =   new Data_TotalImpuesto(detalleDocumento.IdDocumentoDetalle);
                     List<TotalImpuesto> lineaTotalImpuestos =   lineaTotalImpuesto.Read_TotalImpuestos(2);  //  El parámetro -> 2 <- es indicativo de que es por cada línea
 
@@ -86,37 +87,26 @@ namespace BusinessLayer
                         st_totalImpuesto.SubTotalesImpuestos        =   subTotalImpuestos;
                     }
                     detalleDocumento.TotalImpuestos =   lineaTotalImpuestos;
-                    
+                    #endregion lineaTotalImpuesto
+
+                    #region Notas
+                    Data_Nota lineaData_Nota    =   new Data_Nota(detalleDocumento.IdDocumentoDetalle);  // Parámetro es el id de cabecera de documento
+                    List<Nota> lineaNotas       =   lineaData_Nota.Read(2);
+                    detalleDocumento.Notas      =   lineaNotas;
+                    #endregion Notas
+
+                    #region Descripciones
+                    List<Descripcion> descripciones =   data_DocumentoDetalle.Read_Descripcion(detalleDocumento.IdDocumentoDetalle);
+                    detalleDocumento.Descripciones  =   descripciones;
+                    #endregion Descripciones
+
+                    #region PrecioAlternativo
+                    Data_PrecioAlternativo data_PrecioAlternativo   =   new Data_PrecioAlternativo(detalleDocumento.IdDocumentoDetalle);
+                    List<PrecioAlternativo> precioAlternativos      =   data_PrecioAlternativo.Read_PrecioAlternativo();
+                    detalleDocumento.PreciosAlternativos            =   precioAlternativos;                    
+                    #endregion PrecioAlternativo
+
                     #region emergency
-                    List<Descripcion> descripciones = new List<Descripcion>();
-
-                    Descripcion data_descripcion;
-                    data_descripcion = new Descripcion() { Detalle = null ?? string.Empty };
-                    descripciones.Add(data_descripcion);
-
-                    detalleDocumento.Descripciones = descripciones;
-
-                    List<PrecioAlternativo> precioAlternativos = new List<PrecioAlternativo>();
-                    PrecioAlternativo data_precioAlternativo;
-
-                    data_precioAlternativo = new PrecioAlternativo()
-                    {
-                        TipoMoneda = null,
-                        Monto = null,
-                        TipoPrecio = null
-                    };
-                    precioAlternativos.Add(data_precioAlternativo);
-
-                    data_precioAlternativo = new PrecioAlternativo()
-                    {
-                        TipoMoneda = "01",
-                        Monto = 15.47m,
-                        TipoPrecio = "01"
-                    };
-                    precioAlternativos.Add(data_precioAlternativo);
-
-                    detalleDocumento.PreciosAlternativos = precioAlternativos;
-
                     List<Descuento> descuentos = new List<Descuento>();
 
                     detalleDocumento.Descuentos = descuentos;
@@ -132,14 +122,10 @@ namespace BusinessLayer
                         Cantidad = 0,
                         MaximaCantidad = 0,
                         Envio = new Envio(),
-
                     };
                     entregas1.Add(data_entrega);
-
+                                        
                     detalleDocumento.Entregas = entregas1;
-
-
-
                     #endregion emergency
                 }
                 documento.DetalleDocumentos     =   detalleDocumentos;
@@ -161,13 +147,18 @@ namespace BusinessLayer
             documento.TotalImpuestos = totalImpuestos;
             #endregion TotalImpuestos
 
+            #region Notas
+            Data_Nota data_Nota =   new Data_Nota(data_Documento.IdCabeceraDocumento);  // Parámetro es el id de cabecera de documento
+            List<Nota> notas    =   data_Nota.Read(1);
+            documento.Notas     =   notas;
+            #endregion Notas
+
             #region TerminosEntregas
             Data_TerminosEntrega data_TerminosEntrega   =   new Data_TerminosEntrega(data_Documento.IdCabeceraDocumento);
             data_TerminosEntrega.Read_TerminosEntrega();   //  El parámetro -> 1 <- es indicativo de que es por cada línea
             documento.TerminosEntrega                   =   data_TerminosEntrega;
             #endregion TerminosEntregas
-
-            List<Nota> notas = null;
+            
             List<PeriodoFactura> periodoFacturas = null;
             List<DocumentoRelacionado> documentoRelacionados = null;
             List<DocumentoRelacionado> otrosDocumentosRelacionados = null;
@@ -175,8 +166,7 @@ namespace BusinessLayer
             List<MedioPago> medioPagos = null;
             List<Anticipo> anticipos = null;
             List<Descuento> item_descuentos = null;
-
-            documento.Notas                         = notas;
+            
             documento.Relacionados                  = documentoRelacionados;
             documento.OtrosDocumentosRelacionados   = otrosDocumentosRelacionados;
             documento.Entregas                      = entregas;

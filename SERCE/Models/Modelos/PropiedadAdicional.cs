@@ -10,9 +10,9 @@ namespace Models.Modelos
     public class PropiedadAdicional
     {
         /// <summary>
-        /// <para>Nombre del concepto | Catálogo No. 55 | Código de identificación del concepto tributario</para>
+        /// <para>NombreTributo del concepto | Catálogo No. 55 | Código de identificación del concepto tributario</para>
         /// /Invoice/cac:InvoiceLine/cac:Item/cac:AdditionalItemProperty/cbc:Name
-        /// <para> Nombre del concepto tributario | an..100 | [1..1] </para>
+        /// <para> NombreTributo del concepto tributario | an..100 | [1..1] </para>
         /// </summary>
         public string Nombre { get; set; }
 
@@ -20,7 +20,7 @@ namespace Models.Modelos
         /// <para>Código del concepto | Catálogo No. 55 | Código de identificación del concepto tributario</para>
         /// /Invoice/cac:InvoiceLine/cac:Item/cac:AdditionalItemProperty/cbc:NameCode
         /// <para>Código del concepto tributario (del ítem) | n4 | [0..1] </para>
-        /// Nombre de columna en la base de datos: IdLeyendaDetraccion
+        /// NombreTributo de columna en la base de datos: IdLeyendaDetraccion
         /// </summary>
         public string Codigo { get; set; }
 
@@ -46,7 +46,7 @@ namespace Models.Modelos
         /// Código del concepto del ítem
         /// SUNAT 0..n, pero se tomará como un 0..1
         /// an..4
-        /// Nombre de columna en la base de datos: IdCodigoConcepto
+        /// NombreTributo de columna en la base de datos: IdCodigoConcepto
         /// </summary>
         public string Concepto { get; set; }
 

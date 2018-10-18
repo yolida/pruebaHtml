@@ -32,7 +32,7 @@ namespace Models.Modelos
         /// cbc:ID > Value
         /// Código de motivo del traslado
         /// Catálogo No. 20: Códigos – Motivos de traslado
-        /// Nombre de la tabla en la base de datos: [FeiContDB].[dbo].[MotivoTranslados]
+        /// NombreTributo de la tabla en la base de datos: [FeiContDB].[dbo].[MotivoTranslados]
         /// </summary>
         public string CodMotivoTraslado { get; set; }
 

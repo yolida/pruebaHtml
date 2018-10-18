@@ -43,7 +43,7 @@ namespace Security
         /// Genera el ZIP del XML basandose en la trama del XML.
         /// </summary>
         /// <param name="tramaXml">Cadena Base64 con el contenido del XML</param>
-        /// <param name="nombreArchivo">Nombre del archivo ZIP</param>
+        /// <param name="nombreArchivo">NombreTributo del archivo ZIP</param>
         /// <returns>Devuelve Cadena Base64 del archizo ZIP</returns>
         async Task<string> ISerializador.GenerarZip(string tramaXml, string nombreArchivo)
         {

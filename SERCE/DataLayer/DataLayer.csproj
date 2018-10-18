@@ -49,6 +49,8 @@
     <Compile Include="CRUD\Data_DocumentoDetalle.cs" />
     <Compile Include="CRUD\Data_Documentos.cs" />
     <Compile Include="CRUD\Data_Log.cs" />
+    <Compile Include="CRUD\Data_Nota.cs" />
+    <Compile Include="CRUD\Data_PrecioAlternativo.cs" />
     <Compile Include="CRUD\Data_SubTotalImpuesto.cs" />
     <Compile Include="CRUD\Data_TerminosEntrega.cs" />
     <Compile Include="CRUD\Data_TotalImpuesto.cs" />

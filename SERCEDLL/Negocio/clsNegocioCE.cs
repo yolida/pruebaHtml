@@ -46,7 +46,7 @@ namespace FEI.Extension.Negocio
         /// Genera un Comprobate de pago: factura, boletas y sus NC y ND asociadas.
         /// </summary>
         /// <param name="Id">Id del comprobante.</param>
-        /// <returns>Nombre del archivo generado.</returns>
+        /// <returns>NombreTributo del archivo generado.</returns>
         public string cs_pxGenerarCE(string Id)
         {
             string fila = string.Empty;
@@ -114,7 +114,7 @@ namespace FEI.Extension.Negocio
         /// Genera un Documento de baja.
         /// </summary>
         /// <param name="Id">Id del documento.</param>
-        /// <returns>Nombre del archivo generado.</returns>
+        /// <returns>NombreTributo del archivo generado.</returns>
         public string cs_pxGenerarResumenRA(string Id)
         {
             string archivo_nombre_XML = string.Empty;
@@ -156,7 +156,7 @@ namespace FEI.Extension.Negocio
         /// Genera un Resumen diario de boletas y sus NC y ND asociadas.
         /// </summary>
         /// <param name="Id">Id del resumen diario.</param>
-        /// <returns>Nombre del archivo generado.</returns>
+        /// <returns>NombreTributo del archivo generado.</returns>
         public string cs_pxGenerarResumenRC(string Id)
         {
             string archivo_nombre_XML = string.Empty, archivo_nombre_ZIP = string.Empty, archivo_nombre_directorio = string.Empty;

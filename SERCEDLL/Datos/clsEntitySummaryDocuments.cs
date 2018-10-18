@@ -28,7 +28,7 @@ namespace FEI.Extension.Datos
         public string Cs_pr_CDR { get; set; }
         public string Cs_pr_ExceptionSUNAT { get; set; }
         public string Cs_tag_DocumentCurrencyCode { get; set; }
-        public string Cs_tag_AccountingSupplierParty_Party_PartyName_Name { get; set; } //FE-1085 PartyName Nombre Comercial
+        public string Cs_tag_AccountingSupplierParty_Party_PartyName_Name { get; set; } //FE-1085 PartyName NombreTributo Comercial
         //private clsEntityDatabaseLocal localDB;
         protected override void cs_pxActualizarEntidad()
         {

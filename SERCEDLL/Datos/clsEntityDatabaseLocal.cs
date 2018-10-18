@@ -143,7 +143,7 @@ namespace FEI.Extension.Datos
                     //new OdbcCommand("CREATE TABLE " + new clsEntityDatabaseWeb().cs_cmTabla + " (" + Insercion(new clsEntityDatabaseWeb().cs_cmCampos) + "); ", cs_pxConexion_basedatos).ExecuteNonQuery();
                     //new OdbcCommand("CREATE TABLE " + new clsEntityDeclarant().cs_cmTabla + " (" + Insercion(new clsEntityDeclarant().cs_cmCampos) + "); ", cs_pxConexion_basedatos).ExecuteNonQuery();
                     new OdbcCommand("CREATE TABLE " + 
-                        new clsEntityDocument(local).cs_cmTabla + // Nombre de la tabla
+                        new clsEntityDocument(local).cs_cmTabla + // NombreTributo de la tabla
                             " (" + InsercionXML(
                         new clsEntityDocument(local).cs_cmCampos, local.Cs_pr_DBMS, 
                         new clsEntityDocument(local).cs_cmTabla, 

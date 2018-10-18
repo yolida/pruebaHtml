@@ -4,6 +4,8 @@ namespace Models.Modelos
 {
     public class PrecioAlternativo
     {
+        public int IdPrecioAlternativo { get; set; }
+
         /// <summary>
         /// cbc:PriceAmount
         /// Precio de venta unitario/ Valor referencial unitario en operaciones no onerosas
@@ -22,7 +24,7 @@ namespace Models.Modelos
         /// cbc:PriceTypeCode > Value
         /// Código de tipo de precio | an2
         /// Catálogo No. 16: Códigos – Tipo de precio de venta unitario
-        /// Nombre de tabla en la db: TipoPrecio
+        /// NombreTributo de tabla en la db: TipoPrecio
         /// </summary>
         public string TipoPrecio { get; set; }
     }
