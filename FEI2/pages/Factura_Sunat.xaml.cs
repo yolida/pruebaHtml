@@ -151,11 +151,18 @@ namespace FEI.pages
         {
             try
             {
+                int cantidadAceptados = 0;
                 List<Data_Documentos> selected_data_Documentos = new List<Data_Documentos>();
                 foreach (var data_Documento in data_Documentos)
                 {
                     if (data_Documento.Selectable == true)
                         selected_data_Documentos.Add(data_Documento);
+                }
+
+                foreach (var selected_data_Documento in selected_data_Documentos)
+                {
+                    if (selected_data_Documento.EnviadoSunat == true)
+                        cantidadAceptados++;
                 }
 
                 if (selected_data_Documentos.Count() > 0)
@@ -164,48 +171,56 @@ namespace FEI.pages
                     string noEnviados   =   string.Empty;
                     string mensajeFinal =   string.Empty;
 
-                    ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
+                    if (cantidadAceptados == 0)
+                    {
+                        ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
+                            foreach (var selected_data_Documento in selected_data_Documentos)
+                            {
+                                ProcesarEnvio procesarEnvio =   new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
+                                procesarEnvio.Post();
+                            }
+                        });
+                    
                         foreach (var selected_data_Documento in selected_data_Documentos)
                         {
-                            ProcesarEnvio procesarEnvio =   new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
-                            procesarEnvio.Post();
+                            if (selected_data_Documento.EnviadoSunat == true)
+                            {
+                                enviados    +=  $", {selected_data_Documento.SerieCorrelativo}";
+                            }
+                            else
+                            {
+                                noEnviados  +=  $", {selected_data_Documento.SerieCorrelativo}";
+                            }
                         }
-                    });
-                    
-                    foreach (var selected_data_Documento in selected_data_Documentos)
-                    {
-                        if (selected_data_Documento.EnviadoSunat == true)
-                        {
-                            enviados    +=  $", {selected_data_Documento.SerieCorrelativo}";
-                        }
-                        else
-                        {
-                            noEnviados  +=  $", {selected_data_Documento.SerieCorrelativo}";
-                        }
+
+                        if (string.IsNullOrEmpty(enviados)) //  Ningún enviado, puros rechazados como voz
+                            mensajeFinal    =   $"No se pudo enviar ningún documento, los documentos rechazados son:\n {noEnviados}";
+
+                        if (!string.IsNullOrEmpty(enviados) && string.IsNullOrEmpty(noEnviados))    //  Sin ningún documento rechazado
+                            mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados}";
+
+                        if (!string.IsNullOrEmpty(enviados) && !string.IsNullOrEmpty(noEnviados))   //  Con al menos un documento rechazado
+                            mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados} y se han rechazado los siguientes documentos:\n {noEnviados}";
+
+                        CustomDialogWindow customDialogWindow       =   new CustomDialogWindow();
+                        customDialogWindow.Buttons                  =   CustomDialogButtons.OK;
+                        customDialogWindow.Caption                  =   "Mensaje";
+                        customDialogWindow.DefaultButton            =   CustomDialogResults.OK;
+                        customDialogWindow.InstructionHeading       =   "Resultados del envío a Sunat";
+                        customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
+                        customDialogWindow.InstructionText          =   mensajeFinal;
+                        CustomDialogResults customDialogResults     =   customDialogWindow.Show();
+
+                        LoadGrid();
                     }
-
-                    if (string.IsNullOrEmpty(enviados)) //  Ningún enviado, puros rechazados como voz
-                        mensajeFinal    =   $"No se pudo enviar ningún documento, los documentos rechazados son:\n {noEnviados}";
-
-                    if (!string.IsNullOrEmpty(enviados) && string.IsNullOrEmpty(noEnviados))    //  Sin ningún documento rechazado
-                        mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados}";
-
-                    if (!string.IsNullOrEmpty(enviados) && !string.IsNullOrEmpty(noEnviados))   //  Con al menos un documento rechazado
-                        mensajeFinal    =   $"Se ha enviado a Sunat el(los) documento(s):\n {enviados} y se han rechazado los siguientes documentos:\n {noEnviados}";
-
-                    CustomDialogWindow customDialogWindow       =   new CustomDialogWindow();
-                    customDialogWindow.Buttons                  =   CustomDialogButtons.OK;
-                    customDialogWindow.Caption                  =   "Mensaje";
-                    customDialogWindow.DefaultButton            =   CustomDialogResults.OK;
-                    customDialogWindow.InstructionHeading       =   "Resultados del envío a Sunat";
-                    customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
-                    customDialogWindow.InstructionText          =   mensajeFinal;
-                    CustomDialogResults customDialogResults     =   customDialogWindow.Show();
-
-                    LoadGrid();
+                    else
+                    {
+                        System.Windows.Forms.MessageBox.Show("Estimado usuario, está intentando enviar a Sunat uno o varios documentos que ya fueron aceptados, " +
+                            "sí desea revisar estos documento(s) selecciónelo y pulse descargar.", "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 else
-                    System.Windows.Forms.MessageBox.Show("Debe seleccionar al menos un documento");
+                    System.Windows.Forms.MessageBox.Show("Debe seleccionar al menos un documento", "Ninguna selección detectada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {

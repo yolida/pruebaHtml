@@ -398,6 +398,9 @@
                                     <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
                                     <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
                                     <Style.Triggers>
+                                        <Trigger Property="Text" Value="Aceptado">
+                                            <Setter Property="Foreground" Value="Green"/>
+                                        </Trigger>
                                         <Trigger Property="Text" Value="Rechazado">
                                             <Setter Property="Foreground" Value="Red"/>
                                         </Trigger>
@@ -503,16 +506,16 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
-                    <DockPanel Grid.Column="2" Grid.Row="0">
-                        <Button Margin="0,0,0,0" x:Name="btnValidar" HorizontalAlignment="Right" Click="btnValidar_Click"  VerticalAlignment="Bottom"   >
+                    <!--<DockPanel Grid.Column="2" Grid.Row="0">
+                        <Button Margin="0,0,0,0" x:Name="btnValidar" HorizontalAlignment="Right" Click="btnValidar_Click"  VerticalAlignment="Bottom"  MinWidth="150">
                             <StackPanel Orientation="Horizontal">
                                 <Image x:Name="imgbtnValidar" Source="/FEI;component/images/menu_resumendiario.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
                                 <Label x:Name="lblbtnValidar" Content="Validar documento"/>
                             </StackPanel>
                         </Button>
-                    </DockPanel>
+                    </DockPanel>-->
                     <DockPanel Grid.Column="3" Grid.Row="0">
-                        <Button Margin="0,0,0,0" x:Name="btnDescargarXML" HorizontalAlignment="Right" Click="btnDescargarXML_Click"  VerticalAlignment="Bottom"   >
+                        <Button Margin="0,0,0,0" x:Name="btnDescargarXML" HorizontalAlignment="Right" Click="btnDescargarXML_Click"  VerticalAlignment="Bottom" MinWidth="150"  >
                             <StackPanel Orientation="Horizontal">
                                 <Image x:Name="imgBtnDescargarXML" Source="/FEI;component/images/download_24.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
                                 <Label x:Name="lblBtnDescargarXML" Content="Descargar"/>
@@ -520,7 +523,7 @@
                         </Button>
                     </DockPanel>
                     <DockPanel Grid.Column="4" Grid.Row="0">
-                        <Button Margin="0,0,0,0" x:Name="btnEnviar" HorizontalAlignment="Right" Click="btnEnviar_Click"  VerticalAlignment="Bottom"   >
+                        <Button Margin="0,0,0,0" x:Name="btnEnviar" HorizontalAlignment="Right" Click="btnEnviar_Click"  VerticalAlignment="Bottom" MinWidth="150"  >
                             <StackPanel Orientation="Horizontal">
                                 <Image x:Name="image" Source="/FEI;component/images/send.png" Height="18" Width="26" RenderTransformOrigin="0.654,0.5" />
                                 <Label x:Name="TextBoton" Content="Enviar a Sunat"/>
