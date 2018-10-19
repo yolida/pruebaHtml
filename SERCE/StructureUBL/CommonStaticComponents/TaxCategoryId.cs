@@ -3,16 +3,8 @@
 namespace StructureUBL.CommonStaticComponents
 {
     [Serializable]
-    public class TaxCategoryId
+    public class TaxCategoryId: Attributes
     {
-        public string SchemeID { get; set; }
-
-        public string SchemeName { get; set; }
-
-        public string SchemeAgencyName { get; set; }
-
-        public string SchemeAgencyID { get; set; }
-
         public string Value { get; set; } // Categoría de impuestos
 
         public TaxCategoryId()

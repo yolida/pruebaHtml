@@ -171,16 +171,16 @@ namespace FEI.pages
                     string noEnviados   =   string.Empty;
                     string mensajeFinal =   string.Empty;
 
-                    if (cantidadAceptados == 0)
-                    {
+                    //if (cantidadAceptados == 0)
+                    //{
                         ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
                             foreach (var selected_data_Documento in selected_data_Documentos)
                             {
-                                ProcesarEnvio procesarEnvio =   new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
+                                ProcesarEnvio procesarEnvio = new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
                                 procesarEnvio.Post();
                             }
                         });
-                    
+                        
                         foreach (var selected_data_Documento in selected_data_Documentos)
                         {
                             if (selected_data_Documento.EnviadoSunat == true)
@@ -212,12 +212,12 @@ namespace FEI.pages
                         CustomDialogResults customDialogResults     =   customDialogWindow.Show();
 
                         LoadGrid();
-                    }
-                    else
-                    {
-                        System.Windows.Forms.MessageBox.Show("Estimado usuario, está intentando enviar a Sunat uno o varios documentos que ya fueron aceptados, " +
-                            "sí desea revisar estos documento(s) selecciónelo y pulse descargar.", "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    System.Windows.Forms.MessageBox.Show("Estimado usuario, está intentando enviar a Sunat uno o varios documentos que ya fueron aceptados, " +
+                    //        "sí desea revisar estos documento(s) selecciónelo y pulse descargar.", "Acción no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //}
                 }
                 else
                     System.Windows.Forms.MessageBox.Show("Debe seleccionar al menos un documento", "Ninguna selección detectada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

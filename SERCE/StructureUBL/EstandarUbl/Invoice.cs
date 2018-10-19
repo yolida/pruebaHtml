@@ -1202,52 +1202,42 @@ namespace StructureUBL.EstandarUbl
             //}
             //#endregion PaymentTerms
 
-            //#region PrepaidPayment
-            //if (PrepaidPayments.Count > 0)
-            //{
-            //    foreach (var prepaidPayments in PrepaidPayments)
-            //    {
-            //        writer.WriteStartElement("cac:PrepaidPayment"); // [0..*] 
-            //        {
-            //            if (!string.IsNullOrEmpty(prepaidPayments.PrepaidPaymentId.Value.ToString()))
-            //            {
-            //                writer.WriteStartElement("cbc:ID"); // [0..1] Serie y número de comprobante del anticipo (para el caso de reorganización de empresas, incluye el RUC)
-            //                {
-            //                    writer.WriteAttributeString("schemeID", prepaidPayments.PrepaidPaymentId.SchemeID);
-            //                    writer.WriteAttributeString("schemeName", prepaidPayments.PrepaidPaymentId.SchemeName);
-            //                    writer.WriteAttributeString("schemeAgencyName", prepaidPayments.PrepaidPaymentId.SchemeAgencyName);
-            //                    writer.WriteValue(prepaidPayments.PrepaidPaymentId.Value.ToString());
-            //                }
-            //                writer.WriteEndElement();
-            //            }
+            #region PrepaidPayment
+            if (PrepaidPayments.Count > 0)
+            {
+                foreach (var prepaidPayments in PrepaidPayments)
+                {
+                    writer.WriteStartElement("cac:PrepaidPayment"); // [0..*] 
+                    {
+                        if (!string.IsNullOrEmpty(prepaidPayments.PrepaidPaymentId.Value.ToString()))
+                        {
+                            writer.WriteStartElement("cbc:ID"); // [0..1] Serie y número de comprobante del anticipo (para el caso de reorganización de empresas, incluye el RUC)
+                            {
+                                writer.WriteAttributeString("schemeID", prepaidPayments.PrepaidPaymentId.SchemeID);
+                                writer.WriteAttributeString("schemeName", prepaidPayments.PrepaidPaymentId.SchemeName);
+                                writer.WriteAttributeString("schemeAgencyName", prepaidPayments.PrepaidPaymentId.SchemeAgencyName);
+                                writer.WriteValue(prepaidPayments.PrepaidPaymentId.Value.ToString());
+                            }
+                            writer.WriteEndElement();
+                        }
 
-            //            if (!string.IsNullOrEmpty(prepaidPayments.PaidAmount.Value.ToString()))
-            //            {
-            //                writer.WriteStartElement("cbc:PaidAmount"); // [0..1]  Monto prepagado o anticipado
-            //                {
-            //                    writer.WriteAttributeString("currencyID", prepaidPayments.PaidAmount.CurrencyID); // Código de tipo de moneda del monto prepagado o anticipado
-            //                    writer.WriteValue(prepaidPayments.PaidAmount.Value.ToString()); // Monto prepagado o anticipado
-            //                }
-            //                writer.WriteEndElement();
-            //            }
+                        if (!string.IsNullOrEmpty(prepaidPayments.PaidAmount.Value.ToString()))
+                        {
+                            writer.WriteStartElement("cbc:PaidAmount"); // [0..1]  Monto prepagado o anticipado
+                            {
+                                writer.WriteAttributeString("currencyID", prepaidPayments.PaidAmount.CurrencyID); // Código de tipo de moneda del monto prepagado o anticipado
+                                writer.WriteValue(prepaidPayments.PaidAmount.Value.ToString()); // Monto prepagado o anticipado
+                            }
+                            writer.WriteEndElement();
+                        }
 
-            //            if (!string.IsNullOrEmpty(prepaidPayments.InstructionID.Value.ToString()))
-            //            {
-            //                writer.WriteStartElement("cbc:InstructionID"); // [0..1]  Número de RUC del emisor del comprobante de anticipo
-            //                {
-            //                    writer.WriteAttributeString("schemeID", prepaidPayments.InstructionID.SchemeID); // Código de tipo de documento del comprobante de anticipo
-            //                    writer.WriteValue(prepaidPayments.InstructionID.Value.ToString()); // Número de RUC del emisor del comprobante de anticipo
-            //                }
-            //                writer.WriteEndElement();
-            //            }
-
-            //            if (!string.IsNullOrEmpty(prepaidPayments.PaidTime.ToString()))
-            //                writer.WriteElementString("cbc:PaidTime", prepaidPayments.PaidTime.ToString(Formatos.FormatoFecha));  // [0..1]
-            //        }
-            //        writer.WriteEndElement();
-            //    }
-            //}
-            //#endregion PrepaidPayment
+                        if (!string.IsNullOrEmpty(prepaidPayments.PaidTime.ToString()))
+                            writer.WriteElementString("cbc:PaidTime", prepaidPayments.PaidTime.ToString(Formatos.FormatoFecha));  // [0..1]
+                    }
+                    writer.WriteEndElement();
+                }
+            }
+            #endregion PrepaidPayment
 
             //#region AllowanceCharge
             //if (AllowanceCharges.Count > 0)

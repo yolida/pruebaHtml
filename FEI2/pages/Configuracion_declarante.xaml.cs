@@ -20,6 +20,7 @@ namespace FEI.pages
     {
         ReadGeneralData readGeneralData =   new ReadGeneralData();
         Data_Usuario data_Usuario = new Data_Usuario();
+
         public Configuracion_declarante(Data_Usuario usuario)
         {
             InitializeComponent();

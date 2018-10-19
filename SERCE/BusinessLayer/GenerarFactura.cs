@@ -32,148 +32,162 @@ namespace BusinessLayer
         /// <returns></returns>
         public DocumentoElectronico data(Data_Documentos data_Documento)
         {
-            Data_CabeceraDocumento cabeceraDocumento    =   new Data_CabeceraDocumento(data_Documento.IdCabeceraDocumento);
-            cabeceraDocumento.Read_CabeceraDocumento();
-
-            var documento    =   new DocumentoElectronico()  //  Documento principal
+            DocumentoElectronico documento;
+            try
             {
-                SerieCorrelativo    =   data_Documento.SerieCorrelativo,
-                TipoDocumento       =   data_Documento.TipoDocumento ?? string.Empty,
-                FechaEmision        =   cabeceraDocumento.FechaEmision,
-                HoraEmision         =   cabeceraDocumento.HoraEmision,
-                FechaVencimiento    =   cabeceraDocumento.FechaVencimiento,
-                OrdenCompra         =   cabeceraDocumento.OrdenCompra,
-                Moneda              =   cabeceraDocumento.Moneda,
-                TipoOperacion       =   cabeceraDocumento.TipoOperacion,
-                MontoEnLetras       =   cabeceraDocumento.MontoEnLetras ?? string.Empty,
-                CantidadItems       =   cabeceraDocumento.CantidadItems,
-                TotalValorVenta     =   cabeceraDocumento.TotalValorVenta,
-                TotalPrecioVenta    =   cabeceraDocumento.TotalPrecioVenta,
-                TotalDescuento      =   cabeceraDocumento.TotalDescuento,
-                TotalOtrosCargos    =   cabeceraDocumento.TotalOtrosCargos,
-                TotalAnticipos      =   cabeceraDocumento.TotalAnticipos,
-                ImporteTotalVenta   =   cabeceraDocumento.ImporteTotalVenta
-            };
+                Data_CabeceraDocumento cabeceraDocumento    =   new Data_CabeceraDocumento(data_Documento.IdCabeceraDocumento);
+                cabeceraDocumento.Read_CabeceraDocumento();
 
-            #region Emisor
-            Data_Contribuyente Emisor   =   new Data_Contribuyente(data_Documento.IdEmisor);
-            Emisor.Read_Contribuyente();
-            documento.Emisor            =   Emisor;
-            #endregion Emisor
-
-            #region Receptor
-            Data_Contribuyente Receptor =   new Data_Contribuyente(cabeceraDocumento.IdReceptor);
-            Receptor.Read_Contribuyente();
-            documento.Receptor          =   Receptor;
-            documento.Receptor.OtrosParticipantes = new List<Contribuyente>();  //  Pendiente crear entidad OtrosParticipantes
-            #endregion Receptor
-
-            #region documentoDetalle
-            Data_DocumentoDetalle data_DocumentoDetalle =   new Data_DocumentoDetalle(data_Documento.IdCabeceraDocumento);
-            List<DetalleDocumento> detalleDocumentos    =   data_DocumentoDetalle.Read_DocumentoDetalle();
-
-            if (detalleDocumentos.Count > 0)    //  Validar en caso de que no haya detalles del documento
-            {
-                foreach (var detalleDocumento in detalleDocumentos)
+                documento    =   new DocumentoElectronico()  //  Documento principal
                 {
-                    #region lineaTotalImpuesto
-                    Data_TotalImpuesto lineaTotalImpuesto   =   new Data_TotalImpuesto(detalleDocumento.IdDocumentoDetalle);
-                    List<TotalImpuesto> lineaTotalImpuestos =   lineaTotalImpuesto.Read_TotalImpuestos(2);  //  El parámetro -> 2 <- es indicativo de que es por cada línea
+                    SerieCorrelativo    =   data_Documento.SerieCorrelativo,
+                    TipoDocumento       =   data_Documento.TipoDocumento ?? string.Empty,
+                    FechaEmision        =   cabeceraDocumento.FechaEmision,
+                    HoraEmision         =   cabeceraDocumento.HoraEmision,
+                    FechaVencimiento    =   cabeceraDocumento.FechaVencimiento,
+                    OrdenCompra         =   cabeceraDocumento.OrdenCompra,
+                    Moneda              =   cabeceraDocumento.Moneda,
+                    TipoOperacion       =   cabeceraDocumento.TipoOperacion,
+                    MontoEnLetras       =   cabeceraDocumento.MontoEnLetras ?? string.Empty,
+                    CantidadItems       =   cabeceraDocumento.CantidadItems,
+                    TotalValorVenta     =   cabeceraDocumento.TotalValorVenta,
+                    TotalPrecioVenta    =   cabeceraDocumento.TotalPrecioVenta,
+                    TotalDescuento      =   cabeceraDocumento.TotalDescuento,
+                    TotalOtrosCargos    =   cabeceraDocumento.TotalOtrosCargos,
+                    TotalAnticipos      =   cabeceraDocumento.TotalAnticipos,
+                    ImporteTotalVenta   =   cabeceraDocumento.ImporteTotalVenta
+                };
 
-                    foreach (var st_totalImpuesto in lineaTotalImpuestos)
+                #region Emisor
+                Data_Contribuyente Emisor   =   new Data_Contribuyente(data_Documento.IdEmisor);
+                Emisor.Read_Contribuyente();
+                documento.Emisor            =   Emisor;
+                #endregion Emisor
+
+                #region Receptor
+                Data_Contribuyente Receptor =   new Data_Contribuyente(cabeceraDocumento.IdReceptor);
+                Receptor.Read_Contribuyente();
+                documento.Receptor          =   Receptor;
+                documento.Receptor.OtrosParticipantes = new List<Contribuyente>();  //  Pendiente crear entidad OtrosParticipantes
+                #endregion Receptor
+
+                #region documentoDetalle
+                Data_DocumentoDetalle data_DocumentoDetalle =   new Data_DocumentoDetalle(data_Documento.IdCabeceraDocumento);
+                List<DetalleDocumento> detalleDocumentos    =   data_DocumentoDetalle.Read_DocumentoDetalle();
+
+                if (detalleDocumentos.Count > 0)    //  Validar en caso de que no haya detalles del documento
+                {
+                    foreach (var detalleDocumento in detalleDocumentos)
                     {
-                        Data_SubTotalImpuesto data_SubTotalImpuesto =   new Data_SubTotalImpuesto(st_totalImpuesto.IdTotalImpuestos);
-                        List<SubTotalImpuestos> subTotalImpuestos   =   data_SubTotalImpuesto.Read_SubTotalImpuesto();
-                        st_totalImpuesto.SubTotalesImpuestos        =   subTotalImpuestos;
-                    }
-                    detalleDocumento.TotalImpuestos =   lineaTotalImpuestos;
-                    #endregion lineaTotalImpuesto
+                        #region lineaTotalImpuesto
+                        Data_TotalImpuesto lineaTotalImpuesto   =   new Data_TotalImpuesto(detalleDocumento.IdDocumentoDetalle);
+                        List<TotalImpuesto> lineaTotalImpuestos =   lineaTotalImpuesto.Read_TotalImpuestos(2);  //  El parámetro -> 2 <- es indicativo de que es por cada línea
 
-                    #region Notas
-                    Data_Nota lineaData_Nota    =   new Data_Nota(detalleDocumento.IdDocumentoDetalle);  // Parámetro es el id de cabecera de documento
-                    List<Nota> lineaNotas       =   lineaData_Nota.Read(2);
-                    detalleDocumento.Notas      =   lineaNotas;
-                    #endregion Notas
+                        foreach (var st_totalImpuesto in lineaTotalImpuestos)
+                        {
+                            Data_SubTotalImpuesto data_SubTotalImpuesto =   new Data_SubTotalImpuesto(st_totalImpuesto.IdTotalImpuestos);
+                            List<SubTotalImpuestos> subTotalImpuestos   =   data_SubTotalImpuesto.Read_SubTotalImpuesto();
+                            st_totalImpuesto.SubTotalesImpuestos        =   subTotalImpuestos;
+                        }
+                        detalleDocumento.TotalImpuestos =   lineaTotalImpuestos;
+                        #endregion lineaTotalImpuesto
 
-                    #region Descripciones
-                    List<Descripcion> descripciones =   data_DocumentoDetalle.Read_Descripcion(detalleDocumento.IdDocumentoDetalle);
-                    detalleDocumento.Descripciones  =   descripciones;
-                    #endregion Descripciones
+                        #region Notas
+                        Data_Nota lineaData_Nota    =   new Data_Nota(detalleDocumento.IdDocumentoDetalle);  // Parámetro es el id de cabecera de documento
+                        List<Nota> lineaNotas       =   lineaData_Nota.Read(2);
+                        detalleDocumento.Notas      =   lineaNotas;
+                        #endregion Notas
 
-                    #region PrecioAlternativo
-                    Data_PrecioAlternativo data_PrecioAlternativo   =   new Data_PrecioAlternativo(detalleDocumento.IdDocumentoDetalle);
-                    List<PrecioAlternativo> precioAlternativos      =   data_PrecioAlternativo.Read_PrecioAlternativo();
-                    detalleDocumento.PreciosAlternativos            =   precioAlternativos;                    
-                    #endregion PrecioAlternativo
+                        #region Descripciones
+                        List<Descripcion> descripciones =   data_DocumentoDetalle.Read_Descripcion(detalleDocumento.IdDocumentoDetalle);
+                        detalleDocumento.Descripciones  =   descripciones;
+                        #endregion Descripciones
 
-                    #region emergency
-                    List<Descuento> descuentos = new List<Descuento>();
+                        #region PrecioAlternativo
+                        Data_PrecioAlternativo data_PrecioAlternativo   =   new Data_PrecioAlternativo(detalleDocumento.IdDocumentoDetalle);
+                        List<PrecioAlternativo> precioAlternativos      =   data_PrecioAlternativo.Read_PrecioAlternativo();
+                        detalleDocumento.PreciosAlternativos            =   precioAlternativos;                    
+                        #endregion PrecioAlternativo
 
-                    detalleDocumento.Descuentos = descuentos;
+                        #region emergency
+                        List<Descuento> descuentos = new List<Descuento>();
 
-                    List<PropiedadAdicional> propiedadAdicionales = new List<PropiedadAdicional>();
-                    detalleDocumento.PropiedadesAdicionales = propiedadAdicionales;
+                        detalleDocumento.Descuentos = descuentos;
 
-                    List<Entrega> entregas1 = new List<Entrega>();
+                        List<PropiedadAdicional> propiedadAdicionales = new List<PropiedadAdicional>();
+                        detalleDocumento.PropiedadesAdicionales = propiedadAdicionales;
 
-                    Entrega data_entrega;
-                    data_entrega = new Entrega()
-                    {
-                        Cantidad = 0,
-                        MaximaCantidad = 0,
-                        Envio = new Envio(),
-                    };
-                    entregas1.Add(data_entrega);
+                        List<Entrega> entregas1 = new List<Entrega>();
+
+                        Entrega data_entrega;
+                        data_entrega = new Entrega()
+                        {
+                            Cantidad = 0,
+                            MaximaCantidad = 0,
+                            Envio = new Envio(),
+                        };
+                        entregas1.Add(data_entrega);
                                         
-                    detalleDocumento.Entregas = entregas1;
-                    #endregion emergency
+                        detalleDocumento.Entregas = entregas1;
+                        #endregion emergency
+                    }
+                    documento.DetalleDocumentos     =   detalleDocumentos;
                 }
-                documento.DetalleDocumentos     =   detalleDocumentos;
+
+
+                #endregion documentoDetalle
+
+                #region TotalImpuestos
+                Data_TotalImpuesto data_TotalImpuesto   =   new Data_TotalImpuesto(data_Documento.IdCabeceraDocumento);
+                List<TotalImpuesto> totalImpuestos      =   data_TotalImpuesto.Read_TotalImpuestos(1);   //  El parámetro -> 1 <- es indicativo de que es por cada línea
+
+                foreach (var st_totalImpuesto in totalImpuestos)
+                {
+                    Data_SubTotalImpuesto data_SubTotalImpuesto =   new Data_SubTotalImpuesto(st_totalImpuesto.IdTotalImpuestos);
+                    List<SubTotalImpuestos> subTotalImpuestos   =   data_SubTotalImpuesto.Read_SubTotalImpuesto();
+                    st_totalImpuesto.SubTotalesImpuestos        =   subTotalImpuestos;
+                }
+                documento.TotalImpuestos = totalImpuestos;
+                #endregion TotalImpuestos
+
+                #region Notas
+                Data_Nota data_Nota =   new Data_Nota(data_Documento.IdCabeceraDocumento);  // Parámetro es el id de cabecera de documento
+                List<Nota> notas    =   data_Nota.Read(1);
+                documento.Notas     =   notas;
+                #endregion Notas
+
+                #region TerminosEntregas
+                Data_TerminosEntrega data_TerminosEntrega   =   new Data_TerminosEntrega(data_Documento.IdCabeceraDocumento);
+                data_TerminosEntrega.Read_TerminosEntrega();   //  El parámetro -> 1 <- es indicativo de que es por cada línea
+                documento.TerminosEntrega                   =   data_TerminosEntrega;
+                #endregion TerminosEntregas
+
+                #region Anticipos
+                Data_Anticipo anticipo  =   new Data_Anticipo(data_Documento.IdCabeceraDocumento);
+                List<Anticipo> anticipos=   anticipo.Read_Anticipo();
+                documento.Anticipos     =   anticipos;
+                #endregion Anticipos
+
+                List<PeriodoFactura> periodoFacturas = null;
+                List<DocumentoRelacionado> documentoRelacionados = null;
+                List<DocumentoRelacionado> otrosDocumentosRelacionados = null;
+                List<Entrega> entregas = null;
+                List<MedioPago> medioPagos = null;
+
+                List<Descuento> item_descuentos = null;
+            
+                documento.Relacionados                  = documentoRelacionados;
+                documento.OtrosDocumentosRelacionados   = otrosDocumentosRelacionados;
+                documento.Entregas                      = entregas;
+                documento.MedioPagos                    = medioPagos;
+                documento.Descuentos                    = item_descuentos;
+                documento.PeriodosFactura               = periodoFacturas;
+
             }
-
-
-            #endregion documentoDetalle
-
-            #region TotalImpuestos
-            Data_TotalImpuesto data_TotalImpuesto   =   new Data_TotalImpuesto(data_Documento.IdCabeceraDocumento);
-            List<TotalImpuesto> totalImpuestos      =   data_TotalImpuesto.Read_TotalImpuestos(1);   //  El parámetro -> 1 <- es indicativo de que es por cada línea
-
-            foreach (var st_totalImpuesto in totalImpuestos)
+            catch (Exception ex)
             {
-                Data_SubTotalImpuesto data_SubTotalImpuesto =   new Data_SubTotalImpuesto(st_totalImpuesto.IdTotalImpuestos);
-                List<SubTotalImpuestos> subTotalImpuestos   =   data_SubTotalImpuesto.Read_SubTotalImpuesto();
-                st_totalImpuesto.SubTotalesImpuestos        =   subTotalImpuestos;
+                documento   =   new DocumentoElectronico();
             }
-            documento.TotalImpuestos = totalImpuestos;
-            #endregion TotalImpuestos
-
-            #region Notas
-            Data_Nota data_Nota =   new Data_Nota(data_Documento.IdCabeceraDocumento);  // Parámetro es el id de cabecera de documento
-            List<Nota> notas    =   data_Nota.Read(1);
-            documento.Notas     =   notas;
-            #endregion Notas
-
-            #region TerminosEntregas
-            Data_TerminosEntrega data_TerminosEntrega   =   new Data_TerminosEntrega(data_Documento.IdCabeceraDocumento);
-            data_TerminosEntrega.Read_TerminosEntrega();   //  El parámetro -> 1 <- es indicativo de que es por cada línea
-            documento.TerminosEntrega                   =   data_TerminosEntrega;
-            #endregion TerminosEntregas
-            
-            List<PeriodoFactura> periodoFacturas = null;
-            List<DocumentoRelacionado> documentoRelacionados = null;
-            List<DocumentoRelacionado> otrosDocumentosRelacionados = null;
-            List<Entrega> entregas = null;
-            List<MedioPago> medioPagos = null;
-            List<Anticipo> anticipos = null;
-            List<Descuento> item_descuentos = null;
-            
-            documento.Relacionados                  = documentoRelacionados;
-            documento.OtrosDocumentosRelacionados   = otrosDocumentosRelacionados;
-            documento.Entregas                      = entregas;
-            documento.MedioPagos                    = medioPagos;
-            documento.Anticipos                     = anticipos;
-            documento.Descuentos                    = item_descuentos;
-            documento.PeriodosFactura               = periodoFacturas;
 
             return documento;
         }

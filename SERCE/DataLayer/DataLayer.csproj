@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="CRUD\Data_AccesosSunat.cs" />
+    <Compile Include="CRUD\Data_Anticipo.cs" />
     <Compile Include="CRUD\Data_CabeceraDocumento.cs" />
     <Compile Include="CRUD\Data_Contribuyente.cs" />
     <Compile Include="CRUD\Data_DatosFox.cs" />

@@ -69,7 +69,7 @@ namespace FEI
         private string mensajeCabecera  =   string.Empty;
         Data_Usuario data_Usuario       =   new Data_Usuario();
         Data_DatosFox data_DatosFox;
-        public MainWindow(int idUserEmpresa)
+        public MainWindow(int idUserEmpresa, string idUsuario)
         {
             InitializeComponent();
             data_Usuario.Read_Id_User_Empresa(idUserEmpresa);
@@ -84,6 +84,8 @@ namespace FEI
                 lblEmpresa.Content  =   data_Contribuyente.NombreLegal;
                 lblUsuario.Content  =   data_Usuario.IdUsuario;
             }
+            else
+                data_Usuario.IdUsuario  = idUsuario;
 
             if (disponible == false)    //  Validación inicial para la apertura de todos los reportes
             {

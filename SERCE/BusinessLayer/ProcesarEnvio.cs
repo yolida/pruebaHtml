@@ -33,7 +33,7 @@ namespace BusinessLayer
                 GenerarFactura generarFactura   =   new GenerarFactura();
 
                 DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO\
-                
+
                 var response                    =   await generarFactura.Post(documento);
 
                 if (!response.Exito)

@@ -238,19 +238,19 @@ namespace GenerateXML
             //}
             #endregion Get out InvoicePeriod
 
-            // Documento relacionado o DespatchDocumentReferences
-            //if (documento.Relacionados.Count > 0 && documento.Relacionados != null)
+            // documento relacionado o despatchdocumentreferences
+            //if (documento.relacionados.count > 0 && documento.relacionados != null)
             //{
-            //    foreach (var relacionado in documento.Relacionados) // 0..n; Relacionados = DespatchDocumentReference
+            //    foreach (var relacionado in documento.relacionados) // 0..n; relacionados = despatchdocumentreference
             //    {
-            //        if (!string.IsNullOrEmpty(relacionado.TipoDocumento.ToString()))
+            //        if (!string.isnullorempty(relacionado.tipodocumento.tostring()))
             //        {
-            //            invoice.DespatchDocumentReferences.Add(new InvoiceDocumentReference
+            //            invoice.despatchdocumentreferences.add(new invoicedocumentreference
             //            {
-            //                Id = relacionado.NroDocumento, // Número de guía de remisión relacionada con la operación que se factura
-            //                DocumentTypeCode = new DocumentTypeCode()
-            //                {   // Código de tipo de guía de remisión relacionada con la operación que se factura
-            //                    ListName = "Tipo de Documento", ListURI = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01", Value = relacionado.TipoDocumento
+            //                id = relacionado.nrodocumento, // número de guía de remisión relacionada con la operación que se factura
+            //                documenttypecode = new documenttypecode()
+            //                {   // código de tipo de guía de remisión relacionada con la operación que se factura
+            //                    listname = "tipo de documento", listuri = "urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01", value = relacionado.tipodocumento
             //                },
             //            });
             //        }
@@ -280,7 +280,7 @@ namespace GenerateXML
             //}
             #endregion Get out ContractDocumentReference
 
-            // Otros documentos relacionados
+            //Otros documentos relacionados
             //if (documento.OtrosDocumentosRelacionados.Count > 0 && documento.OtrosDocumentosRelacionados != null)
             //{
             //    foreach (var relacionado in documento.OtrosDocumentosRelacionados)
@@ -314,7 +314,7 @@ namespace GenerateXML
             //    }
             //}
 
-            //// Delivery en la documentación dice que es de 0..n de cero a muchos (FALTA)
+            // Delivery en la documentación dice que es de 0..n de cero a muchos (FALTA)
             //if (documento.Entregas.Count > 0 && documento.Entregas != null) // 
             //{
             //    foreach (var entrega in documento.Entregas)
@@ -430,7 +430,7 @@ namespace GenerateXML
             //    }
             //}
 
-            //// Medio de pago
+            // Medio de pago
             //if (documento.MedioPagos.Count > 0 && documento.MedioPagos != null)
             //{
             //    foreach (var medioPago in documento.MedioPagos)
@@ -447,7 +447,7 @@ namespace GenerateXML
             //    }
             //}
 
-            //// Terminos de pago
+            // Terminos de pago
             //if (documento.TerminosPagos.Count > 0 && documento.TerminosPagos != null)
             //{
             //    foreach (var terminosPago in documento.TerminosPagos)
@@ -464,30 +464,22 @@ namespace GenerateXML
             //    }
             //}
 
-            //// PrepaidPayment
-            //if (documento.Anticipos.Count > 0 && documento.Anticipos != null)
-            //{
-            //    foreach (var anticipo in documento.Anticipos)
-            //    {   // Información prepagado o anticipado (Deducción de anticipos)
-            //        if (!string.IsNullOrEmpty(anticipo.ComprobanteAnticipo.ToString()) ||
-            //            !string.IsNullOrEmpty(anticipo.Monto.ToString()) || !string.IsNullOrEmpty(anticipo.NroDocumentoEmisor.ToString()))
-            //        {
-            //            invoice.PrepaidPayments.Add(new PrepaidPayment
-            //            {
-            //                PrepaidPaymentId = new PrepaidPaymentId // cbc:ID | Identificador del pago
-            //                {   // Serie y número de comprobante del anticipo (para el caso de reorganización de empresas, incluye el RUC)
-            //                    SchemeID    = anticipo.TipoDocumento, Value = anticipo.ComprobanteAnticipo
-            //                },
-            //                PaidAmount      = new PaidAmount { CurrencyID = anticipo.Moneda, Value = anticipo.Monto }, // Monto anticipado
-            //                InstructionID   = new InstructionID
-            //                {
-            //                    SchemeID    = anticipo.TipoDocumentoIdentidad, Value = anticipo.NroDocumentoEmisor
-            //                },
-            //                PaidTime        = anticipo.FechaPago
-            //            });
-            //        }
-            //    }
-            //}
+            // PrepaidPayment
+            if (documento.Anticipos.Count > 0 && documento.Anticipos != null)
+            {
+                foreach (var anticipo in documento.Anticipos)
+                {   // Información prepagado o anticipado (Deducción de anticipos)
+                    invoice.PrepaidPayments.Add(new PrepaidPayment
+                    {
+                        PrepaidPaymentId = new PrepaidPaymentId // cbc:ID | Identificador del pago
+                        {   // Serie y número de comprobante del anticipo (para el caso de reorganización de empresas, incluye el RUC)
+                            SchemeID    = anticipo.TipoDocumento, Value = anticipo.ComprobanteAnticipo
+                        },
+                        PaidAmount      = new PaidAmount { CurrencyID = anticipo.Moneda, Value = anticipo.Monto }, // Monto anticipado
+                        PaidTime        = anticipo.FechaPago
+                    });
+                }
+            }
 
             //// AllowanceCharge o Descuentos
             //if (documento.Descuentos.Count > 0 && documento.Descuentos != null)

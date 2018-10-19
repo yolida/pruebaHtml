@@ -5,23 +5,31 @@ namespace Models.Modelos
 {
     public class Anticipo
     {
-        [JsonProperty(Required = Required.AllowNull)]
-        public string ComprobanteAnticipo { get; set; } // cbc:ID
+        public int IdAnticipo { get; set; }
 
+        /// <summary>
+        /// cbc:ID
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
-        public string TipoDocumento { get; set; } // @schemeID
+        public string ComprobanteAnticipo { get; set; }
 
+        /// <summary>
+        /// @schemeID
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
-        public decimal Monto { get; set; } // cbc:PaidAmount
+        public string TipoDocumento { get; set; }
 
+        /// <summary>
+        /// cbc:PaidAmount
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
-        public string Moneda { get; set; } // @currencyID
+        public decimal Monto { get; set; }
 
+        /// <summary>
+        /// @currencyID
+        /// </summary>
         [JsonProperty(Required = Required.AllowNull)]
-        public string NroDocumentoEmisor { get; set; } // cbc:InstructionID
-
-        [JsonProperty(Required = Required.AllowNull)]
-        public string TipoDocumentoIdentidad { get; set; } // @schemeID
+        public string Moneda { get; set; }
 
         /// <summary>
         /// /Invoice/cac:PrepaidPayment/cbc:PaidDate

@@ -151,6 +151,39 @@ namespace DataLayer.CRUD
             connection.Disconnect();
         }
 
+        /// <summary>
+        /// Se empleará más adelante cuando se haga uso de roles
+        /// </summary>
+        /// <param name="id"></param>
+        public void Read_Usuario(int id)
+        {
+            Connection connection = new Connection();
+            SqlCommand sqlCommand = new SqlCommand
+            {
+                CommandText =   "[dbo].[Read_Usuario]",
+                CommandType =   CommandType.StoredProcedure,
+                Connection  =   connection.connectionString
+            };
+
+            SqlParameter paramIdUsuario     =   new SqlParameter
+            {
+                SqlDbType       =   SqlDbType.NVarChar,
+                ParameterName   =   "@IdUsuario",
+                Value           =   IdUsuario
+            };
+            sqlCommand.Parameters.Add(paramIdUsuario);
+
+            connection.Connect();
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                IdDatosFox      =   Convert.ToInt16(reader["IdDatosFox"].ToString());
+                //...
+            }
+            connection.Disconnect();
+        }
+
         public bool Create_User_Empresa()
         {
             Connection connection   = new Connection();

@@ -35,7 +35,7 @@ namespace FEI
                 Data_Usuario data_Usuario   =   new Data_Usuario() { IdUsuario  =   txtUsuario.Text.ToString().Trim(), Contrasenia  =   txtPassword.Password.ToString().Trim() };
                 if (data_Usuario.Security_Authenticate_Usuario())
                 {
-                    MainWindow mainWindow   =   new MainWindow(Int16.Parse(lstEmpresas.SelectedValue.ToString()));
+                    MainWindow mainWindow   =   new MainWindow(Int32.Parse(lstEmpresas.SelectedValue.ToString()), txtUsuario.Text.ToString());
                     mainWindow.Show();
                     try
                     {
