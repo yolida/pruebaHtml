@@ -13,148 +13,159 @@ namespace BusinessLayer
     public class ProcesarEnvio
     {
         Data_Usuario data_Usuario;
-        string IdDocumento  =   string.Empty;
+        //string IdDocumento  =   string.Empty;
         Data_Log data_Log;
 
         public ProcesarEnvio(Data_Usuario idUser_Empresa, string idDocumento)
         {
             data_Usuario    =   idUser_Empresa;
-            IdDocumento     =   idDocumento;
+            //IdDocumento     =   idDocumento;
         }
 
-        public async void Post()
+        public async void Post(Data_Documentos IE_IdDocumento)
         {
-            try
-            {
-                // var taskfactory etc etc pero para despues "20186C16-C1DC-4717-8F46-407447D225BC"
-                Data_Documentos data_Documento  =   new Data_Documentos(IdDocumento);   //  IdDocumento variable global
-                data_Documento.Read_Documento();
-
-                GenerarFactura generarFactura   =   new GenerarFactura();
-
-                DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO\
-
-                var response                    =   await generarFactura.Post(documento);
-
-                if (!response.Exito)
+            //var task = Task.Factory.StartNew(async () =>
+            //{
+                try
                 {
-                    Data_Log data_Log   =   new Data_Log()
+                    string IdDocumento = IE_IdDocumento.IdDocumento;
+
+                    // var taskfactory etc etc pero para despues "20186C16-C1DC-4717-8F46-407447D225BC"
+                    Data_Documentos data_Documento  =   new Data_Documentos(IdDocumento);   //  IdDocumento variable global
+                    data_Documento.Read_Documento();
+
+                    GenerarFactura generarFactura   =   new GenerarFactura();
+
+                    DocumentoElectronico documento  =   generarFactura.data(data_Documento);    //  CAMBIAR A ASINCRONO AL FINALIZAR EL DESARROLLO\
+
+                    var response                    =   await generarFactura.Post(documento);    //await
+
+                    if (!response.Exito)
                     {
-                        DetalleError    =   response.MensajeError,
-                        Comentario      =   $"El XML con serie correlativo: {documento.SerieCorrelativo} no se pudo generar",
+                        Data_Log data_Log   =   new Data_Log()
+                        {
+                            DetalleError    =   response.MensajeError,
+                            Comentario      =   $"El XML con serie correlativo: {documento.SerieCorrelativo} no se pudo generar",
+                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                        };
+                        data_Log.Create_Log();
+                    }
+
+                    string rutaArchivo = Path.Combine(data_Documento.Ruta, $"{documento.SerieCorrelativo}.xml");
+                
+                    Firmar firmar   =   new Firmar();
+
+                    FirmadoRequest firmadoRequest   =   firmar.Data(data_Documento.IdEmisor, response.TramaXmlSinFirma);
+                    FirmadoResponse firmadoResponse =   await firmar.Post(firmadoRequest);      //  Ya se obtuvo el documento firmado
+
+                    if (firmadoResponse.Exito)  //  Comprobamos que se haya firmado de forma correcta
+                    {
+                        Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento) { XmlFirmado = firmadoResponse.TramaXmlFirmado };
+                        if (!actualizacionXML.Update_Documento_OneColumn("[dbo].[Update_Documento_SignedXML]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al actualizar el xmlFirmado del documento",
+                                Comentario      =   "Error con la base de datos",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+                    }
+                    else
+                    {
+                        data_Log = new Data_Log() { DetalleError = response.MensajeError, Comentario = "Error al firmar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
+                        data_Log.Create_Log();
+                    }
+
+                    EnviarSunat enviarSunat =   new EnviarSunat();
+
+                    EnviarDocumentoRequest enviarDocumentoRequest   =   enviarSunat.Data(firmadoResponse.TramaXmlFirmado, data_Documento, 
+                                                                        GetURL(data_Documento.TipoDocumento));  // Obtenemos los datos para EnviarDocumentoRequest
+
+                    EnviarDocumentoResponse enviarDocumentoResponse =   await enviarSunat.Post_Documento(enviarDocumentoRequest);
+
+                    if (enviarDocumentoResponse.Exito && !string.IsNullOrEmpty(enviarDocumentoResponse.TramaZipCdr))    // Comprobar envío a sunat
+                    {
+                        Data_Documentos actualizacionCDR    =   new Data_Documentos() { IdDocumento = IdDocumento,   CdrSunat    = enviarDocumentoResponse.TramaZipCdr };
+                        if (!actualizacionCDR.Update_Documento_OneColumn("[dbo].[Update_Documento_CDR]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al actualizar el CDR del documento",
+                                Comentario      =   "Error con la base de datos: [dbo].[Update_Documento_CDR]",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+
+                        Data_Documentos actualizacionComentario = new Data_Documentos() { IdDocumento = IdDocumento, ComentarioDocumento = enviarDocumentoResponse.MensajeRespuesta };
+                        if (!actualizacionComentario.Update_Documento_OneColumn("[dbo].[Update_Documento_Comentario]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al guardar el comentario notificando la recepción del CDR del documento",
+                                Comentario      =   "No se pudo guardar el CDR",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+
+                        Data_Documentos actualizacionEstadoSunat =  new Data_Documentos() { IdDocumento = IdDocumento, EstadoSunat = "Aceptado" };
+                        if (!actualizacionEstadoSunat.Update_Documento_OneColumn("[dbo].[Update_Documento_EstadoSunat]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al guardar el comentario notificando el estado del documento",
+                                Comentario      =   "No se pudo guardar el estado del documento",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+                    }
+                    else
+                    {
+                        data_Log = new Data_Log() { DetalleError = enviarDocumentoResponse.MensajeError, Comentario = "Error al enviar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
+                        data_Log.Create_Log();
+
+                        Data_Documentos actualizacionComentario = new Data_Documentos() { IdDocumento = IdDocumento, ComentarioDocumento = enviarDocumentoResponse.MensajeError };
+                        if (!actualizacionComentario.Update_Documento_OneColumn("[dbo].[Update_Documento_Comentario]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al guardar el comentario notificando el error al no poder recibir  el CDR del documento",
+                                Comentario      =   "No se recibió el CDR",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+
+                        Data_Documentos actualizacionEstadoSunat =  new Data_Documentos() { IdDocumento = IdDocumento, EstadoSunat = "Rechazado" };
+                        if (!actualizacionEstadoSunat.Update_Documento_OneColumn("[dbo].[Update_Documento_EstadoSunat]"))
+                        {
+                            data_Log = new Data_Log()
+                            {
+                                DetalleError    =   "Error al guardar el comentario notificando el estado del documento",
+                                Comentario      =   "No se pudo guardar el estado del documento",
+                                IdUser_Empresa  =   data_Usuario.IdUser_Empresa
+                            };
+                            data_Log.Create_Log();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    var msg =   string.Concat(ex.InnerException?.Message,   ex.Message);
+                    data_Log = new Data_Log()
+                    {
+                        DetalleError    =   $"Detalle del error: {msg}",
+                        Comentario      =   "Error al procesar el envío del documento",
                         IdUser_Empresa  =   data_Usuario.IdUser_Empresa
                     };
                     data_Log.Create_Log();
                 }
-
-                string rutaArchivo = Path.Combine(data_Documento.Ruta, $"{documento.SerieCorrelativo}.xml");
-                
-                Firmar firmar   =   new Firmar();
-
-                FirmadoRequest firmadoRequest   =   firmar.Data(data_Documento.IdEmisor, response.TramaXmlSinFirma);
-                FirmadoResponse firmadoResponse =   await firmar.Post(firmadoRequest);      //  Ya se obtuvo el documento firmado
-
-                if (firmadoResponse.Exito)  //  Comprobamos que se haya firmado de forma correcta
-                {
-                    Data_Documentos actualizacionXML = new Data_Documentos(IdDocumento) { XmlFirmado = firmadoResponse.TramaXmlFirmado };
-                    if (!actualizacionXML.Update_Documento_OneColumn("[dbo].[Update_Documento_SignedXML]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al actualizar el xmlFirmado del documento",
-                            Comentario      =   "Error con la base de datos",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-                }
-                else
-                {
-                    data_Log = new Data_Log() { DetalleError = response.MensajeError, Comentario = "Error al firmar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
-                    data_Log.Create_Log();
-                }
-
-                EnviarSunat enviarSunat =   new EnviarSunat();
-
-                EnviarDocumentoRequest enviarDocumentoRequest   =   enviarSunat.Data(firmadoResponse.TramaXmlFirmado, data_Documento, 
-                                                                    GetURL(data_Documento.TipoDocumento));  // Obtenemos los datos para EnviarDocumentoRequest
-
-                EnviarDocumentoResponse enviarDocumentoResponse =   await enviarSunat.Post_Documento(enviarDocumentoRequest);
-
-                if (enviarDocumentoResponse.Exito && !string.IsNullOrEmpty(enviarDocumentoResponse.TramaZipCdr))    // Comprobar envío a sunat
-                {
-                    Data_Documentos actualizacionCDR    =   new Data_Documentos() { IdDocumento = IdDocumento,   CdrSunat    = enviarDocumentoResponse.TramaZipCdr };
-                    if (!actualizacionCDR.Update_Documento_OneColumn("[dbo].[Update_Documento_CDR]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al actualizar el CDR del documento",
-                            Comentario      =   "Error con la base de datos: [dbo].[Update_Documento_CDR]",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-
-                    Data_Documentos actualizacionComentario = new Data_Documentos() { IdDocumento = IdDocumento, ComentarioDocumento = enviarDocumentoResponse.MensajeRespuesta };
-                    if (!actualizacionComentario.Update_Documento_OneColumn("[dbo].[Update_Documento_Comentario]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al guardar el comentario notificando la recepción del CDR del documento",
-                            Comentario      =   "No se pudo guardar el CDR",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-
-                    Data_Documentos actualizacionEstadoSunat =  new Data_Documentos() { IdDocumento = IdDocumento, EstadoSunat = "Aceptado" };
-                    if (!actualizacionEstadoSunat.Update_Documento_OneColumn("[dbo].[Update_Documento_EstadoSunat]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al guardar el comentario notificando el estado del documento",
-                            Comentario      =   "No se pudo guardar el estado del documento",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-                }
-                else
-                {
-                    data_Log = new Data_Log() { DetalleError = enviarDocumentoResponse.MensajeError, Comentario = "Error al enviar el documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
-                    data_Log.Create_Log();
-
-                    Data_Documentos actualizacionComentario = new Data_Documentos() { IdDocumento = IdDocumento, ComentarioDocumento = enviarDocumentoResponse.MensajeError };
-                    if (!actualizacionComentario.Update_Documento_OneColumn("[dbo].[Update_Documento_Comentario]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al guardar el comentario notificando el error al no poder recibir  el CDR del documento",
-                            Comentario      =   "No se recibió el CDR",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-
-                    Data_Documentos actualizacionEstadoSunat =  new Data_Documentos() { IdDocumento = IdDocumento, EstadoSunat = "Rechazado" };
-                    if (!actualizacionEstadoSunat.Update_Documento_OneColumn("[dbo].[Update_Documento_EstadoSunat]"))
-                    {
-                        data_Log = new Data_Log()
-                        {
-                            DetalleError    =   "Error al guardar el comentario notificando el estado del documento",
-                            Comentario      =   "No se pudo guardar el estado del documento",
-                            IdUser_Empresa  =   data_Usuario.IdUser_Empresa
-                        };
-                        data_Log.Create_Log();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                var msg =   string.Concat(ex.InnerException?.Message,   ex.Message);
-                data_Log = new Data_Log() { DetalleError = $"Detalle del error: {msg}", Comentario = "Error al procesar el envío del documento", IdUser_Empresa = data_Usuario.IdUser_Empresa };
-                data_Log.Create_Log();
-            }
+            //});
+            //return task;
         }
 
         public string GetURL(string tipoDocumento)

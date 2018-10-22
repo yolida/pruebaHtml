@@ -16,6 +16,7 @@ using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -147,7 +148,7 @@ namespace FEI.pages
             data_Documentos.Selectable      =   false;
         }
 
-        private void btnEnviar_Click(object sender, RoutedEventArgs e)
+        private async void btnEnviar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -173,14 +174,24 @@ namespace FEI.pages
 
                     //if (cantidadAceptados == 0)
                     //{
-                        ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
-                            foreach (var selected_data_Documento in selected_data_Documentos)
-                            {
-                                ProcesarEnvio procesarEnvio = new ProcesarEnvio(data_Usuario, selected_data_Documento.IdDocumento);
-                                procesarEnvio.Post();
-                            }
+                        var t = new Task(() => {
+                            Dodo(selected_data_Documentos);
                         });
+                        t.Start();
+                        await t;
                         
+                        
+
+                        //ProgressDialogResult result = ProgressWindow.Execute(padre, "Procesando...", () => {
+
+                        //    //foreach (var selected_data_Documento in selected_data_Documentos)
+                        //    //{
+                        //    //    procesarEnvio.Post();
+                        //    //}
+                        //});
+
+                        LoadGrid();
+
                         foreach (var selected_data_Documento in selected_data_Documentos)
                         {
                             if (selected_data_Documento.EnviadoSunat == true)
@@ -210,8 +221,7 @@ namespace FEI.pages
                         customDialogWindow.InstructionIcon          =   CustomDialogIcons.Information;
                         customDialogWindow.InstructionText          =   mensajeFinal;
                         CustomDialogResults customDialogResults     =   customDialogWindow.Show();
-
-                        LoadGrid();
+                    
                     //}
                     //else
                     //{
@@ -229,6 +239,13 @@ namespace FEI.pages
                 data_Log = new Data_Log() { DetalleError = $"Detalle del error: {msg}", Comentario = "Error al enviar el documento a sunat desde la interfaz", IdUser_Empresa = data_Usuario.IdUser_Empresa };
                 data_Log.Create_Log();
             }
+        }
+
+        public void Dodo(List<Data_Documentos> selected_data_Documentos)
+        {
+            ProcesarEnvio procesarEnvio = new ProcesarEnvio(data_Usuario, "");
+            IEnumerable<Data_Documentos> documentosProcesar = selected_data_Documentos.AsEnumerable();
+            Parallel.ForEach(documentosProcesar, (data_Documento) => procesarEnvio.Post(data_Documento));
         }
         
         private void btnConsultar_Click(object sender, RoutedEventArgs e)   =>  LoadGrid();
